@@ -1,0 +1,43 @@
+[user]
+  name = Peter Hampton
+  email = pjhampton@protonmail.com 
+  signingkey = 
+[alias]
+  a = add
+  aa = add --all
+  always = "!git rev-parse 2>/dev/null || cd ~/github/git; git"
+  br = branch
+  ci = commit
+  co = checkout
+  coi = checkout-interactive
+  cop = checkout-pr
+  di = diff
+  lb = checkout -
+  lg = log --oneline
+  ll = "!git always --no-pager log -1 --pretty='tformat:%h (%s, %ad)' --date=short"
+  st = status
+  up = pull --rebase --autostash
+[push]
+  default = current
+[pull]
+  default = current
+[branch]
+  autosetuprebase = always
+[core]
+  excludesfile = ~/.gitignore
+[credential]
+  helper = osxkeychain
+[diff]
+  compactionHeuristic = true
+  algorithm = patience
+[github]
+  user = pjhampton
+[filter "lfs"]
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
+[gpg]
+  program = gpg
+[merge]
+  conflictstyle = diff3
