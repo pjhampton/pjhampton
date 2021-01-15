@@ -1,6 +1,7 @@
 brew 'asciidoc'
 brew 'awless'
 brew 'awscli'
+brew 'exa'
 brew 'fzf'
 brew 'gcc'
 brew 'git'
