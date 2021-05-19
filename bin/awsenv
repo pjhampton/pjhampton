@@ -1,0 +1,7 @@
+echo "Attempting to set environment to $1"
+export AWS_DEFAULT_PROFILE=$1
+export AWS_ACCESS_KEY_ID=$(aws configure get aws_access_key_id --profile $1)
+export AWS_SECRET_ACCESS_KEY=$(aws configure get aws_secret_access_key --profile $1)
+
+echo "AWS env now set as follows:"
+aws configure list
