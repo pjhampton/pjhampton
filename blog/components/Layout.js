@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Header from './Header'
+import Header from '@components/Header'
 
 export default function Layout({ children, pageTitle, ...props }) {
   return (
