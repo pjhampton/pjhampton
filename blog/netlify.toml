@@ -1,4 +1,4 @@
 [build]
   base    = "blog"
-  publish = "blog/out"
+  publish = "out"
   command = "npm run build && npm run export"
