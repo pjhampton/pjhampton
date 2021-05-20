@@ -1,3 +1,4 @@
 [build]
+  base    = "blog"
+  publish = "blog/out"
   command = "npm run build && npm run export"
-  publish = "out"
