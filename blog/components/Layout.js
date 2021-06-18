@@ -10,7 +10,7 @@ export default function Layout({ children, pageTitle, ...props }) {
       </Head>
       <Header />
       <section className="layout">
-        <div className="content">{children}</div>
+        <div className="container content">{children}</div>
       </section>
     </>
   )

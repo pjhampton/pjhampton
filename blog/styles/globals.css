@@ -2,15 +2,26 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: #000C10;
+  color: white;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+nav.navbar {
+  background-color: #000C10;
 }
 
-* {
-  box-sizing: border-box;
+.header {
+  background-color: #000C10;
+}
+
+.btn-outline-primary {
+  color: #FFBFDE;
+  border-color: #FFBFDE;
+  width: 140px;
+}
+
+.btn-outline-primary:hover {
+  color: #000C10;
+  border-color: #FFBFDE;
+  background: #FFBFDE;
 }
