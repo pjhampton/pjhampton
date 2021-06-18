@@ -3,15 +3,15 @@ import Layout from '../components/Layout'
 const About = ({ title, description, ...props }) => {
   return (
     <>
-      <Layout pageTitle={`${title} | About`} description={description}>
-        <h1 className="title">About Me</h1>
+      <Layout pageTitle={`${title} | Projects`} description={description}>
+        <h1 className="title">Projects</h1>
 
         <p className="description">
           {description}
         </p>
 
         <p>
-          I am a very exciting person.
+          These are my projects
         </p>
       </Layout>
     </>
