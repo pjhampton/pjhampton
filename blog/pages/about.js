@@ -12,7 +12,7 @@ const About = ({ title, description, ...props }) => {
             JVM you will find me wrangling Go, C++, Python and writing copious amounts of JavaScript. 
             I read my PhD in Artifical Intelligence at AIARG, Ulster University under the
             supervision of Hui Wang, Zhiwei Lin, and William Blackburn. I'm particulary interested
-            in stream processing and distributed systems in the context of data intensive applications.
+            in search problems, stream processing, and distributed systems in the context of data intensive applications.
           </p>
 
           <p>
