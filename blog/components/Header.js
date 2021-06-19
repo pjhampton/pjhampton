@@ -23,7 +23,7 @@ export default function Header() {
             <li className="nav-item text-center">
               <Link href="/about">
                 <button className="btn btn-outline-primary me-3 text-uppercase" type="button">
-                  About
+                  About Me
                 </button>
               </Link>
             </li>

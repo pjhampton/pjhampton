@@ -4,7 +4,7 @@ const About = ({ title, description, ...props }) => {
   return (
     <>
       <Layout pageTitle={`${title} | About`} description={description}>
-        <h1 className="title">About</h1>
+        <h1 className="title">Hey! I'm Pete 👋</h1>
 
         <div className="content">
           <p>

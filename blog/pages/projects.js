@@ -6,10 +6,6 @@ const About = ({ title, description, ...props }) => {
       <Layout pageTitle={`${title} | Projects`} description={description}>
         <h1 className="title">Projects</h1>
 
-        <p className="description">
-          {description}
-        </p>
-
         <p>
           These are my projects
         </p>
