@@ -1,6 +1,11 @@
 ---
 title: 'This is my second post'
 author: 'Pete Hampton'
+author_link: 'https://github.com/pjhampton'
+date: '2018-04-02'
+excerpt: >
+  First sentence except.
+  Second sentence except.
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Rutrum tellus pellentesque eu tincidunt tortor. Tortor consequat id porta nibh venenatis cras. Aliquam sem et tortor consequat id porta nibh venenatis. Ipsum dolor sit amet consectetur adipiscing elit. Blandit massa enim nec dui nunc mattis. Mi proin sed libero enim sed faucibus turpis in. Nulla facilisi cras fermentum odio eu feugiat pretium. Odio euismod lacinia at quis risus sed. Nibh cras pulvinar mattis nunc sed blandit.
