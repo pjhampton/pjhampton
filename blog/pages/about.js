@@ -4,7 +4,7 @@ const About = ({ title, description, ...props }) => {
   return (
     <>
       <Layout pageTitle={`${title} | About`} description={description}>
-        <h1 className="title">Hey! I'm Pete 👋</h1>
+        <h1 className="title">I'm Pete 👋</h1>
 
         <div className="content">
           <p>
@@ -19,7 +19,7 @@ const About = ({ title, description, ...props }) => {
             When not wrestling with computers, you will find me trying to be a present husband and doggy dad,
             meditating, practicing yoga, reading, and working on my garden. I'm <strong>not</strong> currently available for 
             private work or co-founding new projects but feel free to connect with me. If my work has helped 
-            you or your company please consider buying me a coffee sometime or more importantly - pay it forward.
+            you or your company please consider buying me a coffee sometime or more importantly - <i>pay it forward</i>.
           </p>
         </div>
       </Layout>

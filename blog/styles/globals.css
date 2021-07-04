@@ -16,6 +16,7 @@ nav.navbar {
 
 .header {
   background-color: #000C10;
+  margin-bottom: 40px;
 }
 
 .btn-outline-primary {
@@ -32,6 +33,12 @@ nav.navbar {
 
 .content {
   text-align: justify;
+}
+
+.highlight {
+  color: #FFBFDE;
+  font-style: italic;
+  font-weight: bold;
 }
 
 @media (min-width: 1200px) {

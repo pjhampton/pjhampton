@@ -11,7 +11,7 @@ export default function BlogPost({ siteTitle, frontMatter, markdownBody }) {
         <Layout pageTitle={`${siteTitle} | ${frontMatter.title}`}>
         <article>
           <h1>{frontMatter.title}</h1>
-          <p>{frontMatter.author} • {frontMatter.date}</p>
+          <p>⚡️ <span className="highlight">{frontMatter.author}</span> • {frontMatter.date}</p>
           <div>
             <ReactMarkdown children={markdownBody} />
           </div>

@@ -1,9 +1,13 @@
 import Link from 'next/link'
 
+const headerStyle = {
+  marginBottom: '1em'
+};
+
 export default function Header() {
   return (
     <>
-      <header className="header text-center">
+      <header className="header text-center" style={headerStyle}>
         <nav className="navbar navbar-expand-md navbar-light">
           <ul className="navbar-nav mx-auto">
             <li className="nav-item active text-center">
