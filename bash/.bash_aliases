@@ -9,5 +9,6 @@ alias js=node
 alias pc=protoc
 alias py=python3
 alias ssl=cfssl
+alias tf=terrform
 alias v=vault
 alias y=yarn
