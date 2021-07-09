@@ -17,4 +17,3 @@ CHECKSUM_PAYLOAD="""
 """
 
 echo $CHECKSUM_PAYLOAD | jq
-
