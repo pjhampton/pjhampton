@@ -1,7 +1,6 @@
 [user]
-  name = Peter Hampton
+  name = Pete Hampton
   email = pjhampton@protonmail.com 
-  signingkey = 
 [alias]
   a = add
   aa = add --all

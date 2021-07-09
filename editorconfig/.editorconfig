@@ -11,7 +11,11 @@ trim_trailing_whitespace = true
 [*.txt]
 indent_size = 2
 indent_style = tab
-max_line_length = 80
+max_line_length = 50
+
+[*.go]
+indent_size = 8
+indent_style = tab
 
 [*.{js,json}]
 indent_size = 4
@@ -35,10 +39,6 @@ max_line_length = 40
 [*.{rb,py}]
 indent_size = 2
 indent_style = space
-
-[*.go]
-indent_size = 8
-indent_style = tab
 
 [*.{ml,mli,mll,mly}]
 indent_style = space
