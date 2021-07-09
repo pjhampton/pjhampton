@@ -1,0 +1,13 @@
+alias desk="cd ~/Desktop"
+alias down="cd ~/Downloads"
+alias work="cd ~/workspace"
+
+alias c=curl
+alias g=git
+alias k=kubectl
+alias js=node
+alias pc=protoc
+alias py=python3
+alias ssl=cfssl
+alias v=vault
+alias y=yarn
