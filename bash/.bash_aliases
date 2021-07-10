@@ -2,6 +2,8 @@ alias desk="cd ~/Desktop"
 alias down="cd ~/Downloads"
 alias work="cd ~/workspace"
 
+alias a=aws
+alias awho='aws sts get-caller-identity'
 alias c=curl
 alias g=git
 alias k=kubectl
