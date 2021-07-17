@@ -7,7 +7,7 @@ excerpt: >
   This post details the motivation behind my blog. 
 ---
 
-This is take 3 of starting a blog. I have stories to tell for those who care to read, 
+This is _Take 3_ of starting a blog. I have stories to tell for those who care to read, 
 although finding the right words at the right time is never that easy. On reflection,
 there isn't any particular blogs I regularly follow. What I have come to realize is 
 the best Software Engineering blogs are not written for other people, but in fact, the 
