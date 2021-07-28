@@ -3,6 +3,7 @@ alias down="cd ~/Downloads"
 alias work="cd ~/workspace"
 
 alias a=aws
+alias argo=argocd
 alias awho='aws sts get-caller-identity'
 alias gcurl=grpcurl
 alias c=curl
