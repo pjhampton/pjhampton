@@ -2,6 +2,7 @@ tap 'argoproj/tap'
 
 brew 'argoproj/tap/argocd'
 brew 'awscli'
+brew 'buf'
 brew 'cfssl'
 brew 'fzf'
 brew 'git'
