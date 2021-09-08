@@ -8,17 +8,17 @@ const About = ({ title, description, ...props }) => {
 
         <div className="content">
           <p>
-            I am a computer scientist from Belfast, N. Ireland. Although my heart is in the
-            JVM you will find me wrangling C++, Go and writing copious amounts of JavaScript. 
-            I read my PhD in Artifical Intelligence at AIARG, Ulster University under the
-            supervision of Hui Wang, Zhiwei Lin, and William Blackburn. I'm particulary interested
-            in application security, stream processing, and distributed systems in the context of data intensive applications.
+            I'm a computer scientist from Belfast, Northern Ireland. Although my heart is in
+            Java and the JVM, you will find me wrangling C++, Go and writing copious amounts of 
+            JavaScript. I have a masters in Software Engineering and I read my PhD in Artifical 
+            Intelligence at AIARG, Ulster University. I am interested in cloud architectures, 
+            software security, and distributed systems in the context of data intensive applications.
           </p>
 
           <p>
-            When not wrestling with computers, you will find me trying to be a present husband and doggy dad,
+            When not working with computers you will find me trying to be a present husband and doggy dad,
             meditating, practicing yoga, reading, and working on my garden. If my work has helped 
-            you or your company please consider buying me a coffee sometime or more importantly - <i>pay it forward</i>.
+            you or your business please consider buying me a coffee sometime or more importantly - <i>pay it forward</i>.
           </p>
         </div>
       </Layout>
