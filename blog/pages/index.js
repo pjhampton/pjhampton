@@ -3,6 +3,7 @@ import PostList from '@components/PostList'
 import matter from 'gray-matter'
 
 const Index = ({ title, description, posts, ...props }) => {
+
   return (
     <Layout pageTitle={title}>
       <main>
@@ -18,7 +19,7 @@ export async function getStaticProps() {
   const configData = await import(`../siteconfig.json`)
 
   const posts = ((context) => {
-    const keys = context.keys()
+    const keys = context.keys().filter(post => post.startsWith("posts/"))
     const values = keys.map(context)
 
     const data = keys.map((key, index) => {
