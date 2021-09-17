@@ -11,8 +11,8 @@ const About = ({ title, description, ...props }) => {
             I'm a computer scientist from Belfast, Northern Ireland. Although my heart is in
             Java and the JVM, you will find me wrangling C++, Go and writing copious amounts of 
             JavaScript. I have a masters in Software Engineering and I read my PhD in Artifical 
-            Intelligence at AIARG, Ulster University. I am interested in cloud architectures, 
-            software security, and distributed systems in the context of data intensive applications.
+            Intelligence at Ulster University. I am interested in decentralization, public cloud, 
+            and distributed systems in the context of data intensive applications.
           </p>
 
           <p>
