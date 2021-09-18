@@ -35,6 +35,8 @@ export async function getStaticProps() {
     return data
   })(require.context('../posts', true, /\.md$/))
 
+  // sort descending
+  posts.sort((a, b) => Date.parse(b.frontMatter.date) - Date.parse(a.frontMatter.date))
   return {
     props: {
       title: configData.default.title,

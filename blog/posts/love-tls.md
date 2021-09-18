@@ -1,13 +1,13 @@
 ---
-title: 'TLS: learning to love'
+title: 'TLS: Learning to love'
 author: 'Pete Hampton'
 author_link: 'https://github.com/pjhampton'
-date: '2021-08-18'
+date: '2021-09-18'
 excerpt: >
   TLS 
 ---
 
-No matter where you work in the stack, understanding traffic encryption is important. It's a topic that took me years to gain an in depth understanding of. The below are a few of my favourite resources that I hope help you.
+No matter where you work in the stack, understanding traffic encryption is important. It's a topic that took me years to gain an in-depth understanding of. The below are a few of my favourite resources that I recommend reading.
 
   - [How HTTPS Works](https://howhttps.works/why-do-we-need-https/)
   - [HTTPS is Easy](https://httpsiseasy.com/)
