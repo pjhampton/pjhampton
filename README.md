@@ -11,7 +11,7 @@
     <tr>
       <td><img src="https://s2.coinmarketcap.com/static/img/coins/200x200/2011.png" height="30px" width="30px" /></td>
       <td><b>TEZ</b></td>
-      <td>tz1TswsVR6fPQwqur9FHgVZN5ky7CKZGxV6d</td>
+      <td>pjhampton.tez</td>
     </tr>
   </tbody>
 </table>
