@@ -13,10 +13,5 @@
       <td><b>TEZ</b></td>
       <td>tz1TswsVR6fPQwqur9FHgVZN5ky7CKZGxV6d</td>
     </tr>
-    <tr>
-      <td><img src="https://solana.com/branding/new/exchange/exchange-black.png" height="30px" width="30px" /></td>
-      <td><b>SOL</b></td>
-      <td>A6LBiwe4ZJpUBxEQnLzd2bhvPHy4GaKrcnX4paDRFLuX</td>
-    </tr>
   </tbody>
 </table>
