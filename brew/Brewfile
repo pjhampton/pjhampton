@@ -26,4 +26,5 @@ brew 'zsh'
 
 cask 'docker'
 cask 'hyper'
+cask 'keybase'
 cask 'visual-studio-code'
