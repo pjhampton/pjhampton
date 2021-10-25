@@ -5,7 +5,6 @@ alias work="cd ~/workspace"
 alias a=aws
 alias argo=argocd
 alias awho='aws sts get-caller-identity'
-alias c=curl
 alias dk=docker
 alias dkc=docker-compose
 alias g=git
@@ -18,3 +17,6 @@ alias ssl=cfssl
 alias tf=terrform
 alias v=vault
 alias y=yarn
+
+alias c=curl
+alias uuid=uuidgen
