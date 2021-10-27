@@ -1,7 +1,7 @@
 tap 'argoproj/tap'
 tap 'warrensbox/tap'
 
-brew 'argoproj/tap/argocd'
+brew 'argocd'
 brew 'awscli'
 brew 'buf'
 brew 'cfssl'
