@@ -1,5 +1,5 @@
-import Layout from '@components/Layout'
-import PostList from '@components/PostList'
+import Layout from '../components/Layout'
+import PostList from '../components/PostList'
 import matter from 'gray-matter'
 
 interface IndexProps {

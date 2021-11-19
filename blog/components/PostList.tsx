@@ -1,7 +1,12 @@
 import Link from 'next/link'
-
+import { FrontMatter } from '../components/types'
 interface PostListProps {
-  posts: any[];
+  posts: Post[];
+}
+
+interface Post {
+  slug: string;
+  frontMatter: FrontMatter;
 }
 
 export default function PostList({ posts }: PostListProps) {

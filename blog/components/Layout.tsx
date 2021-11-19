@@ -1,9 +1,10 @@
+import { ReactChildren, ReactChild } from 'react'
 import Head from 'next/head'
-import Header from '@components/Header'
+import Header from './Header'
 
 interface LayoutProps {
-  children: any;
   pageTitle: string;
+  children: ReactChild | ReactChildren;
 }
 
 export default function Layout({ children, pageTitle } : LayoutProps) {
@@ -15,7 +16,9 @@ export default function Layout({ children, pageTitle } : LayoutProps) {
       </Head>
       <Header />
       <section className="layout">
-        <div className="container content">{children}</div>
+        <div className="container content">
+          {children}
+        </div>
       </section>
     </>
   )
