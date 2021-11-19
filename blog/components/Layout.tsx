@@ -1,7 +1,12 @@
 import Head from 'next/head'
 import Header from '@components/Header'
 
-export default function Layout({ children, pageTitle, ...props }) {
+interface LayoutProps {
+  children: any;
+  pageTitle: string;
+}
+
+export default function Layout({ children, pageTitle } : LayoutProps) {
   return (
     <>
       <Head>

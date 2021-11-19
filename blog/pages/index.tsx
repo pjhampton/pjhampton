@@ -2,7 +2,12 @@ import Layout from '@components/Layout'
 import PostList from '@components/PostList'
 import matter from 'gray-matter'
 
-const Index = ({ title, description, posts, ...props }) => {
+interface IndexProps {
+  title: string;
+  posts: string;
+}
+
+export default function Index({ title, posts } : IndexProps) {
 
   return (
     <Layout pageTitle={title}>
@@ -12,8 +17,6 @@ const Index = ({ title, description, posts, ...props }) => {
     </Layout>
   )
 }
-
-export default Index
 
 export async function getStaticProps() {
   const configData = await import(`../siteconfig.json`)

@@ -1,6 +1,11 @@
 import Layout from '../components/Layout'
 
-const About = ({ title, description, ...props }) => {
+export interface AboutProps {
+  title: string;
+  description: string;
+}
+
+export default function About({ title, description } : AboutProps) {
   return (
     <>
       <Layout pageTitle={`${title} | About`} description={description}>
@@ -25,8 +30,6 @@ const About = ({ title, description, ...props }) => {
     </>
   )
 }
-
-export default About
 
 export async function getStaticProps() {
   const configData = await import(`../siteconfig.json`)

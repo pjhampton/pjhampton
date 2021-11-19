@@ -1,10 +1,14 @@
-import Link from 'next/link'
 import matter from 'gray-matter'
 import ReactMarkdown from 'react-markdown'
-
 import Layout from '@components/Layout'
 
-export default function BlogPost({ siteTitle, frontMatter, markdownBody }) {
+interface BlogPostProps {
+  siteTitle: string;
+  frontMatter: string;
+  markdownBody: string;
+}
+
+export default function BlogPost({ siteTitle, frontMatter, markdownBody } : BlogPostProps) {
     if (!frontMatter) return <></>
 
     return (
