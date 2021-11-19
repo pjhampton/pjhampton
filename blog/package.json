@@ -18,6 +18,8 @@
     "react-markdown": "^6.0.2"
   },
   "devDependencies": {
-    "browserslist": ">=4.16.5"
+    "@types/react": "^17.0.35",
+    "browserslist": ">=4.16.5",
+    "typescript": "^4.5.2"
   }
 }
