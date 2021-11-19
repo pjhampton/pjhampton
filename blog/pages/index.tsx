@@ -23,7 +23,7 @@ export async function getStaticProps() {
   const configData = await import(`../siteconfig.json`)
 
   const posts = ((context) => {
-    const keys = context.keys().filter(post => post.startsWith("posts/"))
+    const keys = context.keys()
     const values = keys.map(context)
 
     const data = keys.map((key, index) => {
