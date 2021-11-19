@@ -1,12 +1,8 @@
 import Link from 'next/link'
-import { FrontMatter } from '../components/types'
+import { Post } from '../components/types'
+
 interface PostListProps {
   posts: Post[];
-}
-
-interface Post {
-  slug: string;
-  frontMatter: FrontMatter;
 }
 
 export default function PostList({ posts }: PostListProps) {
@@ -21,7 +17,7 @@ export default function PostList({ posts }: PostListProps) {
               <li key={post.slug}>
                   {post.frontMatter.date} -{' '} 
                   <Link href={{ pathname: `/post/${post.slug}` }}>
-                      <a>{post.frontMatter.title}</a>
+                    <a>{post.frontMatter.title}</a>
                   </Link>
               </li>
             )

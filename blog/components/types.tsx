@@ -4,3 +4,8 @@ export interface FrontMatter {
   author: string;
   date: string;
 }
+
+export interface Post {
+  slug: string;
+  frontMatter: FrontMatter;
+}

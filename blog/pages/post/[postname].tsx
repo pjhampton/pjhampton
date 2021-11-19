@@ -1,6 +1,7 @@
 import matter from 'gray-matter'
 import ReactMarkdown from 'react-markdown'
 import Layout from '../../components/Layout'
+import { FrontMatter } from '../../components/types'
 
 interface BlogPostProps {
   siteTitle: string;

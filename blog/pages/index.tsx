@@ -1,10 +1,11 @@
+import matter from 'gray-matter'
 import Layout from '../components/Layout'
 import PostList from '../components/PostList'
-import matter from 'gray-matter'
+import { Post } from '../components/types'
 
 interface IndexProps {
   title: string;
-  posts: string;
+  posts: Post[];
 }
 
 export default function Index({ title, posts } : IndexProps) {
