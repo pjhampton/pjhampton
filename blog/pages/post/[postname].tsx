@@ -2,6 +2,7 @@ import matter from 'gray-matter'
 import ReactMarkdown from 'react-markdown'
 import Layout from '../../components/Layout'
 import { FrontMatter } from '../../components/types'
+import components from '../../components/Components'
 
 interface BlogPostProps {
   siteTitle: string;
@@ -10,35 +11,37 @@ interface BlogPostProps {
 }
 
 export default function BlogPost({ siteTitle, frontMatter, markdownBody } : BlogPostProps) {
-    if (!frontMatter) return <></>
+  if (!frontMatter) return <></>
 
-    return (
-        <Layout pageTitle={`${siteTitle} | ${frontMatter.title}`}>
-        <article>
-          <h1>{frontMatter.title}</h1>
-          <p>⚡️ <span className="highlight">{frontMatter.author}</span> • {frontMatter.date}</p>
-          <div>
-            <ReactMarkdown children={markdownBody} />
-          </div>
-        </article>
-      </Layout>
-    )
+  return (
+      <Layout pageTitle={`${siteTitle} | ${frontMatter.title}`}>
+      <article>
+        <h1>{frontMatter.title}</h1>
+        <p>⚡️ <span className="highlight">{frontMatter.author}</span> • {frontMatter.date}</p>
+        <div>
+          <ReactMarkdown 
+            children={markdownBody}
+            components={components} />
+        </div>
+      </article>
+    </Layout>
+  )
 }
 
 export async function getStaticProps({ ...ctx }) {
-    const { postname } = ctx.params
+  const { postname } = ctx.params
 
-    const content = await import(`../../posts/${postname}.md`)
-    const config = await import(`../../siteconfig.json`)
-    const data = matter(content.default)
+  const content = await import(`../../posts/${postname}.md`)
+  const config = await import(`../../siteconfig.json`)
+  const data = matter(content.default)
 
-    return {
-        props: {
-            siteTitle: config.title,
-            frontMatter: data.data,
-            markdownBody: data.content,
-        },
-    }
+  return {
+    props: {
+      siteTitle: config.title,
+      frontMatter: data.data,
+      markdownBody: data.content,
+    },
+  }
 }
 
 export async function getStaticPaths() {
