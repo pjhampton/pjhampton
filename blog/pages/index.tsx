@@ -1,8 +1,14 @@
-import Layout from '@components/Layout'
-import PostList from '@components/PostList'
 import matter from 'gray-matter'
+import Layout from '../components/Layout'
+import PostList from '../components/PostList'
+import { Post } from '../components/types'
 
-const Index = ({ title, description, posts, ...props }) => {
+interface IndexProps {
+  title: string;
+  posts: Post[];
+}
+
+export default function Index({ title, posts } : IndexProps) {
 
   return (
     <Layout pageTitle={title}>
@@ -13,19 +19,21 @@ const Index = ({ title, description, posts, ...props }) => {
   )
 }
 
-export default Index
+interface RawPost {
+  default: string;
+}
 
 export async function getStaticProps() {
   const configData = await import(`../siteconfig.json`)
 
-  const posts = ((context) => {
-    const keys = context.keys().filter(post => post.startsWith("posts/"))
-    const values = keys.map(context)
+  const posts = ((context: __WebpackModuleApi.RequireContext) => {
+    const keys = context.keys();
+    const values: RawPost[] = keys.map(context) as RawPost[];
 
     const data = keys.map((key, index) => {
       let slug = key.replace(/^.*[\\\/]/, '').slice(0, -3)
       const value = values[index]
-      const document = matter(value.default)
+      const document = matter(value.default);
       return {
         frontMatter: document.data,
         markdownBody: document.content,

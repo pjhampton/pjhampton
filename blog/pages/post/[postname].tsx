@@ -1,10 +1,15 @@
-import Link from 'next/link'
 import matter from 'gray-matter'
 import ReactMarkdown from 'react-markdown'
+import Layout from '../../components/Layout'
+import { FrontMatter } from '../../components/types'
 
-import Layout from '@components/Layout'
+interface BlogPostProps {
+  siteTitle: string;
+  frontMatter: FrontMatter;
+  markdownBody: string;
+}
 
-export default function BlogPost({ siteTitle, frontMatter, markdownBody }) {
+export default function BlogPost({ siteTitle, frontMatter, markdownBody } : BlogPostProps) {
     if (!frontMatter) return <></>
 
     return (
