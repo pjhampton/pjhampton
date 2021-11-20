@@ -8,6 +8,10 @@ interface IndexProps {
   posts: Post[];
 }
 
+interface RawPost {
+  default: string;
+}
+
 export default function Index({ title, posts } : IndexProps) {
 
   return (
@@ -17,10 +21,6 @@ export default function Index({ title, posts } : IndexProps) {
       </main>
     </Layout>
   )
-}
-
-interface RawPost {
-  default: string;
 }
 
 export async function getStaticProps() {
