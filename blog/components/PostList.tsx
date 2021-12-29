@@ -10,7 +10,7 @@ export default function PostList({ posts }: PostListProps) {
   return (
     <div>
       {!posts && <div>No Posts</div>}
-      <ul style={{ listStyle: 'none' }}>
+      <ul style={{ listStyle: 'none', padding: 0 }}>
         {posts &&
           posts.map((post) => {
             return (

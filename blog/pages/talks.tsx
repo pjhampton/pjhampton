@@ -11,7 +11,7 @@ export default function Talks({ title } : TalksProps) {
       <>
         <h1>Talks</h1>
 
-        <ul style={{ listStyle: 'none' }}>
+        <ul style={{ listStyle: 'none', padding: 0 }}>
           <li>2021-Nov-06 (<strong>ElasticON 21</strong>) - Data Streams & Pipelines: <i>Observing with the Elastic Stack</i>. <a href="/talks/pjhampton-elasticon-oct2021.pdf" target="_blank">[Slides]</a></li>
         </ul>
       </>
