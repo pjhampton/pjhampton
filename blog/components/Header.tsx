@@ -1,12 +1,18 @@
 import Link from 'next/link'
+import Image from 'next/image'
+
+import avatar from '../public/pjhampton-avatar.png'
 
 const headerStyle = {
   marginBottom: '1em'
-};
+}
 
 export default function Header() {
   return (
     <header className="header text-center" style={headerStyle}>
+      <div className="avatarContainer">
+        <Image src={avatar} alt="PJ Hampton" className="avatar" />
+      </div>
       <nav className="navbar navbar-expand-md navbar-light">
         <ul className="navbar-nav mx-auto">
           <li className="nav-item active text-center">
