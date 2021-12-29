@@ -10,10 +10,14 @@ export default function Header() {
   return (
     <header className="header text-center" style={headerStyle}>
       <div className="avatarContainer">
-        <SiteImage 
-          alt="PJ Hampton"
-          className="avatar"
-          src={avatar} />
+        <Link href="/">
+          <a>
+            <SiteImage 
+              alt="PJ Hampton"
+              className="avatar"
+              src={avatar} />
+          </a>
+        </Link>
       </div>
       <nav className="navbar navbar-expand-md navbar-light">
         <ul className="navbar-nav mx-auto">
