@@ -1,7 +1,20 @@
 import Link from 'next/link'
-import Image from 'next/image'
+import Image, { ImageLoader } from 'next/image'
 
 import avatar from '../public/pjhampton-avatar.png'
+
+const normalizeSrc = (src: string) => {
+  return src[0] === "/" ? src.slice(1) : src;
+};
+
+const cloudflareLoader: ImageLoader = ({ src, width, quality }) => {
+  const params = [`width=${width}`];
+  if (quality) {
+    params.push(`quality=${quality}`);
+  }
+  const paramsString = params.join(",");
+  return `/cdn-cgi/image/${paramsString}/${normalizeSrc(src)}`;
+}
 
 const headerStyle = {
   marginBottom: '1em'
@@ -11,7 +24,11 @@ export default function Header() {
   return (
     <header className="header text-center" style={headerStyle}>
       <div className="avatarContainer">
-        <Image src={avatar} alt="PJ Hampton" className="avatar" />
+        <Image 
+          alt="PJ Hampton"
+          className="avatar"
+          loader={cloudflareLoader}
+          src={avatar} />
       </div>
       <nav className="navbar navbar-expand-md navbar-light">
         <ul className="navbar-nav mx-auto">
