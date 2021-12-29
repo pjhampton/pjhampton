@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { Post } from '../components/types'
+import { DateFormatter } from '../utils/dates'
 
 interface PostListProps {
   posts: Post[];
@@ -15,7 +16,7 @@ export default function PostList({ posts }: PostListProps) {
           posts.map((post) => {
             return (
               <li key={post.slug}>
-                  {post.frontMatter.date} -{' '} 
+                  {DateFormatter(post.frontMatter.date)} -{' '} 
                   <Link href={{ pathname: `/post/${post.slug}` }}>
                     <a>{post.frontMatter.title}</a>
                   </Link>
