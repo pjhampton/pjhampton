@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import SiteImage from '../components/SiteImage'
-
 import avatar from '../public/pjhampton-avatar.png'
 
 const headerStyle = {
