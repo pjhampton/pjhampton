@@ -1,4 +1,4 @@
-import Image, {ImageLoader} from "next/image"
+import Image, { ImageLoader } from "next/image"
 
 const cloudflareImageLoader: ImageLoader = ({ src, width, quality }) => {
   if (!quality) {
