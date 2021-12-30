@@ -1,13 +1,13 @@
 import Image, { ImageLoader } from "next/image"
 import getConfig from "next/config";
 
-const { cloudflareConfig } = getConfig()
+const { serverRuntimeConfig } = getConfig()
 
 const cloudflareImageLoader: ImageLoader = ({ src, width, quality }) => {
   if (!quality) {
     quality = 75
   }
-  return `${cloudflareConfig.imageWorkerURL}?width=${width}&quality=${quality}&image=https://pjhampton.com/${src}`;
+  return `${serverRuntimeConfig.cloudflareWorkerURL}?width=${width}&quality=${quality}&image=https://pjhampton.com/${src}`;
 }
 
 const SiteImage = (props: any) => {
