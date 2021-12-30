@@ -1,5 +1,3 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Permanent+Marker"); */
-
 html,
 body {
   padding: 0;
@@ -14,7 +12,7 @@ h1 {
 
 h1.special {
   font-size: 2.4em;
-  /* font-family: 'Permanent Marker'; */
+  font-family: 'Permanent Marker';
 }
 
 h1.heading {

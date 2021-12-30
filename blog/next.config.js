@@ -12,5 +12,5 @@ module.exports = {
   },
   serverRuntimeConfig: {
     cloudflareWorkerURL: 'https://blog-image-renderer.pdvil.workers.dev'
-  }
+  },
 }
