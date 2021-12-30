@@ -1,7 +1,4 @@
 import Image, { ImageLoader } from "next/image"
-import getConfig from "next/config";
-
-const { serverRuntimeConfig } = getConfig()
 
 const cloudflareImageLoader: ImageLoader = ({ src, width, quality }) => {
   if (!quality) {
