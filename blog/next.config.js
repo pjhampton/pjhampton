@@ -10,4 +10,7 @@ module.exports = {
     loader: 'imgix',
     path: ''
   },
+  cloudflareConfig: {
+    imageWorkerURL: 'https://blog-image-renderer.pdvil.workers.dev'
+  }
 }
