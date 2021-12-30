@@ -7,7 +7,7 @@ const cloudflareImageLoader: ImageLoader = ({ src, width, quality }) => {
   if (!quality) {
     quality = 75
   }
-  return `${serverRuntimeConfig.cloudflareWorkerURL}?width=${width}&quality=${quality}&image=https://pjhampton.com/${src}`;
+  return `https://blog-image-renderer.pdvil.workers.dev?width=${width}&quality=${quality}&image=https://pjhampton.com/${src}`;
 }
 
 const SiteImage = (props: any) => {
