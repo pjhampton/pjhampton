@@ -8,7 +8,7 @@ export default function About({ title } : AboutProps) {
   return (
     <Layout pageTitle={`${title} | About`}>
       <>
-        <h1 className="title">I'm Pete 👋</h1>
+        <h1 className="special">I'm Pete 👋</h1>
 
         <div className="content">
           <p>
