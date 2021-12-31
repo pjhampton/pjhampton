@@ -1,14 +1,12 @@
 import Link from 'next/link'
+import NavLink from './NavLink'
 import SiteImage from '../components/SiteImage'
 import avatar from '../public/pjhampton-avatar.png'
 
-const headerStyle = {
-  marginBottom: '1em'
-}
-
 export default function Header() {
+
   return (
-    <header className="header text-center" style={headerStyle}>
+    <header className="header text-center" style={{marginBottom: '1em'}}>
       <div className="avatarContainer">
         <Link href="/">
           <a>
@@ -22,25 +20,13 @@ export default function Header() {
       <nav className="navbar navbar-expand-md navbar-light">
         <ul className="navbar-nav mx-auto">
           <li className="nav-item active text-center">
-            <Link href="/">
-              <button className="btn btn-outline-primary me-3 text-uppercase" type="button">
-                Home
-              </button>
-            </Link>
+            <NavLink text="Home" href="/" />
           </li>
           <li className="nav-item text-center">
-            <Link href="/talks">
-              <button className="btn btn-outline-primary me-3 text-uppercase" type="button">
-                Talks
-              </button>
-            </Link>
+            <NavLink text="Talks" href="/talks" />
           </li>
           <li className="nav-item text-center">
-            <Link href="/about">
-              <button className="btn btn-outline-primary me-3 text-uppercase" type="button">
-                About Me
-              </button>
-            </Link>
+            <NavLink text="About" href="/about" />
           </li>
         </ul>
       </nav>

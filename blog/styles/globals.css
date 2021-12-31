@@ -56,6 +56,18 @@ nav.navbar {
   margin-bottom: 40px;
 }
 
+.btn-primary {
+  color: #000C10;
+  border-color: #FFBFDE;
+  background: #FFBFDE;
+  width: 140px;
+}
+
+.btn-primary:hover {
+  color: #000C10;
+  background: #FFBFDE;
+}
+
 .btn-outline-primary {
   color: #FFBFDE;
   border-color: #FFBFDE;
