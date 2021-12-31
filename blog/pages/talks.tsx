@@ -12,7 +12,7 @@ export default function Talks({ title } : TalksProps) {
         <h1 className="special heading font-future">2021</h1>
 
         <ul style={{ listStyle: 'none', padding: 0 }}>
-          <li>2021-Nov-06 (<strong className="highlight">ElasticON 21</strong>) - <span className="silver">Data Streams & Pipelines: <i>Observing with the Elastic Stack</i></span>. <a href="/talks/pjhampton-elasticon-oct2021.pdf" target="_blank">[Slides]</a></li>
+          <li>6 Nov 2021 (<strong className="highlight">ElasticON 21</strong>) - <span className="silver">Data Streams & Pipelines: <i>Observing with the Elastic Stack</i></span>. <a href="/talks/pjhampton-elasticon-oct2021.pdf" target="_blank">[Slides]</a></li>
         </ul>
       </>
     </Layout>
