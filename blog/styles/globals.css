@@ -28,6 +28,10 @@ a {
   text-decoration: none;
 }
 
+.silver {
+  color: #c0c0c0;
+}
+
 a:hover {
   color: #c0c0c0;
   text-decoration: underline;
