@@ -17,7 +17,7 @@ export default function PostList({ posts }: PostListProps) {
           const articleDetail = articles.map((post) => {
             return (
               <li key={post.slug} id={post.slug} style={{paddingBottom: '.15em'}}>
-                {DateFormatter(post.frontMatter.date)} -{' '} 
+                <span style={{width: "100px", display: "inline-block"}}>{DateFormatter(post.frontMatter.date)}</span> -{' '} 
                 <Link href={{ pathname: `/post/${post.slug}` }}>
                   <a>{post.frontMatter.title}</a>
                 </Link>
