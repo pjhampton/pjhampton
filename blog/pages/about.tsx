@@ -16,12 +16,13 @@ export default function About({ title } : AboutProps) {
             will find me wrangling C++, Go and writing copious amounts of TypeScript. I have a masters 
             degree in Software Engineering and I read my PhD in Artifical Intelligence at Ulster University. 
             Although I have many professional interests; I specialise in  software architecture, functional 
-            programming and distributed systems in the context of data intensive applications.
+            programming and distributed systems in the context of data intensive applications. This site is
+            a collection of essays on these topics and more.
           </p>
 
           <p>
             When not wrangling computers you will find me trying to be a present husband and doggy dad,
-            meditating, practicing yoga, and working on my garden. If my work has helped you or 
+            meditating, practicing yoga, and working on my garden. If my work or content has helped you or 
             your business please consider buying me a coffee sometime or more importantly - <i>pay it forward</i>.
           </p>
         </div>
