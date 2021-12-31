@@ -6,6 +6,11 @@ export interface FrontMatter {
 }
 
 export interface Post {
-  slug: string;
   frontMatter: FrontMatter;
+  markdownBody: string;
+  slug: string;
+}
+
+export interface PostGroup {
+  [year: string]: Post[]
 }

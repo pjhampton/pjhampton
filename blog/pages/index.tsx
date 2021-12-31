@@ -1,11 +1,11 @@
 import matter from 'gray-matter'
 import Layout from '../components/Layout'
 import PostList from '../components/PostList'
-import { Post } from '../components/types'
+import { Post, PostGroup } from '../components/types'
 
 interface IndexProps {
   title: string;
-  posts: Post[];
+  posts: PostGroup;
 }
 
 interface RawPost {
@@ -38,18 +38,24 @@ export async function getStaticProps() {
         frontMatter: document.data,
         markdownBody: document.content,
         slug,
-      }
+      } as Post
     })
     return data
   })(require.context('../posts', true, /\.md$/))
 
   // sort descending
   posts.sort((a, b) => Date.parse(b.frontMatter.date) - Date.parse(a.frontMatter.date))
+  const groupedPosts = posts.reduce((result, post) => {
+    const year = new Date(post.frontMatter.date).getFullYear().toString();
+    result[year] = result[year] || [];
+    result[year].push(post);
+    return result;
+  }, {} as PostGroup)
+
   return {
     props: {
       title: configData.default.title,
-      description: configData.default.description,
-      posts,
+      posts: groupedPosts,
     },
   }
 }
