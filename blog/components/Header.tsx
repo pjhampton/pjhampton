@@ -13,6 +13,8 @@ export default function Header() {
             <SiteImage 
               alt="PJ Hampton"
               className="avatar"
+              height={150}
+              width={150}
               src={avatar} />
           </a>
         </Link>

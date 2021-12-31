@@ -17,7 +17,7 @@ export default function PostList({ posts }: PostListProps) {
           const articleDetail = articles.map((post) => {
             return (
               <li key={post.slug} id={post.slug} style={{paddingBottom: '.15em'}}>
-                <span style={{width: "100px", display: "inline-block"}}>{DateFormatter(post.frontMatter.date)}</span> -{' '} 
+                <span style={{width: "97px", display: "inline-block"}}>{DateFormatter(post.frontMatter.date)}</span> ~{' '} 
                 <Link href={{ pathname: `/post/${post.slug}` }}>
                   <a>{post.frontMatter.title}</a>
                 </Link>
@@ -25,7 +25,7 @@ export default function PostList({ posts }: PostListProps) {
             )
           })
           return (
-            <div key={key}>
+            <div key={key} id={key}>
               <h1 className="special heading">{key}</h1>
               <ul style={{ listStyle: 'none', padding: 0 }}>
                 {articleDetail}
