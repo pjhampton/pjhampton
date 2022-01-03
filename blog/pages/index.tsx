@@ -45,6 +45,7 @@ export async function getStaticProps() {
 
   // sort descending
   posts.sort((a, b) => Date.parse(b.frontMatter.date) - Date.parse(a.frontMatter.date))
+  // group by year
   const groupedPosts = posts.reduce((result, post) => {
     const year = new Date(post.frontMatter.date).getFullYear().toString();
     result[year] = result[year] || [];

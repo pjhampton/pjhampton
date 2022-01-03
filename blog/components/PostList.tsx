@@ -1,12 +1,14 @@
 import Link from 'next/link'
 import { PostGroup } from '../components/types'
-import { DateFormatter } from '../utils/dates'
 
 interface PostListProps {
   posts: PostGroup;
 }
 
 export default function PostList({ posts }: PostListProps) {
+
+  const formatDate = (date: string) =>
+    date.split("-").reverse().join(" ")
 
   return (
     <>
@@ -17,7 +19,7 @@ export default function PostList({ posts }: PostListProps) {
           const articleDetail = articles.map((post) => {
             return (
               <li key={post.slug} id={post.slug} style={{paddingBottom: '.15em'}}>
-                <span style={{width: "97px", display: "inline-block"}}>{DateFormatter(post.frontMatter.date)}</span> ~{' '} 
+                <span style={{width: "97px", display: "inline-block"}}>{formatDate(post.frontMatter.date)}</span> ~{' '} 
                 <Link href={{ pathname: `/post/${post.slug}` }}>
                   <a>{post.frontMatter.title}</a>
                 </Link>
