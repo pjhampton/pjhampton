@@ -2,7 +2,7 @@ import matter from 'gray-matter'
 import ReactMarkdown from 'react-markdown'
 import Layout from '../../components/Layout'
 import { FrontMatter } from '../../components/types'
-import components from '../../components/Components'
+import CodeContainer from '../../components/CodeContainer'
 
 interface BlogPostProps {
   siteTitle: string;
@@ -21,7 +21,7 @@ export default function BlogPost({ siteTitle, frontMatter, markdownBody } : Blog
         <div>
           <ReactMarkdown 
             children={markdownBody}
-            components={components} />
+            components={CodeContainer} />
         </div>
       </article>
     </Layout>
