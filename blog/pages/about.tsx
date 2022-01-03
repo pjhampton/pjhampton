@@ -15,9 +15,9 @@ export default function About({ title } : AboutProps) {
             I'm a computer scientist from Belfast, N. Ireland. Although my heart is in the JVM, you 
             will find me wrangling C++, Go and writing copious amounts of TypeScript. I have a masters 
             degree in Software Engineering and I read my PhD in Artifical Intelligence at Ulster University. 
-            Although I have many professional interests; I specialise in  software architecture, functional 
-            programming and distributed systems in the context of data intensive applications. This site is
-            a collection of essays on these topics and more.
+            Although I have many professional interests; I specialise in  software architecture, multi-paradigm 
+            programming and distributed systems in the context of data intensive applications. This site is a 
+            collection of essays on these topics and more.
           </p>
 
           <p>
