@@ -11,17 +11,15 @@ const NavLink = ({text, href} : NavLinkProps) => {
   const baseNavStyles = ["btn", "me-3", "text-uppercase"]
 
   return (
-    <>
-      <Link href={href}>
-        <button className={
-          router.pathname == `${href}` ? 
-            ["btn-primary", ...baseNavStyles].join(" ").toString() 
-            : ["btn-outline-primary", ...baseNavStyles].join(" ").toString()
-          } type="button">
-          {text}
-        </button>
-      </Link>
-    </>
+    <Link href={href}>
+      <button className={
+        router.pathname == `${href}` ? 
+          ["btn-primary", ...baseNavStyles].join(" ").toString() 
+          : ["btn-outline-primary", ...baseNavStyles].join(" ").toString()
+        } type="button">
+        {text}
+      </button>
+    </Link>
   )
 }
 
