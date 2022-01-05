@@ -15,7 +15,6 @@ export default function Header() {
               className="avatar"
               height={150}
               width={150}
-              placeholder="blur"
               src={avatar} />
           </a>
         </Link>
