@@ -40,11 +40,18 @@ a:hover {
 div.avatarContainer {
   width: 150px;
   height: 150px;
-  margin: 10px auto 0 auto;
+  margin: 15px auto 5px auto;
+  overflow: hidden;
 }
 
 img.avatar {
   border-radius: 50%;
+  transition: all 0.5s ease 0s;
+}
+
+img.avatar:hover {
+  webkit-filter: hue-rotate(90deg); /* Chrome, Safari, Opera */
+  filter: hue-rotate(90deg);
 }
 
 nav.navbar {
