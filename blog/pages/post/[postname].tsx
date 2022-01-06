@@ -19,9 +19,7 @@ export default function BlogPost({ siteTitle, frontMatter, markdownBody } : Blog
         <h1>{frontMatter.title}</h1>
         <p>⚡️ <span className="highlight">{frontMatter.author}</span> • {frontMatter.date}</p>
         <div>
-          <ReactMarkdown 
-            children={markdownBody}
-            components={CodeContainer} />
+          <ReactMarkdown children={markdownBody} components={CodeContainer} />
         </div>
       </article>
     </Layout>

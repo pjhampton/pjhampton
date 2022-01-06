@@ -11,7 +11,7 @@ export default function Header() {
         <Link href="/">
           <a>
             <SiteImage 
-              alt="PJ Hampton"
+              alt="PJ Hampton Avatar"
               className="avatar"
               src={avatar} />
           </a>
