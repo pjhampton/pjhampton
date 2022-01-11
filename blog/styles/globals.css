@@ -65,26 +65,26 @@ nav.navbar {
 
 .btn-primary {
   color: #000C10;
-  border-color: #FFBFDE;
-  background: #FFBFDE;
+  border-color: #a0a8fd;
+  background: #a0a8fd;
   width: 140px;
 }
 
 .btn-primary:hover {
   color: #000C10;
-  background: #FFBFDE;
+  background: #a0a8fd;
 }
 
 .btn-outline-primary {
-  color: #FFBFDE;
-  border-color: #FFBFDE;
+  color: #a0a8fd;
+  border-color: #a0a8fd;
   width: 140px;
 }
 
 .btn-outline-primary:hover {
   color: #000C10;
-  border-color: #FFBFDE;
-  background: #FFBFDE;
+  border-color: #a0a8fd;
+  background: #a0a8fd;
 }
 
 .content {
