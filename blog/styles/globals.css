@@ -15,7 +15,7 @@ h1.special {
   font-family: 'Permanent Marker';
 }
 
-h1.heading {
+h1.heading, h2, h3 {
   color: #fecc9d;
 }
 
