@@ -2,11 +2,14 @@ import Link from 'next/link'
 import NavLink from './NavLink'
 import SiteImage from '../components/SiteImage'
 import avatar from '../public/pjhampton-avatar.png'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGithub, faKeybase, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 
 export default function Header() {
 
   return (
     <header className="header text-center" style={{marginBottom: '1em'}}>
+      
       <div className="avatarContainer">
         <Link href="/">
           <a>
@@ -16,6 +19,31 @@ export default function Header() {
               src={avatar} />
           </a>
         </Link>
+      </div>
+      <div>
+        <ul className="social">
+          <li>
+            <Link href={"https://github.com/pjhampton"}>
+              <a target="_blank" rel="noreferrer">
+                <FontAwesomeIcon icon={faGithub} style={{width: 30}} />
+              </a>
+            </Link>
+          </li>
+          <li>
+            <Link href={"https://keybase.io/pjhampton"}>
+              <a target="_blank" rel="noreferrer">
+                <FontAwesomeIcon icon={faKeybase} style={{width: 30}} />
+              </a>
+            </Link>
+          </li>
+          <li>
+            <Link href={"https://www.linkedin.com/in/pjhampton/"}>
+              <a target="_blank" rel="noreferrer">
+                <FontAwesomeIcon icon={faLinkedinIn} style={{width: 30}} />
+              </a>
+            </Link>
+          </li>
+        </ul>
       </div>
       <nav className="navbar navbar-expand-md navbar-light">
         <ul className="navbar-nav mx-auto">
