@@ -25,21 +25,21 @@ export default function Header() {
           <li>
             <Link href={"https://github.com/pjhampton"}>
               <a target="_blank" rel="noreferrer">
-                <FontAwesomeIcon icon={faGithub} />
+                <FontAwesomeIcon icon={faGithub} size="2x" />
               </a>
             </Link>
           </li>
           <li>
             <Link href={"https://keybase.io/pjhampton"}>
               <a target="_blank" rel="noreferrer">
-                <FontAwesomeIcon icon={faKeybase} />
+                <FontAwesomeIcon icon={faKeybase} size="2x" />
               </a>
             </Link>
           </li>
           <li>
             <Link href={"https://www.linkedin.com/in/pjhampton/"}>
               <a target="_blank" rel="noreferrer">
-                <FontAwesomeIcon icon={faLinkedinIn} />
+                <FontAwesomeIcon icon={faLinkedinIn} size="2x" />
               </a>
             </Link>
           </li>
