@@ -120,6 +120,7 @@ ul.social li {
   margin: 10px 0;
 }
 
-ul.social li a svg {
-  width: 2em;
+ul.social svg {
+  width: inherit;
+  height: 2em;
 }
