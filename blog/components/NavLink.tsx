@@ -8,7 +8,7 @@ interface NavLinkProps {
 
 const NavLink = ({text, href} : NavLinkProps) => {
   const router = useRouter()
-  const baseNavStyles = ["btn", "me-3", "text-uppercase"]
+  const baseNavStyles = ["btn", "text-uppercase"]
 
   return (
     <Link href={href}>

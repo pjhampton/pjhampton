@@ -63,11 +63,15 @@ nav.navbar {
   margin-bottom: 40px;
 }
 
+.btn {
+  margin: 0 5px;
+}
+
 .btn-primary {
   color: #000C10;
   border-color: #a0a8fd;
   background: #a0a8fd;
-  width: 120px;
+  width: 130px;
 }
 
 .btn-primary:hover {
@@ -78,7 +82,7 @@ nav.navbar {
 .btn-outline-primary {
   color: #a0a8fd;
   border-color: #a0a8fd;
-  width: 120px;
+  width: 130px;
 }
 
 .btn-outline-primary:hover {
@@ -117,7 +121,8 @@ ul.social {
 
 ul.social li {
   display: inline;
-  padding-right: 20px;
+  padding-right: 10px;
+  padding-left: 10px;
   margin: 10px 0;
 }
 
