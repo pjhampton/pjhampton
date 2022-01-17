@@ -71,7 +71,7 @@ nav.navbar {
   color: #000C10;
   border-color: #a0a8fd;
   background: #a0a8fd;
-  width: 130px;
+  width: 120px;
 }
 
 .btn-primary:hover {
@@ -82,7 +82,7 @@ nav.navbar {
 .btn-outline-primary {
   color: #a0a8fd;
   border-color: #a0a8fd;
-  width: 130px;
+  width: 120px;
 }
 
 .btn-outline-primary:hover {

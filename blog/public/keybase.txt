@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/pjhampton
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://pjhampton.com
+  * I am pjhampton (https://keybase.io/pjhampton) on keybase.
+  * I have a public key ASA4BjAQ80N-FeVHo0_iEuYMBNwrRuXfw9mB0X3KCDzRIgo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "012038063010f3437e15e547a34fe212e60c04dc2b46e5dfc3d981d17dca083cd1220a",
+      "host": "keybase.io",
+      "kid": "012038063010f3437e15e547a34fe212e60c04dc2b46e5dfc3d981d17dca083cd1220a",
+      "uid": "8fbeb62699a55dde67290cd87b667319",
+      "username": "pjhampton"
+    },
+    "merkle_root": {
+      "ctime": 1642450905,
+      "hash": "e740e3594003186fbe90edd6fee8db5339671d5a850da48f40d0ff8c92398deb2e5ac5f32f12250e86845b0d8dd8c617733c9cfc3792eb765c4675af2e75833e",
+      "hash_meta": "36173833ce47b26bbfbe14feddf77123ecb55dd3bfc026f971a453222b4e7b2f",
+      "seqno": 21656273
+    },
+    "service": {
+      "entropy": "cnqLGVxQmB/8QbOvldhhC85z",
+      "hostname": "pjhampton.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.8.0"
+  },
+  "ctime": 1642450984,
+  "expire_in": 504576000,
+  "prev": "d53683c72a82ca6c32af42263e1c2ed62c601e3455e98a646650bf4058c00111",
+  "seqno": 23,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgOAYwEPNDfhXlR6NP4hLmDATcK0bl38PZgdF9ygg80SIKp3BheWxvYWTESpcCF8Qg1TaDxyqCymwyr0ImPhwu1ixgHjRV6YpkZlC/QFjAARHEIHxtP5DFU3jbsLh/gho6NEMqk6z5wPpKApu0itBLjHc/AgHCo3NpZ8RA1bFHIDzv/rlJtOF+Vl7UdEpiNacze0jsi1kkLZ5HDIpkHzCmcoKKwyxHD1Q5Nl9hsephTIRpmKTQdviOtf1sBqhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIC1Fcym/BWgDCKX5VYPrPejqQNVKp2asWd2vNEqERbsXo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/pjhampton
+
+==================================================================
