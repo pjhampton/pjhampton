@@ -5,7 +5,7 @@ import avatar from '../public/pjhampton-avatar.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faKeybase, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 
-export default function Header() {
+const Header = () => {
 
   return (
     <header className="header text-center" style={{marginBottom: '1em'}}>
@@ -51,9 +51,6 @@ export default function Header() {
             <NavLink text="Home" href="/" />
           </li>
           <li className="nav-item text-center">
-            <NavLink text="Talks" href="/talks" />
-          </li>
-          <li className="nav-item text-center">
             <NavLink text="About" href="/about" />
           </li>
         </ul>
@@ -61,3 +58,5 @@ export default function Header() {
     </header>
   )
 }
+
+export default Header;
