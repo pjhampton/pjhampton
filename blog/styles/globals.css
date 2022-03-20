@@ -58,6 +58,10 @@ nav.navbar {
   background-color: #000C10;
 }
 
+.navbar-nav {
+  flex-direction: inherit;
+}
+
 .header {
   background-color: #000C10;
   margin-bottom: 40px;
