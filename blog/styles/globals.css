@@ -19,6 +19,20 @@ h1.heading, h2, h3 {
   color: #fecc9d;
 }
 
+span.highlight {
+  color: #fecc9d;
+}
+
+span.highlight-secondary {
+  color: #a0a8fd;
+}
+
+@media (max-width: 992px) {
+  span.greetings {
+    display:block;
+  }
+}
+
 p {
   font-size: 1.1em;
 }
