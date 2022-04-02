@@ -9,7 +9,7 @@ export default function About({ title } : AboutProps) {
     <Layout pageTitle={`${title} | About`}>
       <>
         <h1 className="special">
-          I'm Pete 👋
+          I'm Pete 👋{' '}
           <span className="greetings">
             <span className="highlight">こんにちは</span> <span className="highlight-secondary">أهلا بك</span>
           </span>
