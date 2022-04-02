@@ -3,7 +3,7 @@ import NavLink from './NavLink'
 import SiteImage from '../components/SiteImage'
 import avatar from '../public/pjhampton-avatar.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub, faKeybase, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
+import { faGithub, faKeybase, faLinkedinIn, faSpeakerDeck } from '@fortawesome/free-brands-svg-icons'
 
 const Header = () => {
 
@@ -26,6 +26,13 @@ const Header = () => {
             <Link href={"https://github.com/pjhampton"}>
               <a target="_blank" rel="noreferrer">
                 <FontAwesomeIcon icon={faGithub} size="2x" />
+              </a>
+            </Link>
+          </li>
+          <li>
+            <Link href={"https://speakerdeck.com/pjhampton"}>
+              <a target="_blank" rel="noreferrer">
+                <FontAwesomeIcon icon={faSpeakerDeck} size="2x" />
               </a>
             </Link>
           </li>
