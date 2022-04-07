@@ -1,10 +1,7 @@
 tap 'argoproj/tap'
 tap 'warrensbox/tap'
 
-brew 'argocd'
-brew 'asciinema'
 brew 'awscli'
-brew 'buf'
 brew 'cfssl'
 brew 'fzf'
 brew 'git'
