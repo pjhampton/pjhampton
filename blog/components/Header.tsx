@@ -37,13 +37,6 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <Link href={"https://keybase.io/pjhampton"}>
-              <a target="_blank" rel="noreferrer">
-                <FontAwesomeIcon icon={faKeybase} size="2x" />
-              </a>
-            </Link>
-          </li>
-          <li>
             <Link href={"https://www.linkedin.com/in/pjhampton/"}>
               <a target="_blank" rel="noreferrer">
                 <FontAwesomeIcon icon={faLinkedinIn} size="2x" />
