@@ -3,6 +3,7 @@ tap 'warrensbox/tap'
 
 brew 'awscli'
 brew 'cfssl'
+brew 'cmatrix'
 brew 'fzf'
 brew 'git'
 brew 'go'
