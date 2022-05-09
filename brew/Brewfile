@@ -1,4 +1,3 @@
-tap 'argoproj/tap'
 tap 'warrensbox/tap'
 
 brew 'awscli'
