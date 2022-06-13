@@ -27,7 +27,7 @@ export default function About({ title } : AboutProps) {
           </p>
 
           <p>
-            When not wrangling computers you will find me trying to be a present husband and doggy dad,
+            When not wrangling computers for a living, you will find me trying to be a present husband and father,
             meditating, practicing yoga, and working on my garden. If my work or content has helped you or 
             your business please consider buying me a coffee sometime or more importantly - <i>pay it forward</i>.
           </p>
