@@ -8,7 +8,11 @@ module.exports = {
   },
   images: {
     loader: 'imgix',
-    path: ''
+    path: '',
+    domains: [
+      'localhost',
+      'user-images.githubusercontent.com'
+    ]
   },
   serverRuntimeConfig: {
     cloudflareWorkerURL: 'https://blog-image-renderer.pdvil.workers.dev'
