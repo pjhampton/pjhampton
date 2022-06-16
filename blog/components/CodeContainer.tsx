@@ -9,7 +9,7 @@ const CodeContainer = {
     const match = /language-(\w+)/.exec(className || '')
     return !inline && match ? (
       <SyntaxHighlighter 
-        children={String(children).replace(/\n$/, '')}
+        children={String(children).replace(/\r?\n$/, '')}
         language={match[1]}
         PreTag="div"
         style={atomDark}
