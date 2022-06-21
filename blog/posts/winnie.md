@@ -3,7 +3,6 @@ title: 'Winnie'
 author: 'Pete Hampton'
 author_link: 'https://github.com/pjhampton'
 date: '2022-Jun-16'
-image: "/public/posts/winnie.jpeg"
 excerpt: >
   Winnie 
 ---
