@@ -10,7 +10,7 @@
     <li>My current work is focused on the confluence of <a href="https://www.elastic.co/observability">observability</a> and <a href="https://www.elastic.co/security">security</a>.</li>
     <li>I favour <a href="https://boringtechnology.club/">boring technology</a>, evolutionary design, and test-driven development.</li>
     <li>I enjoy hacking on data-intensive platforms, distributed systems, and database internals.</li>
-    <li>My approach to technical problems is reductionist, and I like to reason from <a href="https://fs.blog/first-principles/">first principles</a>.</li>
+    <li>My approach to problems is reductionist - I enjoy synthetic thinking and <a href="https://fs.blog/first-principles/">first principles</a> reasoning.</li>
   </ul>
 
 </p>
