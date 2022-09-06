@@ -12,8 +12,7 @@ const CodeContainer = {
         language={match[1]}
         PreTag='div'
         style={atomDark}
-        wrapLines={false}
-        {...props}>
+        wrapLines={false}>
         {String(children).replace(/\r?\n$/, '')}
       </SyntaxHighlighter>
     ) : (
