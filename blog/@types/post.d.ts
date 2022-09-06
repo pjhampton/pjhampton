@@ -1,10 +1,4 @@
 
-export interface FrontMatter {
-  title: string;
-  author: string;
-  date: string;
-}
-
 export interface Post {
   frontMatter: FrontMatter;
   markdownBody: string;
@@ -13,4 +7,10 @@ export interface Post {
 
 export interface PostGroup {
   [year: string]: Post[]
+}
+
+export interface PostProps {
+  siteTitle: string;
+  frontMatter: FrontMatter;
+  markdownBody: string;
 }

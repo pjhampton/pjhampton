@@ -8,18 +8,20 @@ const CodeContainer = {
   code({node, inline, className, children, ...props}: CodeProps) {
     const match = /language-(\w+)/.exec(className || '')
     return !inline && match ? (
-      <SyntaxHighlighter 
-        children={String(children).replace(/\r?\n$/, '')}
+      <SyntaxHighlighter
         language={match[1]}
-        PreTag="div"
+        PreTag='div'
         style={atomDark}
         wrapLines={false}
-        {...props} />
+        {...props}>
+        {String(children).replace(/\r?\n$/, '')}
+      </SyntaxHighlighter>
     ) : (
-      <code className={className} {...props} />
+      <code className={className} {...props}>
+        {children}
+      </code>
     )
   }
 }
 
 export default CodeContainer
-

@@ -1,7 +1,8 @@
 import matter from 'gray-matter'
-import Layout from '../components/Layout'
-import PostList from '../components/PostList'
-import { Post, PostGroup } from '../components/types'
+import Layout from '@components/Layout'
+import PostList from '@components/PostList'
+import { Post, PostGroup } from '../@types/post'
+import { NextSeo } from 'next-seo';
 
 interface IndexProps {
   title: string;
@@ -12,22 +13,27 @@ interface RawPost {
   default: string;
 }
 
-export default function Index({ title, posts } : IndexProps) {
+export default function Index({ posts } : IndexProps) {
 
   return (
-    <Layout pageTitle={title}>
+    <>
+      <NextSeo
+        title='Pete Hampton - Software Engineer'
+        description={`Pete Hampton is a Software Engineer and freelance consultant from Belfast, N. Ireland. 
+                      He mainly works with Java and TypeScript, and enjoys databases and digital signal processing.`} />
+      <Layout pageTitle={'Pete Hampton'}>
       <main>
         <PostList posts={posts} />
       </main>
     </Layout>
+    </>
   )
 }
 
 export async function getStaticProps() {
-  const configData = await import(`../siteconfig.json`)
 
   const posts = ((context: __WebpackModuleApi.RequireContext) => {
-    const keys = context.keys();
+    const keys = context.keys().filter(path => path.startsWith('posts'));
     const values: RawPost[] = keys.map(context) as RawPost[];
 
     const data = keys.map((key, index) => {
@@ -55,7 +61,6 @@ export async function getStaticProps() {
 
   return {
     props: {
-      title: configData.default.title,
       posts: groupedPosts,
     },
   }
