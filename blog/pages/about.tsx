@@ -1,46 +1,34 @@
-import Layout from '../components/Layout'
+import Layout from '@components/Layout'
+import { NextSeo } from 'next-seo'
 
-export interface AboutProps {
-  title: string;
-}
-
-export default function About({ title } : AboutProps) {
+export default function About() {
   return (
-    <Layout pageTitle={`${title} | About`}>
-      <>
-        <h1 className="special">
-          I'm Pete 👋{' '}
-          <span className="greetings">
-            <span className="highlight">こんにちは</span> <span className="highlight-secondary">أهلا بك</span>
-          </span>
-        </h1>
+    <>
+      <NextSeo
+        title='Pete Hampton - About me'
+        description={`👋 I work with Java and TypeScript, and work with big and fast data.
+                         This is my blog in which I talk about these subjects and other topics I find interesting.`} />
+      <Layout pageTitle={`Pete Hampton | About`}>
+        <>
+          <h1 className='special'>
+            Yo! I&apos;m Pete 👋{' '}
+          </h1>
 
-        <div className="content">
           <p>
-            I'm a Computer Scientist from Belfast, N. Ireland. Although my heart is in the JVM, you 
-            will find me programming C++, Go and writing copious amounts of TypeScript. I have a masters 
-            degree in Software Engineering and I read my PhD in Artifical Intelligence at Ulster University. 
+            I&apos;m a Software Developer from Belfast, N. Ireland. My expertise is in Java and TypeScript, but you 
+            will also find me programming C++ and Go.
             Although I have a few professional interests; I specialise in  software design and distributed systems 
             in the context of data intensive applications.
+            When not wrangling computers for a living, you will find me working to be a present father and husband,
+            meditating, practicing yoga, and working on my garden. I also collect guitar pedals and enjoy learning about
+            Digital Signal Processing (DSP).
           </p>
 
           <p>
-            When not wrangling computers for a living, you will find me working to be a present husband and father,
-            meditating, practicing yoga, and working on my garden. I also collect guitar pedals and enjoy learning about
-            Digital Signal Processing (DSP). If my work or content has helped you or your business please consider <i>paying it forward</i>.
+          If my work or content has helped you or your business please pay it forward.
           </p>
-        </div>
-      </>
-    </Layout>
+        </>
+      </Layout>
+    </>
   )
-}
-
-export async function getStaticProps() {
-  const configData = await import(`../siteconfig.json`)
-
-  return {
-    props: {
-      title: configData.default.title,
-    },
-  }
 }

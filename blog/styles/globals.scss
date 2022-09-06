@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import 'sidebar.scss';
+
+// Global overrides
+
+h1 {
+  font-size: 2.4em;
+
+  &.special {
+    font-family: 'Permanent Marker';
+    margin-bottom: 0.3em;
+  }
+}
+
+h2 {
+  font-size: 1.7em;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+}
+
+h3 {
+  font-size: 1.5em;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+}
+
+h4 {
+  font-size: 1.4em;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+}
+
+h5 {
+  font-size: 1.2em;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+}
+
+p {
+  text-align: justify;
+}
+
+p, pre {
+  margin-bottom: 1em;
+}
+
+img {
+  border-radius: 0.3em;
+}
+
+// Post Styles
+
+.postList {
+  margin-bottom: 1.2em;
+
+  a {
+    @apply underline text-gray-800 hover:text-gray-600 dark:text-gray-100 dark:hover:text-gray-300
+  }
+}
+
+.post {
+  ul, ol {
+    padding: 0 1em 1em 1em;
+    margin-left: 1em;
+  }
+
+  li {
+    list-style-type: square;
+  }
+
+  img {
+    max-height: 35em;
+    margin: 0 auto;
+  }
+}
+
+.activeNavLink {
+  border-bottom: 4px solid #a9beef;
+}
+
+// 404.tsx
+
+.errorpage {
+
+  position: relative;
+
+  figure {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+}
