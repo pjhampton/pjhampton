@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { FaGithub, FaSpeakerDeck, FaLinkedin, FaAngellist } from 'react-icons/fa'
+import { FaGithub, FaSpeakerDeck, FaLinkedin, FaAngellist, FaProductHunt } from 'react-icons/fa'
 
 const SocialIcons = () => {
   return (
@@ -21,6 +21,14 @@ const SocialIcons = () => {
       </div>
 
       <div className='pr-4'>
+        <Link href={'https://speakerdeck.com/pjhampton'}>
+          <a target='_blank' rel='noreferrer'>
+            <FaSpeakerDeck size={38} className="hover:opacity-80" />
+          </a>
+        </Link>
+      </div>
+
+      <div className='pr-4'>
         <Link href={'https://angel.co/u/pjhampton'}>
           <a target='_blank' rel='noreferrer'>
             <FaAngellist size={35} className="hover:opacity-80" />
@@ -29,9 +37,9 @@ const SocialIcons = () => {
       </div>
 
       <div className='pr-4'>
-        <Link href={'https://speakerdeck.com/pjhampton'}>
+        <Link href={'https://www.producthunt.com/@pete_hampton'}>
           <a target='_blank' rel='noreferrer'>
-            <FaSpeakerDeck size={35} className="hover:opacity-80" />
+            <FaProductHunt size={35} className="hover:opacity-80" />
           </a>
         </Link>
       </div>
