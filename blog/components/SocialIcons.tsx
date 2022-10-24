@@ -37,7 +37,7 @@ const SocialIcons = () => {
       </div>
 
       <div className='pr-4'>
-        <Link href={'https://www.producthunt.com/@pete_hampton'}>
+        <Link href={'https://www.producthunt.com/@pjhampton'}>
           <a target='_blank' rel='noreferrer'>
             <FaProductHunt size={35} className="hover:opacity-80" />
           </a>
