@@ -8,7 +8,7 @@ module.exports = {
   },
   images: {
     loader: 'imgix',
-    path: '',
+    path: 'https://',
     domains: [
       'localhost',
       'user-images.githubusercontent.com'

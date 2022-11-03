@@ -37,7 +37,7 @@ const NavLink = ({text, href, otherHrefMatches} : NavLinkProps) => {
   }
 
   return (
-    <Link href={href}>
+    <Link href={href} legacyBehavior>
       <button className={
         routerPathStartWith(router.pathname) ?
           ['activeNavLink', ...baseStyles].join(' ').toString()
@@ -46,7 +46,7 @@ const NavLink = ({text, href, otherHrefMatches} : NavLinkProps) => {
         {text}
       </button>
     </Link>
-  )
+  );
 }
 
 export default NavLink

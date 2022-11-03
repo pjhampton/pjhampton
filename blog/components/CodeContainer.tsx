@@ -19,7 +19,7 @@ const CodeContainer = {
       <code className={className} {...props}>
         {children}
       </code>
-    )
+    );
   }
 }
 

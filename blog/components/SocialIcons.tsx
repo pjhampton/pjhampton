@@ -5,46 +5,45 @@ const SocialIcons = () => {
   return (
     <div className='inline-flex pt-5'>
       <div className='pr-4'>
-        <Link href={'https://github.com/pjhampton'}>
-          <a target='_blank' rel='noreferrer'>
-            <FaGithub size={35} className="hover:opacity-80" />
-          </a>
+        <Link href={'https://github.com/pjhampton'} target='_blank' rel='noreferrer'>
+          <FaGithub size={35} className="hover:opacity-80" />
         </Link>
       </div>
 
       <div className='pr-4'>
-        <Link href={'https://www.linkedin.com/in/pjhampton/'}>
-          <a target='_blank' rel='noreferrer'>
-            <FaLinkedin size={35} className="hover:opacity-80" />
-          </a>
+        <Link
+          href={'https://www.linkedin.com/in/pjhampton/'}
+          target='_blank'
+          rel='noreferrer'>
+          <FaLinkedin size={35} className="hover:opacity-80" />
         </Link>
       </div>
 
       <div className='pr-4'>
-        <Link href={'https://speakerdeck.com/pjhampton'}>
-          <a target='_blank' rel='noreferrer'>
-            <FaSpeakerDeck size={38} className="hover:opacity-80" />
-          </a>
+        <Link
+          href={'https://speakerdeck.com/pjhampton'}
+          target='_blank'
+          rel='noreferrer'>
+          <FaSpeakerDeck size={38} className="hover:opacity-80" />
         </Link>
       </div>
 
       <div className='pr-4'>
-        <Link href={'https://angel.co/u/pjhampton'}>
-          <a target='_blank' rel='noreferrer'>
-            <FaAngellist size={35} className="hover:opacity-80" />
-          </a>
+        <Link href={'https://angel.co/u/pjhampton'} target='_blank' rel='noreferrer'>
+          <FaAngellist size={35} className="hover:opacity-80" />
         </Link>
       </div>
 
       <div className='pr-4'>
-        <Link href={'https://www.producthunt.com/@pjhampton'}>
-          <a target='_blank' rel='noreferrer'>
-            <FaProductHunt size={35} className="hover:opacity-80" />
-          </a>
+        <Link
+          href={'https://www.producthunt.com/@pjhampton'}
+          target='_blank'
+          rel='noreferrer'>
+          <FaProductHunt size={35} className="hover:opacity-80" />
         </Link>
       </div>
     </div>
-  )
+  );
 }
 
 export default SocialIcons

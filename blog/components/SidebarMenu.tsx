@@ -18,10 +18,10 @@ const SidebarMenu = ({menuOpenState, setMenuOpenState} : SidebarMenuProps) => {
       onStateChange={(state) => setMenuOpenState(state.isOpen)}
       customBurgerIcon={false}>
       <div className='p-2 pt-6'>
-        <Link href="/">
-          <a className='pt-10'>
-            <SiteImage className='object-center w-24 h-24 mx-auto rounded-full' src={avatar} alt='PJ Hampton Avatar' width='150' height='150' />
-          </a>
+        <Link href="/" className='pt-10'>
+
+          <SiteImage className='object-center w-24 h-24 mx-auto rounded-full' src={avatar} alt='PJ Hampton Avatar' width='150' height='150' />
+
         </Link>
       </div>
 
@@ -36,19 +36,19 @@ const SidebarMenu = ({menuOpenState, setMenuOpenState} : SidebarMenuProps) => {
         </figcaption>
       </div>
 
-      <Link href="/">
-        <a id="posts" className="block menu-item">Posts</a>
+      <Link href="/" id="posts" className="block menu-item">
+        Posts
       </Link>
       
-      <Link href="/about">
-        <a id="about" className="block menu-item">About</a>
+      <Link href="/about" id="about" className="block menu-item">
+        About
       </Link>
 
       <div className="pt-12">
         <SocialIcons />
       </div>
     </Menu>
-  )
+  );
 }
 
 export default SidebarMenu
