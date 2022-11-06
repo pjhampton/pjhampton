@@ -9,9 +9,9 @@ const cloudflareImageLoader: ImageLoader = ({ src, width, quality }) => {
 
 const SiteImage = (props: any) => {
   if (process.env.NODE_ENV === 'development') {
-    return <Image {...props} unoptimized={true} alt="" />
+    return <Image {...props} placeholder={'blur'} unoptimized={true} alt="" />
   } else {
-    return <Image {...props} loader={cloudflareImageLoader} alt="" />
+    return <Image {...props} placeholder={'blur'} loader={cloudflareImageLoader} alt="" />
   }
 }
 
