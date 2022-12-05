@@ -3,6 +3,7 @@ title: 'Finding a writing style'
 author: 'Pete Hampton'
 author_link: 'https://github.com/pjhampton'
 date: '2022-Jan-14'
+show_post_footer: true
 excerpt: >
     I reflect on my writing style and what I wish for in the future from my blog.
 ---

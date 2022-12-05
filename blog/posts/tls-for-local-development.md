@@ -3,6 +3,7 @@ title: 'TLS for local development'
 author: 'Pete Hampton'
 author_link: 'https://github.com/pjhampton'
 date: '2022-Jun-21'
+show_post_footer: true
 excerpt: >
   
 ---

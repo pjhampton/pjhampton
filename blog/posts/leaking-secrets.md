@@ -3,6 +3,7 @@ title: 'Favourite Footguns Pt 2: Leaking secrets'
 author: 'Pete Hampton'
 author_link: 'https://github.com/pjhampton'
 date: '2022-Jan-12'
+show_post_footer: true
 excerpt: >
   This post looks at one of my favourite footguns - leaking secrets.
 ---

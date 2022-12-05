@@ -3,6 +3,7 @@ title: 'Favourite Footguns Pt 3: No resets in Object Pools'
 author: 'Pete Hampton'
 author_link: 'https://github.com/pjhampton'
 date: '2022-Nov-2'
+show_post_footer: true
 excerpt: >
 
 ---

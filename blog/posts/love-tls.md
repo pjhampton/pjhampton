@@ -3,6 +3,7 @@ title: 'TLS: Learning to love'
 author: 'Pete Hampton'
 author_link: 'https://github.com/pjhampton'
 date: '2021-Sep-18'
+show_post_footer: true
 excerpt: >
   TLS 
 ---

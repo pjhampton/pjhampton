@@ -3,6 +3,7 @@ title: 'Favourite Footguns Pt 1: Leaking references'
 author: 'Pete Hampton'
 author_link: 'https://github.com/pjhampton'
 date: '2021-Nov-22'
+show_post_footer: true
 excerpt: >
   This post looks at one of my favourite footguns - leaky references. I provide an example in Java 17
   and recreate it in a more functional friendly way. 

@@ -3,6 +3,7 @@ title: 'Grokking Sed'
 author: 'Pete Hampton'
 author_link: 'https://github.com/pjhampton'
 date: '2022-Apr-12'
+show_post_footer: true
 excerpt: >
   Grokking Sed
 ---

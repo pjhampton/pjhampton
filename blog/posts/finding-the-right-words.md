@@ -3,6 +3,7 @@ title: 'Finding the right words'
 author: 'Pete Hampton'
 author_link: 'https://github.com/pjhampton'
 date: '2021-Jul-17'
+show_post_footer: true
 excerpt: >
   This post details the motivation behind my blog. 
 ---

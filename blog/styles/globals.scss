@@ -18,6 +18,12 @@ h2 {
   font-size: 1.7em;
   font-weight: 600;
   margin-bottom: 0.5em;
+
+  &.special {
+    font-size: 2.4em;
+    font-family: 'Permanent Marker';
+    margin-bottom: 0.3em;
+  }
 }
 
 h3 {
@@ -78,6 +84,12 @@ img {
 
 .activeNavLink {
   border-bottom: 4px solid #a9beef;
+}
+
+// footer
+
+hr.footer {
+  border-top-width: 2px;
 }
 
 // 404.tsx

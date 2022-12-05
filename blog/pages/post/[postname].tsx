@@ -7,6 +7,7 @@ import CodeContainer from '@components/CodeContainer'
 import { NextSeo } from 'next-seo'
 
 export default function BlogPost({ siteTitle, frontMatter, markdownBody } : PostProps) {
+  
   if (!frontMatter) return <></>
 
   return (
@@ -23,6 +24,13 @@ export default function BlogPost({ siteTitle, frontMatter, markdownBody } : Post
           <div className='post'>
             <ReactMarkdown components={CodeContainer}>{markdownBody}</ReactMarkdown>
           </div>
+          {frontMatter.show_post_footer &&
+          <div className='mb-10 post-footer'>
+            <hr className="footer" />
+            <h2 className='special'>~ Feedback</h2>
+
+            <p>Like to offer feedback or ideas? Then please email me at <span className='font-semibold'>pjhampton[@]duck.com</span></p>
+          </div>}
         </article>
       </Layout>
     </>
