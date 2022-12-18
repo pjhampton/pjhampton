@@ -28,4 +28,5 @@ brew 'watch'
 brew 'zsh'
 
 cask 'hyper'
+cask 'tla-plus-toolbox'
 cask 'visual-studio-code'
