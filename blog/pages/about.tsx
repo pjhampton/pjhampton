@@ -15,17 +15,17 @@ export default function About() {
           </h1>
 
           <p>
-            I&apos;m a Software Developer from Belfast, N. Ireland. My expertise is in Java and TypeScript, but you 
-            will also find me programming C++, Rust, and Go.
+            I&apos;m a Software Developer from Belfast, N. Ireland. My expertise is in Java, but you 
+            will also find me programming TypeScript, C++, Rust, and Go.
             Although I have a few professional interests; I specialise in software design and distributed systems 
             in the context of data intensive applications.
             When not wrangling computers for a living, you will find me working to be a present father and husband,
-            meditating, practicing yoga, and working on my garden. I also collect guitar pedals and enjoy learning about
-            Digital Signal Processing (DSP).
+            meditating, reading, and practicing yoga. I also collect guitar pedals and enjoy learning about
+            Digital Signal Processing.
           </p>
 
           <p>
-          If my work or content has helped you or your business please pay it forward.
+            If my work or content has helped you or your business please pay it forward.
           </p>
         </>
       </Layout>
