@@ -20,7 +20,7 @@ const SidebarMenu = ({menuOpenState, setMenuOpenState} : SidebarMenuProps) => {
       <div className='p-2 pt-6'>
         <Link href="/" className='pt-10'>
 
-          <SiteImage className='object-center w-24 h-24 mx-auto rounded-full' src={avatar} alt='PJ Hampton Avatar' width='150' height='150' />
+          <SiteImage className='object-center w-24 h-24 mx-auto rounded-full' src={avatar} alt='PJ Hampton Avatar' />
 
         </Link>
       </div>
