@@ -1,4 +1,4 @@
-import type { CodeComponent, ReactMarkdownProps } from 'react-markdown/lib/ast-to-react'
+import type { ReactMarkdownProps } from 'react-markdown/lib/ast-to-react'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { atomDark } from 'react-syntax-highlighter/dist/cjs/styles/prism'
 
