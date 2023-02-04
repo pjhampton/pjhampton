@@ -22,7 +22,7 @@
     "react-burger-menu": "^3.0.9",
     "react-dom": "18.2.0",
     "react-icons": "^4.7.1",
-    "react-markdown": "^6.0.2",
+    "react-markdown": "^8.0.5",
     "react-syntax-highlighter": "^15.5.0",
     "sass": "^1.58.0",
     "sharp": "^0.31.3"
