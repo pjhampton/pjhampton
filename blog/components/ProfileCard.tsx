@@ -14,10 +14,11 @@ const ProfileCard = () => {
     </div>
 
     <div className='p-2 pt-6'>
-      <Link href="/" className='pt-10'>
+      <Link href="/" className='pt-10' aria-label='return home'>
         <SiteImage 
+          alt='Pete Hampton Avatar' 
           className='mx-auto rounded-full ' 
-          src={avatar} alt='PJ Hampton Avatar' 
+          src={avatar}
           width='150' 
           height='150' />
       </Link>
