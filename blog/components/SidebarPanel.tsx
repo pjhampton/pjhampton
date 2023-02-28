@@ -9,7 +9,7 @@ interface SidebarPanelProps {
 const SidebarPanel = ({ toggleMenu } : SidebarPanelProps) => {
   return (
     <div className='fixed sidepanel'>
-      <button className="p-2.5" onClick={toggleMenu}>
+      <button className="p-2.5" onClick={toggleMenu} aria-label="toggle menu">
         <SiteImage 
           alt='PJ Hampton Avatar'
           className=' p-1.5 rounded-full' 
