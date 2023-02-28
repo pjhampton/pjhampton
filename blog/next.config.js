@@ -1,4 +1,4 @@
-module.exports = {
+const defaultConfig = {
   webpack: function (config) {
     config.module.rules.push({
       test: /\.md$/,
@@ -19,3 +19,10 @@ module.exports = {
   },
   productionBrowserSourceMaps: true
 }
+
+// https://www.npmjs.com/package/@next/bundle-analyzer
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true',
+})
+
+module.exports = withBundleAnalyzer(defaultConfig);
