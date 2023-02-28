@@ -1,4 +1,4 @@
-import avatar from '@public/avatar.png'
+import avatar from '@public/avatar.webp'
 import ThemeToggle from './ThemeToggle'
 import SiteImage from '@components/SiteImage'
 

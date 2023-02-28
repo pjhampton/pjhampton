@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import SiteImage from './SiteImage'
-import avatar from '@public/avatar.png'
+import avatar from '@public/avatar.webp'
 import SocialIcons from './SocialIcons'
 import { push as Menu } from 'react-burger-menu'
 import { Dispatch, SetStateAction } from 'react'

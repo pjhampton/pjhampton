@@ -1,5 +1,5 @@
 import Link from "next/link"
-import avatar from '@public/avatar.png'
+import avatar from '@public/avatar.webp'
 import SiteImage from "@components/SiteImage"
 
 const FourOhFour = () => {
