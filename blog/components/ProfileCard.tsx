@@ -3,6 +3,7 @@ import avatar from '@public/avatar.webp'
 import SocialIcons from './SocialIcons'
 import SiteImage from '@components/SiteImage'
 import ThemeToggle from '@components/ThemeToggle'
+import { motion } from "framer-motion";
 
 const ProfileCard = () => {
 
@@ -15,12 +16,14 @@ const ProfileCard = () => {
 
     <div className='p-2 pt-6'>
       <Link href="/" className='pt-10' aria-label='return home'>
-        <SiteImage 
-          alt='Pete Hampton Avatar' 
-          className='mx-auto rounded-full ' 
-          src={avatar}
-          width='150' 
-          height='150' />
+        <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.9 }}>
+          <SiteImage 
+            alt='Pete Hampton Avatar' 
+            className='mx-auto rounded-full ' 
+            src={avatar}
+            width='150' 
+            height='150' />
+        </motion.div>
       </Link>
     </div>
 
