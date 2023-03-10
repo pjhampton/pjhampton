@@ -11,7 +11,7 @@ export default function About() {
       <Layout pageTitle={`Pete Hampton | About`}>
         <>
           <h1 className='special'>
-            Yo! I&apos;m Pete 👋{' '}
+            Hey-o! I&apos;m Pete 👋{' '}
           </h1>
 
           <p>
