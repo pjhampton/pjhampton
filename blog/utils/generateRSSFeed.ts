@@ -3,14 +3,14 @@ import { getSortedPosts } from './posts';
 import fs from 'fs';
 
 export default async function generateRssFeed() {
-  const site_url = 'localhost:3000';
+  const site_url = 'https://pjhampton.com';
  
   const feedOptions: FeedOptions = {
    title: 'Pete Hampton | RSS Feed',
    description: 'Pete Hamptons blog feed',
    site_url: site_url,
    feed_url: `${site_url}/rss.xml`,
-   image_url: `${site_url}/logo.png`,
+   image_url: `${site_url}/avatar.webp`,
    pubDate: new Date(),
    copyright: `All rights reserved ${new Date().getFullYear()}`,
   };
