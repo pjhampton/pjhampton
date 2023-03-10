@@ -16,7 +16,7 @@ const ProfileCard = () => {
 
     <div className='p-2 pt-6'>
       <Link href="/" className='pt-10' aria-label='return home'>
-        <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.9 }}>
+        <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
           <SiteImage 
             alt='Pete Hampton Avatar' 
             className='mx-auto rounded-full ' 
