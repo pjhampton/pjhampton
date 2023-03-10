@@ -1,16 +1,13 @@
-import matter from 'gray-matter'
+import { NextSeo } from 'next-seo'
 import Layout from '@components/Layout'
 import PostList from '@components/PostList'
-import { Post, PostGroup } from '../@types/post'
-import { NextSeo } from 'next-seo';
+import { PostGroup } from '../@types/post'
+import generateRssFeed from '@utils/generateRSSFeed'
+import { getSortedPosts, groupPostsByYear  } from '@utils/posts'
 
 interface IndexProps {
   title: string;
   posts: PostGroup;
-}
-
-interface RawPost {
-  default: string;
 }
 
 export default function Index({ posts } : IndexProps) {
@@ -31,33 +28,10 @@ export default function Index({ posts } : IndexProps) {
 }
 
 export async function getStaticProps() {
+  await generateRssFeed()
 
-  const posts = ((context: __WebpackModuleApi.RequireContext) => {
-    const keys = context.keys().filter(path => path.startsWith('posts'));
-    const values: RawPost[] = keys.map(context) as RawPost[];
-
-    const data = keys.map((key, index) => {
-      let slug = key.replace(/^.*[\\\/]/, '').slice(0, -3)
-      const value = values[index]
-      const document = matter(value.default);
-      return {
-        frontMatter: document.data,
-        markdownBody: document.content,
-        slug,
-      } as Post
-    })
-    return data
-  })(require.context('../posts', true, /\.md$/))
-
-  // sort descending
-  posts.sort((a, b) => Date.parse(b.frontMatter.date) - Date.parse(a.frontMatter.date))
-  // group by year
-  const groupedPosts = posts.reduce((result, post) => {
-    const year = new Date(post.frontMatter.date).getFullYear().toString();
-    result[year] = result[year] || [];
-    result[year].push(post);
-    return result;
-  }, {} as PostGroup)
+  const posts = getSortedPosts()
+  const groupedPosts = groupPostsByYear(posts)
 
   return {
     props: {

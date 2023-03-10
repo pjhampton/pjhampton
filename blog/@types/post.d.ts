@@ -1,4 +1,8 @@
 
+export interface RawPost {
+  default: string;
+}
+
 export interface Post {
   frontMatter: FrontMatter;
   markdownBody: string;
