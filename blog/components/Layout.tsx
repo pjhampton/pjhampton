@@ -40,7 +40,7 @@ export default function Layout({ children, pageTitle } : LayoutProps) {
           <div className='col-start-4 col-end-12 md:col-start-5'>
             
             <div className='hidden md:block'>
-              <ul role="tablist" className='flex flex-col flex-wrap pl-0 mb-8 list-none nav nav-tabs nav-justified md:flex-row' id='tabs-tabJustify' role='tablist'>
+              <ul role="tablist" className='flex flex-col flex-wrap pl-0 mb-8 list-none nav nav-tabs nav-justified md:flex-row' id='tabs-tabJustify'>
                 <li className='flex-grow text-center nav-item' role='presentation'>
                   <NavLink text='Posts' href='/' otherHrefMatches={['/post']} />
                 </li>
