@@ -101,16 +101,16 @@ With the following configuration
 
 ```yaml
 apiVersion: v1
- kind: ConfigMap
- data:
-   log.level: debug
-   registries.conf: |
-     registries:
-     - name: Google Container Registry
-       prefix: gcr.io
-       api_url: https://gcr.io
-       default: true
-       credentials: secret:argocd/image-updater-gcr#secret
+kind: ConfigMap
+data:
+  log.level: debug
+  registries.conf: |
+    registries:
+    - name: Google Container Registry
+      prefix: gcr.io
+      api_url: https://gcr.io
+      default: true
+      credentials: secret:argocd/image-updater-gcr#secret
 ```
 
 To set up your strategy you can add the [following annotations](https://argocd-image-updater.readthedocs.io/en/stable/basics/update-strategies/#strategy-digest) to your Argo application. Below is an example of the daemon process checking the sha digest of the `latest` tagged image. 

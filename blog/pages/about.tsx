@@ -24,7 +24,7 @@ export default function About() {
           </p>
 
           <p>
-            If my work or content has helped you or your business consider paying it forward.
+            If my work or content has helped you or your business consider paying it forward somehow.
           </p>
         </>
       </Layout>
