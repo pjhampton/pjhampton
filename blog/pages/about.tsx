@@ -17,7 +17,7 @@ export default function About() {
           <p>
             I&apos;m a Software Developer from Belfast, N. Ireland. My expertise is in Java, but you 
             will also find me programming C++, Go, and TypeScript. I specialise in software design and 
-            distributed systems in the context of data intensive applications.
+            distributed systems in the context of data intensive applications. I also enjoy the Linux and SysAdmin world.
             When not wrangling computers for a living, you will find me working to be a present father and husband,
             meditating, reading, and practicing yoga. I also collect guitar pedals and enjoy learning about
             Digital Signal Processing.
