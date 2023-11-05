@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 const ProfileCard = () => {
 
   return (
-    <figure className='p-8 text-center bg-white rounded-xl md:p-0 dark:bg-slate-800 w-80 h-96' style={{position: 'fixed'}}>
+    <figure className='p-8 text-center bg-white rounded-xl md:p-0 w-80 h-96' style={{position: 'fixed'}}>
 
     <div style={{ position: 'absolute', right: 0 }}>
       <ThemeToggle />
@@ -29,10 +29,10 @@ const ProfileCard = () => {
 
     <div className='p-6 pt-8 space-y-4 text-center'>
       <figcaption className='font-medium'>
-        <div className='text-sky-500 dark:text-sky-400'>
+        <div className='text-sky-500'>
           Pete Hampton
         </div>
-        <div className='text-slate-700 dark:text-slate-500'>
+        <div className='text-slate-700'>
           Code Zookeeper
         </div>
       </figcaption>

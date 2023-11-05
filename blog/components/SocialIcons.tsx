@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { FaGithub, FaSpeakerDeck, FaLinkedin, FaAngellist, FaProductHunt } from 'react-icons/fa'
+import { FaGithub, FaSpeakerDeck, FaLinkedin, FaProductHunt } from 'react-icons/fa'
 
 const SocialIcons = () => {
   return (
