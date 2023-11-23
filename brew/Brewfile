@@ -1,7 +1,9 @@
 tap 'warrensbox/tap'
 
+brew 'bat'
 brew 'cfssl'
 brew 'cmake'
+brew 'eza'
 brew 'git'
 brew 'github'
 brew 'gnu-sed'
