@@ -33,16 +33,6 @@ const SocialIcons = () => {
           <FaSpeakerDeck size={38} className="hover:opacity-80" />
         </Link>
       </div>
-
-      <div className='pl-2 pr-2'>
-        <Link
-          href={'https://www.producthunt.com/@pjhampton'}
-          target='_blank'
-          rel='noreferrer'
-          aria-label='Pete Hampton ProductHunt'>
-          <FaProductHunt size={35} className="hover:opacity-80" />
-        </Link>
-      </div>
     </div>
   );
 }
