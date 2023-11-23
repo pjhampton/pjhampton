@@ -3,20 +3,21 @@ alias down="cd ~/Downloads"
 alias work="cd ~/workspace"
 
 alias a=aws
-alias argo=argocd
 alias awho='aws sts get-caller-identity'
-alias dk=docker
-alias dkc=docker-compose
+alias d=docker
+alias dc=docker-compose
 alias g=git
 alias gcurl=grpcurl
 alias k=kubectl
-alias js=node
 alias pc=protoc
 alias py=python3
 alias ssl=cfssl
+alias t=tmux
 alias tf=terrform
-alias v=vault
+alias v=nvim
 alias y=yarn
 
 alias c=curl
+alias e=exit
+alias ls=exa
 alias uuid=uuidgen
