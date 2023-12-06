@@ -3,7 +3,7 @@ import { FaGithub, FaSpeakerDeck, FaLinkedin, FaProductHunt } from 'react-icons/
 
 const SocialIcons = () => {
   return (
-    <div className='inline-flex pt-5'>
+    <div className='inline-flex pt-4'>
       <div className='pl-2 pr-2'>
         <Link 
           href={'https://github.com/pjhampton'} 

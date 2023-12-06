@@ -8,7 +8,7 @@ export default function About() {
         title='Pete Hampton - About me'
         description={`👋 I work with Java and TypeScript, and work with big and fast data.
                          This is my blog in which I talk about these subjects and other topics I find interesting.`} />
-      <Layout pageTitle={`Pete Hampton | About`}>
+      <Layout pageTitle={`Pete Hampton | About`} showShare={false}>
         <>
           <h1 className='special'>
             Hey-o! I&apos;m Pete 👋{' '}

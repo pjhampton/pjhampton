@@ -6,10 +6,11 @@ import { ReactChildren, ReactChild, useEffect, useState } from 'react'
 
 interface LayoutProps {
   pageTitle: string;
+  showShare: boolean;
   children: ReactChild | ReactChildren;
 }
 
-export default function Layout({ children, pageTitle } : LayoutProps) {
+export default function Layout({ children, showShare, pageTitle } : LayoutProps) {
   const [isMounted, setIsMounted] = useState(false)
   const [menuOpenState, setMenuOpenState] = useState(false)
 
@@ -24,7 +25,7 @@ export default function Layout({ children, pageTitle } : LayoutProps) {
       {isMounted &&
       <>
       <div className='visible md:invisible'>
-          <SidebarMenu menuOpenState={menuOpenState} setMenuOpenState={setMenuOpenState} />
+        <SidebarMenu menuOpenState={menuOpenState} setMenuOpenState={setMenuOpenState} />
         <SidebarPanel toggleMenu={toggleMenu} />
       </div>
       
@@ -33,7 +34,7 @@ export default function Layout({ children, pageTitle } : LayoutProps) {
           
           <div className='hidden md:block'>
             <div className='col-start-1 col-end-4'>
-              <ProfileCard />
+              <ProfileCard showShare={showShare} pageTitle={pageTitle} />
             </div>
           </div>
 

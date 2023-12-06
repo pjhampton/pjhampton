@@ -18,7 +18,7 @@ export default function Index({ posts } : IndexProps) {
         title='Pete Hampton - Software Engineer'
         description={`Pete Hampton is a Software Engineer and freelance consultant from Belfast, N. Ireland. 
                       He mainly works with Java and TypeScript, and enjoys databases and digital signal processing.`} />
-      <Layout pageTitle={'Pete Hampton'}>
+      <Layout pageTitle={'Pete Hampton'} showShare={false}>
       <main>
         <PostList posts={posts} />
       </main>

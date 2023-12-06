@@ -1,10 +1,10 @@
 import matter from 'gray-matter'
-import ReactMarkdown from 'react-markdown'
-import { PostProps } from '../../@types/post'
-import Layout from '@components/Layout'
-import { formatDate } from '@utils/datetime'
-import CodeContainer from '@components/CodeContainer'
 import { NextSeo } from 'next-seo'
+import Layout from '@components/Layout'
+import ReactMarkdown from 'react-markdown'
+import { formatDate } from '@utils/datetime'
+import { PostProps } from '../../@types/post'
+import CodeContainer from '@components/CodeContainer'
 
 export default function BlogPost({ siteTitle, frontMatter, markdownBody } : PostProps) {
   
@@ -15,7 +15,7 @@ export default function BlogPost({ siteTitle, frontMatter, markdownBody } : Post
       <NextSeo
         title={`Pete Hampton - ${frontMatter.title}`}
         description={frontMatter.excerpt} />
-      <Layout pageTitle={`${siteTitle} | ${frontMatter.title}`}>
+      <Layout pageTitle={`${siteTitle} | ${frontMatter.title}`} showShare={true}>
         <article>
           <div className='pb-3'>
             <h1 className='text-3xl font-medium'>{frontMatter.title}</h1>
@@ -45,7 +45,7 @@ export async function getStaticProps({ ...ctx }) {
 
   return {
     props: {
-      siteTitle: 'Pete Hampton\'s Blog',
+      siteTitle: 'Pete Hampton',
       frontMatter: data.data,
       markdownBody: data.content,
     },
