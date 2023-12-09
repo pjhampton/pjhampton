@@ -23,7 +23,12 @@ const CodeContainer = {
         {String(children).replace(/\r?\n$/, '')}
       </SyntaxHighlighter>
     ) : (
-      <code className={className} {...props}>
+      <code className={className} style={{
+        backgroundColor: 'rgb(29, 31, 33)',
+        padding: '5px',
+        borderRadius: '5px',
+        color: 'rgb(218, 208, 133)'
+      }} {...props}>
         {children}
       </code>
     );
