@@ -13,7 +13,6 @@ function d() {
 export PATH="$PATH:$GOPATH/bin"
 export PATH="$PATH:$HOME/.bin"
 export PATH="$PATH:$HOME/.rvm/bin"
-export PATH="$PATH:/Library/TeX/texbin"
 export PATH="$PATH:/usr/local/sbin"
 
 if [ -x "$(which ssh-add)" ]; then
