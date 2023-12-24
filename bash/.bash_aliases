@@ -19,5 +19,5 @@ alias y=yarn
 
 alias c=curl
 alias e=exit
-alias ls=exa
+alias ls=eza
 alias uuid=uuidgen
