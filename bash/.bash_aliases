@@ -18,6 +18,7 @@ alias v=nvim
 alias y=yarn
 
 alias c=curl
+alias cat=bat
 alias e=exit
 alias ls=eza
 alias uuid=uuidgen
