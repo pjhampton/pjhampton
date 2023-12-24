@@ -1,6 +1,7 @@
 tap 'warrensbox/tap'
 
 brew 'bat'
+brew 'bottom'
 brew 'cfssl'
 brew 'cmake'
 brew 'eza'
