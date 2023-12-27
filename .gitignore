@@ -1,5 +1,8 @@
 # mac
 .DS_Store
 
+# Homebrew
+Brewfile.lock.json
+
 # Snyk
 .dccache

@@ -2,6 +2,7 @@ tap 'warrensbox/tap'
 
 brew 'bat'
 brew 'bottom'
+brew 'ccache'
 brew 'cfssl'
 brew 'cmake'
 brew 'eza'
