@@ -50,6 +50,7 @@ brew 'watch'
 brew 'zsh'
 
 cask 'hyper'
+cask 'lens'
 cask 'tableplus'
 cask 'visual-studio-code'
 cask 'visualvm'
