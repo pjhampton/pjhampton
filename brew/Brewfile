@@ -1,6 +1,7 @@
 tap 'koekeishiya/formulae'
 tap 'warrensbox/tap'
 
+brew 'awscli'
 brew 'bat'
 brew 'binutils'
 brew 'bottom'
