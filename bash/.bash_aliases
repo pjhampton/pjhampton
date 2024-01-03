@@ -13,7 +13,7 @@ alias pc=protoc
 alias py=python3
 alias ssl=cfssl
 alias t=tmux
-alias tf=terrform
+alias tf=terraform
 alias v=nvim
 alias y=yarn
 
