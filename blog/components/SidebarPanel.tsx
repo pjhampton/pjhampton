@@ -12,7 +12,7 @@ const SidebarPanel = ({ toggleMenu } : SidebarPanelProps) => {
       <button className="p-2.5" onClick={toggleMenu} aria-label="toggle menu">
         <SiteImage 
           alt='PJ Hampton Avatar'
-          className=' p-1.5 rounded-full' 
+          className=' p-1.5 rounded-xl' 
           src={avatar} 
           width='80'
           height='80'  />

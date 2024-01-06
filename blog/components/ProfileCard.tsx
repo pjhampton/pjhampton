@@ -27,7 +27,7 @@ const ProfileCard = ({ pageTitle, showShare = false } : ProfileCardProps) => {
           <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }}>
             <SiteImage 
               alt='Pete Hampton Avatar' 
-              className='mx-auto rounded-full ' 
+              className='mx-auto rounded-xl' 
               src={avatar}
               width='150' 
               height='150' />
