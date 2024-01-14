@@ -1,7 +1,16 @@
+import { useTheme } from 'next-themes';
 import Link from 'next/link'
-import { FaGithub, FaSpeakerDeck, FaLinkedin, FaProductHunt } from 'react-icons/fa'
+import { FaGithub, FaSpeakerDeck, FaLinkedin } from 'react-icons/fa'
 
-const SocialIcons = () => {
+interface SocialIconProps {
+  isSidebar: boolean;
+}
+
+const SocialIcons = ({ isSidebar } : SocialIconProps) => {
+  const { theme } = useTheme();
+
+  const socialHighlight = (isSidebar && theme == 'dark') ? 'text-slate-200' : '';
+
   return (
     <div className='inline-flex pt-4'>
       <div className='pl-2 pr-2'>
@@ -10,7 +19,7 @@ const SocialIcons = () => {
           target='_blank' 
           rel='noreferrer' 
           aria-label='Pete Hampton Github'>
-          <FaGithub size={35} className="hover:opacity-80" />
+          <FaGithub size={35} className={`hover:opacity-80 ${socialHighlight}`} />
         </Link>
       </div>
 
@@ -20,7 +29,7 @@ const SocialIcons = () => {
           target='_blank'
           rel='noreferrer'
           aria-label='Pete Hampton LinkedIn'>
-          <FaLinkedin size={35} className="hover:opacity-80" />
+          <FaLinkedin size={35} className={`hover:opacity-80 ${socialHighlight}`} />
         </Link>
       </div>
 
@@ -30,7 +39,7 @@ const SocialIcons = () => {
           target='_blank'
           rel='noreferrer'
           aria-label='Pete Hampton SpeakerDeck'>
-          <FaSpeakerDeck size={38} className="hover:opacity-80" />
+          <FaSpeakerDeck size={38} className={`hover:opacity-80 ${socialHighlight}`} />
         </Link>
       </div>
     </div>

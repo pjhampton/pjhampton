@@ -1,7 +1,20 @@
 import Layout from '@components/Layout'
 import { NextSeo } from 'next-seo'
+import { useEffect, useState } from 'react';
 
 export default function About() {
+  const emojis = ['👋', '🦄', '⚡️', '🚀', '🍕'];
+  const [emojiIndex, setEmojiIndex] = useState(0);
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setEmojiIndex((prevIndex) => (prevIndex + 1) % emojis.length);
+    }, 1000);
+    return () => clearInterval(intervalId);
+  }, []);
+
+  const emoji = emojis[emojiIndex];
+
   return (
     <>
       <NextSeo
@@ -11,7 +24,7 @@ export default function About() {
       <Layout pageTitle={`Pete Hampton | About`} showShare={false}>
         <>
           <h1 className='special'>
-            Hey-o! I&apos;m Pete 👋{' '}
+            Hey-o! I&apos;m Pete {emoji}{' '}
           </h1>
 
           <p>

@@ -46,7 +46,7 @@ const ProfileCard = ({ pageTitle, showShare = false } : ProfileCardProps) => {
         </figcaption>
       </div>
 
-      <SocialIcons />
+      <SocialIcons isSidebar={false} />
     </figure>
 
     {showShare &&

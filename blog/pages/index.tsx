@@ -16,13 +16,12 @@ export default function Index({ posts } : IndexProps) {
     <>
       <NextSeo
         title='Pete Hampton - Software Engineer'
-        description={`Pete Hampton is a Software Engineer and freelance consultant from Belfast, N. Ireland. 
-                      He mainly works with Java and TypeScript, and enjoys databases and digital signal processing.`} />
+        description={`Pete Hampton is a Software Engineer and consultant from Belfast, N. Ireland.`} />
       <Layout pageTitle={'Pete Hampton'} showShare={false}>
-      <main>
-        <PostList posts={posts} />
-      </main>
-    </Layout>
+        <main>
+          <PostList posts={posts} />
+        </main>
+      </Layout>
     </>
   )
 }

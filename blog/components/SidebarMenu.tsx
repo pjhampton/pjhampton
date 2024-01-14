@@ -18,9 +18,7 @@ const SidebarMenu = ({menuOpenState, setMenuOpenState} : SidebarMenuProps) => {
       customBurgerIcon={false}>
       <div className='p-2 pt-6'>
         <Link href="/" className='pt-10'>
-
-          <SiteImage className='object-center w-24 h-24 mx-auto rounded-full' src={avatar} alt='PJ Hampton Avatar' />
-
+          <SiteImage className='object-center w-24 h-24 mx-auto rounded-md' src={avatar} alt='PJ Hampton Avatar' />
         </Link>
       </div>
 
@@ -44,7 +42,7 @@ const SidebarMenu = ({menuOpenState, setMenuOpenState} : SidebarMenuProps) => {
       </Link>
 
       <div className="pt-12">
-        <SocialIcons />
+        <SocialIcons isSidebar={true} />
       </div>
     </Menu>
   );

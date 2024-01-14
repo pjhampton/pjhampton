@@ -8,8 +8,8 @@ type CodeComponentProps = JSX.IntrinsicElements['code'] &
   };
 
   interface CodeProps extends Omit<CodeComponentProps, 'ref'> {
-  codeTagProps?: any;
-}
+    codeTagProps?: any;
+  }
 
 const CodeContainer = {
   code({node, className, inline, children, ...props}: CodeProps) {
