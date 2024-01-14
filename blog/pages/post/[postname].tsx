@@ -6,6 +6,7 @@ import { formatDate } from '@utils/datetime'
 import { PostProps } from '../../@types/post'
 import CodeContainer from '@components/CodeContainer'
 import { useTheme } from 'next-themes'
+import Link from 'next/link'
 
 export default function BlogPost({ siteTitle, frontMatter, markdownBody } : PostProps) {
   const { theme } = useTheme();
@@ -31,7 +32,7 @@ export default function BlogPost({ siteTitle, frontMatter, markdownBody } : Post
             <hr className="footer" />
             <h2 className='special'>~ Feedback</h2>
 
-            <p>Like to offer feedback or ideas? Then please email me at <span className='font-semibold'>pjhampton[@]duck.com</span></p>
+            <p>Wish to offer feedback or ideas? Consider opening an <Link href={`https://github.com/pjhampton/pjhampton`}>issue on this repository</Link>.</p>
           </div>}
         </article>
       </Layout>
