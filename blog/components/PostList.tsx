@@ -1,15 +1,17 @@
 import Link from 'next/link'
 import { PostGroup } from '../@types/post'
 import { formatDate } from '@utils/datetime'
+import { useTheme } from 'next-themes';
 
 interface PostListProps {
   posts: PostGroup;
 }
 
 export default function PostList({ posts }: PostListProps) {
+  const { theme } = useTheme()
 
   return <>
-    {!posts && <div>No Posts yet</div>}
+    {!posts && <div>No Posts available</div>}
     
     {posts && 
       Object.keys(posts).reverse().map((key, _) => {
@@ -27,7 +29,7 @@ export default function PostList({ posts }: PostListProps) {
         })
         return (
           <div className='postList' key={key} id={key}>
-            <h1 className='special'>{key}</h1>
+            <h1 className={`special ${theme === 'dark' ? 'cornsilk' : '' }`}>{key}</h1>
             <ul style={{ listStyle: 'none', padding: 0 }}>
               {articleDetail}
             </ul>

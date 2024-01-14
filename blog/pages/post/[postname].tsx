@@ -5,9 +5,11 @@ import ReactMarkdown from 'react-markdown'
 import { formatDate } from '@utils/datetime'
 import { PostProps } from '../../@types/post'
 import CodeContainer from '@components/CodeContainer'
+import { useTheme } from 'next-themes'
 
 export default function BlogPost({ siteTitle, frontMatter, markdownBody } : PostProps) {
-  
+  const { theme } = useTheme();
+
   if (!frontMatter) return <></>
 
   return (
@@ -18,7 +20,7 @@ export default function BlogPost({ siteTitle, frontMatter, markdownBody } : Post
       <Layout pageTitle={`${siteTitle} | ${frontMatter.title}`} showShare={true}>
         <article>
           <div className='pb-3'>
-            <h1 className='text-3xl font-medium'>{frontMatter.title}</h1>
+            <h1 className={`text-3xl font-medium ${theme === 'dark' ? 'cornsilk' : '' }`}>{frontMatter.title}</h1>
             <p>⚡️ <span className='font-semibold'>{frontMatter.author}</span> • {formatDate(frontMatter.date)}</p>
           </div>
           <div className='post'>

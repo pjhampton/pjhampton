@@ -1,15 +1,17 @@
 import Layout from '@components/Layout'
 import { NextSeo } from 'next-seo'
+import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
 
 export default function About() {
+  const { theme } = useTheme()
   const emojis = ['👋', '🦄', '⚡️', '🚀', '🍕'];
   const [emojiIndex, setEmojiIndex] = useState(0);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
       setEmojiIndex((prevIndex) => (prevIndex + 1) % emojis.length);
-    }, 1000);
+    }, 900);
     return () => clearInterval(intervalId);
   }, []);
 
@@ -23,7 +25,7 @@ export default function About() {
                          This is my blog in which I talk about these subjects and other topics I find interesting.`} />
       <Layout pageTitle={`Pete Hampton | About`} showShare={false}>
         <>
-          <h1 className='special'>
+          <h1 className={`special ${theme === 'dark' ? 'cornsilk' : '' }`}>
             Hey-o! I&apos;m Pete {emoji}{' '}
           </h1>
 
