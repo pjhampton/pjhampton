@@ -9,6 +9,7 @@ alias dc=docker-compose
 alias g=git
 alias gcurl=grpcurl
 alias k=kubectl
+alias kctx=kubectx
 alias pc=protoc
 alias py=python3
 alias ssl=cfssl
