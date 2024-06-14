@@ -46,6 +46,7 @@ brew 'vcpkg'
 brew 'tfswitch'
 brew 'watch'
 brew 'yq'
+brew 'zig'
 brew 'zsh'
 
 cask 'hyper'
