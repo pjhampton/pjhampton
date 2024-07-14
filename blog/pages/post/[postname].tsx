@@ -22,7 +22,7 @@ export default function BlogPost({ siteTitle, frontMatter, markdownBody } : Post
         <article>
           <div className='pb-3'>
             <h1 className={`text-3xl font-medium ${theme === 'dark' ? 'cornsilk' : '' }`}>{frontMatter.title}</h1>
-            <p>⚡️ <span className='font-semibold'>{frontMatter.author}</span> • {formatDate(frontMatter.date)}</p>
+            <p><span className='font-semibold'>{frontMatter.author}</span> ⚡️ {formatDate(frontMatter.date)}</p>
           </div>
           <div className='post'>
             <ReactMarkdown components={CodeContainer}>{markdownBody}</ReactMarkdown>

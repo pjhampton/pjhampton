@@ -39,7 +39,7 @@ final public class Person {
 }
 ```
 
-Below I create a no-thrills object pool that accepts a generic type. In this blog post, it will just be kept to a Person object though. An ```ArrayDeque<T>``` is used as the internal collection with a create function to build the Pool. The reason why I call this a no-thrills pool is that more sophisticated implementations can resize based on supply and demand parameters (hence the use of ArrayDeque<T> here) and do resetting (which we will get to). On a side note, this object pool has First In First Out (FIFO) semantics, but you could easily make it LIFO, or use a combination of the two (for whatever reason).
+Below I create a no-thrills object pool that accepts a generic type. In this blog post, it will just be kept to a Person object though. An ```ArrayDeque<T>``` is used as the internal collection with a create function to build the Pool. The reason why I call this a no-thrills pool is that more sophisticated implementations can resize based on supply and demand parameters (hence the use of `ArrayDeque<T>` here) and do resetting (which we will get to). On a side note, this object pool has First In First Out (FIFO) semantics, but you could easily make it LIFO, or use a combination of the two (for whatever reason).
 
 ```java
 package com.pjhampton.objpool;
@@ -141,7 +141,7 @@ Hi, I'm Person 6, and I'm 16!
 
 ### The Footgun
 
-In this example, things can't really go wrong. After all - we are in control of what the Person properties are. We set them to be name = Person $i, and age = $i + 10. But if the data was coming in from an external source that the system doesn't control (which is usually the case in any useful system), we could run into a data issue very quickly. For example, let's assume that every other Person does not have an age. This programs output would start to look like so:
+In this example, things can't really go wrong. After all - we are in control of what the Person properties are. We set them to be `name = Person $i`, and `age = $i + 10`. But if the data was coming in from an external source that the system doesn't control (which is usually the case in any useful system), we could run into a data issue very quickly. For example, let's assume that every other Person does not have an age. This programs output would start to look like so:
 
 ```java
 public static void main(String[] args) {

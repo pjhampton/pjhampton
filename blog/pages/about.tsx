@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 
 export default function About() {
   const { theme } = useTheme()
-  const emojis = ['👋', '🦄', '⚡️', '🚀', '🍕'];
+  const emojis = ['👋', '🦄', '⚡️', '🥸', '🍕'];
   const [emojiIndex, setEmojiIndex] = useState(0);
 
   useEffect(() => {
@@ -32,7 +32,7 @@ export default function About() {
           <p>
             My expertise is in Java, but you 
             will also find me programming C++, Go, and TypeScript. I specialise in software design and 
-            distributed systems in the context of data intensive applications. I also enjoy the Linux and SysAdmin world.
+            distributed systems in the context of data-intensive applications. I also enjoy the Linux and SysAdmin world.
             When not wrangling computers for a living, you will find me working to be a present father and husband,
             meditating, reading, and practicing yoga. I collect guitar pedals and enjoy learning about
             Digital Signal Processing.
