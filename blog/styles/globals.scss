@@ -101,8 +101,13 @@ img {
 
 // footer
 
-hr.footer {
-  border-top-width: 2px;
+.post-footer {
+  background-color: #FF8668;
+  color: black;
+
+  a {
+    text-decoration: underline;
+  }
 }
 
 // 404.tsx

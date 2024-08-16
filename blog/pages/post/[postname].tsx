@@ -27,13 +27,13 @@ export default function BlogPost({ siteTitle, frontMatter, markdownBody } : Post
           <div className='post'>
             <ReactMarkdown components={CodeContainer}>{markdownBody}</ReactMarkdown>
           </div>
-          {frontMatter.show_post_footer &&
-          <div className='mb-10 post-footer'>
-            <hr className="footer" />
-            <h2 className='special'>~ Feedback</h2>
 
-            <p>Wish to offer feedback or ideas? Consider opening an <Link href={`https://github.com/pjhampton/pjhampton`}>issue on this repository</Link>.</p>
-          </div>}
+          {frontMatter.show_post_footer &&
+          <footer className='p-4 mb-10 rounded-lg post-footer'>
+            <h2 className='special'>Feedback?</h2>
+
+            <p>Consider opening an <Link href={`https://github.com/pjhampton/pjhampton`}>issue on this repository</Link></p>
+          </footer>}
         </article>
       </Layout>
     </>
