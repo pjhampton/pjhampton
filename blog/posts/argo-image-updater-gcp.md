@@ -3,6 +3,7 @@ title: 'ArgoCD Image Updater - GCR Connectivity'
 author: 'Pete Hampton'
 author_link: 'https://github.com/pjhampton'
 date: '2023-Mar-30'
+show_post_footer: true
 excerpt: >
   ArgoCD Image Updater - Permissions issue when connecting to Google Cloud Registry
 ---
