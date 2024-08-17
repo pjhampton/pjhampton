@@ -3,6 +3,7 @@ title: 'IPC - Sharing memory between JVMs'
 author: 'Pete Hampton'
 author_link: 'https://github.com/pjhampton'
 date: '2023-Jul-30'
+show_post_footer: true
 excerpt: >
   yo
 ---
