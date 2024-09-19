@@ -1,13 +1,14 @@
+import React from 'react';
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
-interface NavLinkProps {
+interface Props {
   text: string;
   href: string;
   otherHrefMatches: string[];
 }
 
-const NavLink = ({text, href, otherHrefMatches} : NavLinkProps) => {
+const NavLink = ({text, href, otherHrefMatches} : Props) => {
   const router = useRouter()
   const baseStyles = [
     'block', 
@@ -49,4 +50,4 @@ const NavLink = ({text, href, otherHrefMatches} : NavLinkProps) => {
   );
 }
 
-export default NavLink
+export default React.memo(NavLink)

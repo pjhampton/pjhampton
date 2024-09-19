@@ -125,3 +125,49 @@ img {
 svg {
   color: black;
 }
+
+.input-container {
+  padding: .7em 0;
+  position: relative;
+}
+
+.url-input {
+  width: 300px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  color: #888;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: inherit;
+
+  &:focus,
+  &:active {
+    outline: none;
+  }
+}
+
+.copied-animation {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  opacity: 1;
+  animation: fadeOutUp 1.5s forwards;
+}
+
+@keyframes fadeOutUp {
+  0% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-20px);
+  }
+}

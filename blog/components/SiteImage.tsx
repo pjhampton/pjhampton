@@ -1,9 +1,11 @@
+import React from "react"
 import Image, { ImageLoader } from "next/image"
 
 const cloudflareImageLoader: ImageLoader = ({ src, width, quality }) => {
   if (!quality) {
     quality = 75
   }
+
   return `https://blog-image-renderer.pdvil.workers.dev?width=${width}&quality=${quality}&image=https://pjhampton.com/${src}`;
 }
 
@@ -15,4 +17,4 @@ const SiteImage = (props: any) => {
   }
 }
 
-export default SiteImage
+export default React.memo(SiteImage)

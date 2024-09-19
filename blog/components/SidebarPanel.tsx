@@ -1,12 +1,14 @@
-import avatar from '@public/avatar.webp'
-import ThemeToggle from './ThemeToggle'
+import React from 'react'
 import SiteImage from '@components/SiteImage'
+import ThemeToggle from '@components/ThemeToggle'
 
-interface SidebarPanelProps {
+import avatar from '@public/avatar.webp'
+
+interface Props {
   toggleMenu: () => void;
 }
 
-const SidebarPanel = ({ toggleMenu } : SidebarPanelProps) => {
+const SidebarPanel = ({ toggleMenu } : Props) => {
   return (
     <div className='fixed sidepanel'>
       <button className="p-2.5" onClick={toggleMenu} aria-label="toggle menu">
@@ -29,4 +31,4 @@ const SidebarPanel = ({ toggleMenu } : SidebarPanelProps) => {
   )
 }
 
-export default SidebarPanel
+export default React.memo(SidebarPanel)

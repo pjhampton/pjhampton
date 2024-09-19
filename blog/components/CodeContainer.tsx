@@ -1,5 +1,5 @@
-import type { ReactMarkdownProps } from 'react-markdown/lib/ast-to-react'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
+import type { ReactMarkdownProps } from 'react-markdown/lib/ast-to-react'
 import { atomDark } from 'react-syntax-highlighter/dist/cjs/styles/prism'
 
 type CodeComponentProps = JSX.IntrinsicElements['code'] &
@@ -7,9 +7,9 @@ type CodeComponentProps = JSX.IntrinsicElements['code'] &
     inline?: boolean;
   };
 
-  interface CodeProps extends Omit<CodeComponentProps, 'ref'> {
-    codeTagProps?: any;
-  }
+interface CodeProps extends Omit<CodeComponentProps, 'ref'> {
+  codeTagProps?: any;
+}
 
 const CodeContainer = {
   code({node, className, inline, children, ...props}: CodeProps) {

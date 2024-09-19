@@ -1,18 +1,20 @@
+import React from 'react'
 import Link from 'next/link'
-import avatar from '@public/avatar.webp'
-import SocialIcons from './SocialIcons'
-import SiteImage from '@components/SiteImage'
-import ThemeToggle from '@components/ThemeToggle'
-import { motion } from "framer-motion";
-import ShareIcons from './ShareIcons'
-import FadeIn from 'react-fade-in';
+import FadeIn from 'react-fade-in'
+import { motion } from "framer-motion"
 
-interface ProfileCardProps {
-  pageTitle: string;
+import ShareUrl from '@components/ShareUrl'
+import SiteImage from '@components/SiteImage'
+import SocialIcons from '@components/SocialIcons'
+import ThemeToggle from '@components/ThemeToggle'
+
+import avatar from '@public/avatar.webp'
+
+interface Props {
   showShare: boolean;
 }
 
-const ProfileCard = ({ pageTitle, showShare = false } : ProfileCardProps) => {
+const ProfileCard = ({ showShare = false } : Props) => {
 
   return (
     <span style={{position: 'fixed'}}>
@@ -46,26 +48,28 @@ const ProfileCard = ({ pageTitle, showShare = false } : ProfileCardProps) => {
         </figcaption>
       </div>
 
-      <SocialIcons isSidebar={false} />
+      <SocialIcons 
+        isSidebar={false} />
     </figure>
 
     {showShare &&
     <FadeIn className='visible xs:invisible'>
       <figure className='p-8 mt-4 text-center bg-white rounded-xl md:p-0 w-80 h-23'>
 
-      <div className='p-4 space-y-3 text-center'>
-        <figcaption className='font-medium uppercase'>
-          <div className='text-slate-700'>
-            Share this post
-          </div>
-        </figcaption>
-      </div>
+        <div className='pt-4 space-y-3 text-center'>
+          <figcaption className='font-medium uppercase'>
+            <div className='text-slate-700'>
+              Share this post
+            </div>
+          </figcaption>
+        </div>
 
-      <ShareIcons pageTitle={pageTitle} />
+        <ShareUrl />
+        
       </figure>
     </FadeIn>}
   </span>
   );
 }
 
-export default ProfileCard
+export default React.memo(ProfileCard);

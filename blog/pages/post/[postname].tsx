@@ -1,12 +1,14 @@
+import Link from 'next/link'
 import matter from 'gray-matter'
 import { NextSeo } from 'next-seo'
-import Layout from '@components/Layout'
+import { useTheme } from 'next-themes'
 import ReactMarkdown from 'react-markdown'
+
+import Layout from '@components/Layout'
 import { formatDate } from '@utils/datetime'
 import { PostProps } from '../../@types/post'
 import CodeContainer from '@components/CodeContainer'
-import { useTheme } from 'next-themes'
-import Link from 'next/link'
+
 
 export default function BlogPost({ siteTitle, frontMatter, markdownBody } : PostProps) {
   const { theme } = useTheme();
@@ -32,7 +34,7 @@ export default function BlogPost({ siteTitle, frontMatter, markdownBody } : Post
           <footer className='p-4 mb-10 rounded-lg post-footer'>
             <h2 className='special'>Feedback?</h2>
 
-            <p>Consider opening an <Link href={`https://github.com/pjhampton/pjhampton`}>issue on this repository</Link></p>
+            <p>Consider opening an <Link href={`https://github.com/pjhampton/pjhampton`} target="_blank">issue on this repository</Link></p>
           </footer>}
         </article>
       </Layout>

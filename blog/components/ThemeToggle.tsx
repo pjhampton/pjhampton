@@ -1,3 +1,4 @@
+import React from 'react'
 import { useTheme } from 'next-themes'
 import { FaSun, FaMoon } from 'react-icons/fa'
 
@@ -21,4 +22,4 @@ const ThemeToggle = () => {
   );
 }
 
-export default ThemeToggle
+export default React.memo(ThemeToggle)

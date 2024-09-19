@@ -1,13 +1,14 @@
+import React from 'react';
 import Link from 'next/link'
+import { useTheme } from 'next-themes';
 import { PostGroup } from '../@types/post'
 import { formatDate } from '@utils/datetime'
-import { useTheme } from 'next-themes';
 
-interface PostListProps {
+interface Props {
   posts: PostGroup;
 }
 
-export default function PostList({ posts }: PostListProps) {
+const PostList = ({ posts }: Props) => {
   const { theme } = useTheme()
 
   return <>
@@ -39,3 +40,5 @@ export default function PostList({ posts }: PostListProps) {
     }
   </>;
 }
+
+export default React.memo(PostList)

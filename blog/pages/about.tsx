@@ -12,6 +12,7 @@ export default function About() {
     const intervalId = setInterval(() => {
       setEmojiIndex((prevIndex) => (prevIndex + 1) % emojis.length);
     }, 900);
+    
     return () => clearInterval(intervalId);
   }, []);
 

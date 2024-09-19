@@ -1,16 +1,18 @@
 import Link from 'next/link'
-import SiteImage from './SiteImage'
-import avatar from '@public/avatar.webp'
-import SocialIcons from './SocialIcons'
 import { push as Menu } from 'react-burger-menu'
-import { Dispatch, SetStateAction } from 'react'
+import React, { Dispatch, SetStateAction } from 'react'
 
-interface SidebarMenuProps {
+import SiteImage from '@components/SiteImage'
+import SocialIcons from '@components/SocialIcons'
+
+import avatar from '@public/avatar.webp'
+
+interface Props {
   menuOpenState: boolean;
   setMenuOpenState: Dispatch<SetStateAction<boolean>>;
 }
 
-const SidebarMenu = ({menuOpenState, setMenuOpenState} : SidebarMenuProps) => {
+const SidebarMenu = ({menuOpenState, setMenuOpenState} : Props) => {
   return (
     <Menu
       isOpen={menuOpenState}
@@ -48,4 +50,4 @@ const SidebarMenu = ({menuOpenState, setMenuOpenState} : SidebarMenuProps) => {
   );
 }
 
-export default SidebarMenu
+export default React.memo(SidebarMenu);
