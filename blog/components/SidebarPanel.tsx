@@ -1,6 +1,5 @@
 import React from 'react'
 import SiteImage from '@components/SiteImage'
-import ThemeToggle from '@components/ThemeToggle'
 
 import avatar from '@public/avatar.webp'
 
@@ -19,14 +18,6 @@ const SidebarPanel = ({ toggleMenu } : Props) => {
           width='80'
           height='80'  />
       </button>
-
-      <div className="absolute bottom-0 w-full">
-        <div className='block text-center'>
-          <div className='inline-block m-auto'>
-            <ThemeToggle />
-          </div>
-        </div>
-      </div>
     </div>
   )
 }

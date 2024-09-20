@@ -4,6 +4,7 @@ import React, { Dispatch, SetStateAction } from 'react'
 
 import SiteImage from '@components/SiteImage'
 import SocialIcons from '@components/SocialIcons'
+import ThemeToggle from '@components/ThemeToggle'
 
 import avatar from '@public/avatar.webp'
 
@@ -45,6 +46,14 @@ const SidebarMenu = ({menuOpenState, setMenuOpenState} : Props) => {
 
       <div className="pt-12">
         <SocialIcons isSidebar={true} />
+      </div>
+
+      <div className="bottom-0 w-full">
+        <div className='text-center'>
+          <div className='inline-flex m-auto'>
+            <ThemeToggle />
+          </div>
+        </div>
       </div>
     </Menu>
   );
