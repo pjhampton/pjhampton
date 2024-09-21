@@ -1,9 +1,10 @@
 import { ReactChildren, ReactChild, useEffect, useState } from 'react'
 
 import NavLink from '@components/NavLink'
+import SiteImage from '@components/SiteImage'
 import ProfileCard from '@components/ProfileCard'
 import SidebarMenu from '@components/SidebarMenu'
-import SidebarPanel from '@components/SidebarPanel'
+import avatar from '@public/avatar.webp'
 
 interface Props {
   pageTitle: string;
@@ -21,14 +22,23 @@ export default function Layout({ children, showShare } : Props) {
 
   return (
     <>
-      {isMounted &&
-      <>
-        <div className='visible md:invisible'>
-          <SidebarMenu menuOpenState={menuOpenState} setMenuOpenState={setMenuOpenState} />
-          <SidebarPanel toggleMenu={() => setMenuOpenState(!menuOpenState)} />
+      {isMounted && <>
+        <div className='visible md:hidden'>
+          <SidebarMenu menuOpenState={menuOpenState} setMenuOpenState={setMenuOpenState} /> 
+            <button 
+              className="p-2.5" 
+              onClick={() => setMenuOpenState(!menuOpenState)} 
+              aria-label="toggle menu on smaller devices">
+              <SiteImage 
+                alt='PJ Hampton Avatar'
+                className='p-1.5 rounded-xl' 
+                src={avatar} 
+                width='80'
+                height='80' />
+            </button>
         </div>
         
-        <div className='container w-full pt-10 mx-auto md:max-w-6xl'>
+        <div className='container w-full mx-auto md:pt-10 md:max-w-6xl'>
           <span className='grid grid-cols-12'>
             
             <div className='hidden md:block'>
@@ -37,7 +47,7 @@ export default function Layout({ children, showShare } : Props) {
               </div>
             </div>
 
-            <div className='col-start-4 col-end-12 md:col-start-5'>
+            <div className='col-start-2 col-end-12 md:col-start-5'>
               <div className='hidden md:block'>
                 <ul role="tablist" className='flex flex-col flex-wrap pl-0 mb-8 list-none nav nav-tabs nav-justified md:flex-row' id='tabs-tabJustify'>
                   <li className='flex-grow text-center nav-item' role='presentation'>
@@ -55,8 +65,7 @@ export default function Layout({ children, showShare } : Props) {
             </div>
           </span>
         </div>
-      </>
-      } 
+      </>} 
     </>
   )
 }

@@ -27,7 +27,9 @@ export default function BlogPost({ siteTitle, frontMatter, markdownBody } : Post
             <p><span className='font-semibold'>{frontMatter.author}</span> ⚡️ {formatDate(frontMatter.date)}</p>
           </div>
           <div className='post'>
-            <ReactMarkdown components={CodeContainer}>{markdownBody}</ReactMarkdown>
+            <ReactMarkdown components={CodeContainer}>
+              {markdownBody}
+            </ReactMarkdown>
           </div>
 
           {frontMatter.show_post_footer &&
