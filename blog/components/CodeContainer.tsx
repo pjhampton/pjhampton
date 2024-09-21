@@ -7,12 +7,8 @@ type CodeComponentProps = JSX.IntrinsicElements['code'] &
     inline?: boolean;
   };
 
-interface CodeProps extends Omit<CodeComponentProps, 'ref'> {
-  codeTagProps?: any;
-}
-
 const CodeContainer = {
-  code({node, className, inline, children, ...props}: CodeProps) {
+  code({ className, inline, children, ...props }: CodeComponentProps) {
     const match = /language-(\w+)/.exec(className || '')
     return !inline && match ? (
       <SyntaxHighlighter

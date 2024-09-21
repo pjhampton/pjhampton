@@ -1,5 +1,5 @@
 import React from "react"
-import Image, { ImageLoader } from "next/image"
+import Image, { ImageLoader, StaticImageData } from "next/image"
 
 const cloudflareImageLoader: ImageLoader = ({ src, width, quality }) => {
   if (!quality) {
@@ -9,7 +9,15 @@ const cloudflareImageLoader: ImageLoader = ({ src, width, quality }) => {
   return `https://blog-image-renderer.pdvil.workers.dev?width=${width}&quality=${quality}&image=https://pjhampton.com/${src}`;
 }
 
-const SiteImage = (props: any) => {
+interface Props {
+  alt: string;
+  className: string;
+  src: string | StaticImageData;
+  width: number;
+  height: number;
+}
+
+const SiteImage = (props: Props) => {
   if (process.env.NODE_ENV === 'development') {
     return <Image {...props} placeholder={'blur'} unoptimized={true} alt="" />
   } else {

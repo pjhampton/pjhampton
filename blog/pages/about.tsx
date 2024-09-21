@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 
 export default function About() {
   const { theme } = useTheme()
-  const emojis = ['👋', '🦄', '⚡️', '🥸', '🍕'];
+  const emojis = ['👋', '🦄', '⚡️', '💡', '🍕', '✨'];
   const [emojiIndex, setEmojiIndex] = useState(0);
 
   useEffect(() => {
@@ -14,7 +14,7 @@ export default function About() {
     }, 900);
     
     return () => clearInterval(intervalId);
-  }, []);
+  });
 
   const emoji = emojis[emojiIndex];
 

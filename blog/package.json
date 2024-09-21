@@ -3,9 +3,10 @@
   "version": "1",
   "private": true,
   "scripts": {
+    "build": "next build",
     "clean": "rm -rf ./.next ./out",
     "dev": "next dev",
-    "build": "next build",
+    "lint": "next lint",
     "start": "next start"
   },
   "dependencies": {
@@ -38,7 +39,7 @@
     "@types/webpack-env": "^1.18.5",
     "autoprefixer": "^10.4.20",
     "browserslist": ">=4.23.3",
-    "eslint": "9.11.0",
+    "eslint": "^8",
     "eslint-config-next": "^14.2.13",
     "postcss": "^8.4.47",
     "tailwindcss": "^3.4.12",

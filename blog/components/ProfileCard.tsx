@@ -31,8 +31,8 @@ const ProfileCard = ({ showShare = false } : Props) => {
               alt='Pete Hampton Avatar' 
               className='mx-auto rounded-xl' 
               src={avatar}
-              width='150' 
-              height='150' />
+              width={150} 
+              height={150} />
           </motion.div>
         </Link>
       </div>

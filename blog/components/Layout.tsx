@@ -57,8 +57,8 @@ export default function Layout({ children, showShare } : Props) {
                     alt='PJ Hampton Avatar'
                     className='p-1 rounded-xl' 
                     src={avatar} 
-                    width='80'
-                    height='80' />
+                    width={80}
+                    height={80} />
                 </button>
               </div>
 

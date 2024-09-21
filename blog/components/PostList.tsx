@@ -15,7 +15,7 @@ const PostList = ({ posts }: Props) => {
     {!posts && <div>No Posts available</div>}
     
     {posts && 
-      Object.keys(posts).reverse().map((key, _) => {
+      Object.keys(posts).reverse().map((key) => {
         const articles = posts[key];
         const articleDetail = articles.map((post) => {
           return (
