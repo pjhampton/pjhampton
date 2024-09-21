@@ -24,7 +24,9 @@ const SidebarMenu = ({menuOpenState, setMenuOpenState} : Props) => {
           <SiteImage 
             src={avatar}
             alt='Pete Hampton Avatar'
-            className='object-center w-24 h-24 mx-auto rounded-md' />
+            width='32'
+            height='32'
+            className='object-center w-32 h-32 mx-auto rounded-md' />
         </Link>
       </div>
 

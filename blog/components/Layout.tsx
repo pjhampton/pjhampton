@@ -4,6 +4,7 @@ import NavLink from '@components/NavLink'
 import SiteImage from '@components/SiteImage'
 import ProfileCard from '@components/ProfileCard'
 import SidebarMenu from '@components/SidebarMenu'
+
 import avatar from '@public/avatar.webp'
 
 interface Props {
@@ -23,21 +24,6 @@ export default function Layout({ children, showShare } : Props) {
   return (
     <>
       {isMounted && <>
-        <div className='visible md:hidden'>
-          <SidebarMenu menuOpenState={menuOpenState} setMenuOpenState={setMenuOpenState} /> 
-            <button 
-              className="p-2.5" 
-              onClick={() => setMenuOpenState(!menuOpenState)} 
-              aria-label="toggle menu on smaller devices">
-              <SiteImage 
-                alt='PJ Hampton Avatar'
-                className='p-1.5 rounded-xl' 
-                src={avatar} 
-                width='80'
-                height='80' />
-            </button>
-        </div>
-        
         <div className='container w-full mx-auto md:pt-10 md:max-w-6xl'>
           <span className='grid grid-cols-12'>
             
@@ -59,6 +45,23 @@ export default function Layout({ children, showShare } : Props) {
                 </ul>
               </div>
               
+              <div className='visible md:hidden'>
+                <SidebarMenu 
+                  menuOpenState={menuOpenState} 
+                  setMenuOpenState={setMenuOpenState} /> 
+                <button 
+                  className="pt-2.5" 
+                  onClick={() => setMenuOpenState(!menuOpenState)} 
+                  aria-label="toggle menu on smaller devices">
+                  <SiteImage 
+                    alt='PJ Hampton Avatar'
+                    className='p-1 rounded-xl' 
+                    src={avatar} 
+                    width='80'
+                    height='80' />
+                </button>
+              </div>
+
               <section>
                 {children}
               </section>
