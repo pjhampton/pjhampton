@@ -26,6 +26,12 @@ export default function Layout({ children, showShare } : Props) {
       {isMounted && <>
         <div className='container w-full mx-auto md:pt-10 md:max-w-6xl'>
           <span className='grid grid-cols-12'>
+
+            <div className='visible md:hidden'>
+              <SidebarMenu 
+                menuOpenState={menuOpenState} 
+                setMenuOpenState={setMenuOpenState} /> 
+            </div>
             
             <div className='hidden md:block'>
               <div className='col-start-1 col-end-4'>
@@ -46,9 +52,6 @@ export default function Layout({ children, showShare } : Props) {
               </div>
               
               <div className='visible md:hidden'>
-                <SidebarMenu 
-                  menuOpenState={menuOpenState} 
-                  setMenuOpenState={setMenuOpenState} /> 
                 <button 
                   className="pt-2.5" 
                   onClick={() => setMenuOpenState(!menuOpenState)} 
