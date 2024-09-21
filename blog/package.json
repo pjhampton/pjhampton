@@ -3,11 +3,10 @@
   "version": "1",
   "private": true,
   "scripts": {
-    "clean": "rm -rf ./.next",
+    "clean": "rm -rf ./.next ./out",
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "export": "next export"
+    "start": "next start"
   },
   "dependencies": {
     "@next/bundle-analyzer": "^14.0.1",
