@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import { useTheme } from 'next-themes';
 
 interface Props {
   text: string;
@@ -10,6 +11,8 @@ interface Props {
 
 const NavLink = ({text, href, otherHrefMatches} : Props) => {
   const router = useRouter()
+  const { theme } = useTheme()
+
   const baseStyles = [
     'block', 
     'w-full', 
@@ -20,7 +23,7 @@ const NavLink = ({text, href, otherHrefMatches} : Props) => {
     'font-medium', 
     'uppercase', 
     'border-b-4', 
-    'nav-link'
+    'nav-link',
   ]
 
   const routerPathStartWith = (pathname: string): boolean => {
@@ -41,7 +44,11 @@ const NavLink = ({text, href, otherHrefMatches} : Props) => {
     <Link href={href} legacyBehavior>
       <button className={
         routerPathStartWith(router.pathname) ?
-          ['activeNavLink', ...baseStyles].join(' ').toString()
+          [
+            'activeNavLink', 
+            ... (theme === 'dark') ? ['cornsilk'] : [],
+            ...baseStyles
+          ].join(' ').toString()
           : baseStyles.join(' ').toString()
         } type='button'>
         {text}

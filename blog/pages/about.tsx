@@ -27,7 +27,7 @@ export default function About() {
       <Layout pageTitle={`Pete Hampton | About`} showShare={false}>
         <>
           <h1 className={`special ${theme === 'dark' ? 'cornsilk' : '' }`}>
-            Hey-o! I&apos;m Pete {emoji}{' '}
+            Hey-o! <span className='hidden md:inline-block'>I&apos;m Pete</span> {emoji}{' '}
           </h1>
 
           <p>

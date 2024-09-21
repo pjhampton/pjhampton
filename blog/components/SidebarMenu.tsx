@@ -21,7 +21,10 @@ const SidebarMenu = ({menuOpenState, setMenuOpenState} : Props) => {
       customBurgerIcon={false}>
       <div className='p-2 pt-6'>
         <Link href="/" className='pt-10'>
-          <SiteImage className='object-center w-24 h-24 mx-auto rounded-md' src={avatar} alt='PJ Hampton Avatar' />
+          <SiteImage 
+            src={avatar}
+            alt='Pete Hampton Avatar'
+            className='object-center w-24 h-24 mx-auto rounded-md' />
         </Link>
       </div>
 
@@ -48,11 +51,9 @@ const SidebarMenu = ({menuOpenState, setMenuOpenState} : Props) => {
         <SocialIcons isSidebar={true} />
       </div>
 
-      <div className="bottom-0 w-full">
-        <div className='text-center'>
-          <div className='inline-flex m-auto'>
-            <ThemeToggle />
-          </div>
+      <div className='pt-12 text-center'>
+        <div className='inline-flex m-auto'>
+          <ThemeToggle />
         </div>
       </div>
     </Menu>

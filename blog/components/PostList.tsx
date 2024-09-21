@@ -20,8 +20,12 @@ const PostList = ({ posts }: Props) => {
         const articleDetail = articles.map((post) => {
           return (
             <li key={post.slug} id={post.slug} style={{paddingBottom: '.15em'}}>
-              <span style={{width: '97px', display: 'inline-block'}}>
-                {formatDate(post.frontMatter.date)}</span> ~&nbsp;&nbsp;&nbsp;
+              <span className="hidden md:inline-block">
+                <span style={{width: '97px', display: 'inline-block'}}>
+                  {formatDate(post.frontMatter.date)}
+                </span>
+                ~&nbsp;&nbsp;&nbsp;
+              </span>
               <Link href={{ pathname: `/post/${post.slug}` }} legacyBehavior>
                 {post.frontMatter.title}
               </Link>

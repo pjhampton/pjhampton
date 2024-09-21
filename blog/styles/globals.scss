@@ -66,8 +66,8 @@ img {
 .postList {
   margin-bottom: 1.2em;
 
-  a {
-    @apply underline text-gray-800 hover:text-gray-600 dark:text-gray-100 dark:hover:text-gray-300
+  a:hover {
+    @apply text-gray-800 hover:text-gray-600 dark:text-gray-100 dark:hover:text-gray-300
   }
 }
 
