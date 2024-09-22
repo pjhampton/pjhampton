@@ -12,7 +12,13 @@ Oftentimes, software need to talk to other software - this is where IPC (Inter-P
 
 ## Consumer
 
-Let's write the consumer as that is what we will run first. First, I constrain the message buffer to 1024 Bytes and then open a `RandomAccessFile` called `smem.dat` (shared memory dot data). The `RandomAccessFile` acts as a large array of bytes stored in the file system. `RandomAccessFile.getChannel()` returns a reading/writing channel to that file. `channel.map(FileChannel.MapMode.READ_WRITE, 0, MESSAGE_SIZE);` maps a region of file directly into memory - it allows us to work with the file as if it were a large array of bytes in memory. This is powerful as it allows us to read and write to the file directly, rather than traditional slow disk operations. The actual mechanics of how the data is transferred between the program and the file are handled by the operating system and although is incredibly efficient, can be subject to things like virtual memory management and paging.
+Let's write the consumer as that is what we will run first. First, I constrain the message buffer to 1024 Bytes and then open a `RandomAccessFile` called `smem.dat` (shared memory dot data). The `RandomAccessFile` acts as a large array of bytes stored in the file system. `RandomAccessFile.getChannel()` returns a reading/writing channel to that file. 
+
+```java
+channel.map(FileChannel.MapMode.READ_WRITE, 0, MESSAGE_SIZE);
+``` 
+
+The above snippet maps a region of file directly into memory - it allows us to work with the file as if it were a large array of bytes in memory. This is powerful as it allows us to read and write to the file directly, rather than traditional slow disk operations. The actual mechanics of how the data is transferred between the program and the file are handled by the operating system and although is incredibly efficient, can be subject to things like virtual memory management and paging.
 
 In the while loop that polls for new messages, there is a syncronization mechanism in place `buffer.get(MESSAGE_SIZE - 1) == (byte) 1` where the producer will signal to the consumer that a new message is available by setting the last byte to `1`. The message is then read out of the buffer based on the length of the message and decoded as a string for printing. At the end, the consumer will set `buffer.put(MESSAGE_SIZE - 1, (byte) 0);` to signal to the producer that the massage has been read and is ready for the next message.
 
