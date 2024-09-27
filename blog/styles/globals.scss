@@ -93,6 +93,14 @@ img {
     max-height: 35em;
     margin: 0 auto;
   }
+
+  a {
+    @apply text-sky-500;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
 .activeNavLink {
