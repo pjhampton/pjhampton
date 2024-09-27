@@ -24,18 +24,18 @@ const ProfileCard = ({ showShare = false } : Props) => {
         <ThemeToggle />
       </div>
 
-      <div className='p-2 pt-6'>
-        <Link href="/" className='pt-10' aria-label='return home'>
+      <span className='p-2 pt-6'>
+        <Link href="/" className='inline-flex' aria-label='return home'>
           <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }}>
             <SiteImage 
               alt='Pete Hampton Avatar' 
-              className='mx-auto rounded-xl' 
+              className='mx-auto mt-6 mb-1 rounded-xl' 
               src={avatar}
               width={150} 
               height={150} />
           </motion.div>
         </Link>
-      </div>
+      </span>
 
       <div className='p-6 pt-8 space-y-4 text-center'>
         <figcaption className='font-medium'>
