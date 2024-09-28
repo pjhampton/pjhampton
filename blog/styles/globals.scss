@@ -61,6 +61,10 @@ img {
   color: cornsilk;
 }
 
+.navy {
+  color: rgb(30, 48, 80);
+}
+
 // Post Styles
 
 .postList {
@@ -131,7 +135,7 @@ img {
 }
 
 svg {
-  color: black;
+  color: rgb(30, 48, 80);
 }
 
 .input-container {
@@ -143,7 +147,7 @@ svg {
   width: 300px;
   padding: 10px;
   font-size: 16px;
-  border: 1px solid #dddddd;
+  border: 1px solid #f0f0f0;
   color: #888888;
   border-radius: 4px;
   cursor: pointer;

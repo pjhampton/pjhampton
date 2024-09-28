@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 
 export default function About() {
   const { theme } = useTheme()
-  const emojis = ['👋', '🦄', '⚡️', '💡', '🍕', '✨'];
+  const emojis = ['👋', '🦄', '⚡️', '💡', '🍕', '✨', '🍷'];
   const [emojiIndex, setEmojiIndex] = useState(0);
 
   useEffect(() => {
@@ -26,7 +26,7 @@ export default function About() {
                          This is my blog in which I talk about these subjects and other topics I find interesting.`} />
       <Layout pageTitle={`Pete Hampton | About`} showShare={false}>
         <>
-          <h1 className={`special ${theme === 'dark' ? 'cornsilk' : '' }`}>
+          <h1 className={`special ${theme === 'dark' ? 'cornsilk' : 'navy' }`}>
             Hey-o! <span className='hidden md:inline-block'>I&apos;m Pete</span> {emoji}
           </h1>
 

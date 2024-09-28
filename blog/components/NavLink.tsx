@@ -46,7 +46,7 @@ const NavLink = ({text, href, otherHrefMatches} : Props) => {
         routerPathStartWith(router.pathname) ?
           [
             'activeNavLink', 
-            ... (theme === 'dark') ? ['cornsilk'] : [],
+            ... (theme === 'dark') ? ['cornsilk'] : ['navy'],
             ...baseStyles
           ].join(' ').toString()
           : baseStyles.join(' ').toString()

@@ -24,7 +24,7 @@ const PostList = ({ posts }: Props) => {
                 <span style={{width: '97px', display: 'inline-block'}}>
                   {formatDate(post.frontMatter.date)}
                 </span>
-                ~&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;~&nbsp;&nbsp;&nbsp;
               </span>
               <Link href={{ pathname: `/post/${post.slug}` }} legacyBehavior>
                 {post.frontMatter.title}
@@ -34,7 +34,7 @@ const PostList = ({ posts }: Props) => {
         })
         return (
           <div className='postList' key={key} id={key}>
-            <h1 className={`special ${theme === 'dark' ? 'cornsilk' : '' }`}>{key}</h1>
+            <h1 className={`special ${theme === 'dark' ? 'cornsilk' : 'navy' }`}>{key}</h1>
             <ul style={{ listStyle: 'none', padding: 0 }}>
               {articleDetail}
             </ul>
