@@ -9,7 +9,7 @@ interface Props {
 }
 
 const PostList = ({ posts }: Props) => {
-  const { theme } = useTheme()
+  const { resolvedTheme } = useTheme()
 
   return <>
     {!posts && <div>No Posts available</div>}
@@ -34,7 +34,7 @@ const PostList = ({ posts }: Props) => {
         })
         return (
           <div className='postList' key={key} id={key}>
-            <h1 className={`special ${theme === 'dark' ? 'cornsilk' : 'navy' }`}>{key}</h1>
+            <h1 className={`special ${resolvedTheme === 'dark' ? 'cornsilk' : 'navy' }`}>{key}</h1>
             <ul style={{ listStyle: 'none', padding: 0 }}>
               {articleDetail}
             </ul>

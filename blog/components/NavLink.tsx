@@ -11,7 +11,7 @@ interface Props {
 
 const NavLink = ({text, href, otherHrefMatches} : Props) => {
   const router = useRouter()
-  const { theme } = useTheme()
+  const { resolvedTheme } = useTheme()
 
   const baseStyles = [
     'block', 
@@ -46,7 +46,7 @@ const NavLink = ({text, href, otherHrefMatches} : Props) => {
         routerPathStartWith(router.pathname) ?
           [
             'activeNavLink', 
-            ... (theme === 'dark') ? ['cornsilk'] : ['navy'],
+            ... (resolvedTheme === 'dark') ? ['cornsilk'] : ['navy'],
             ...baseStyles
           ].join(' ').toString()
           : baseStyles.join(' ').toString()

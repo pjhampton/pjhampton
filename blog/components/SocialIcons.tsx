@@ -8,10 +8,10 @@ interface Props {
 }
 
 const SocialIcons = ({ isSidebar } : Props) => {
-  const { theme } = useTheme();
+  const { resolvedTheme } = useTheme();
 
   const socialHighlight = 
-    (isSidebar && theme == 'dark') ? 'text-slate-200' : '';
+    (isSidebar && resolvedTheme == 'dark') ? 'text-slate-200' : '';
 
   return (
     <div className='inline-flex pt-4'>

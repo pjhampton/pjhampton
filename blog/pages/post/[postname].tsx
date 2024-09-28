@@ -11,7 +11,7 @@ import CodeContainer from '@components/CodeContainer'
 
 
 export default function BlogPost({ siteTitle, frontMatter, markdownBody } : PostProps) {
-  const { theme } = useTheme();
+  const { resolvedTheme } = useTheme();
 
   if (!frontMatter) return <></>
 
@@ -23,7 +23,7 @@ export default function BlogPost({ siteTitle, frontMatter, markdownBody } : Post
       <Layout pageTitle={`${siteTitle} | ${frontMatter.title}`} showShare={true}>
         <article>
           <div className='pb-3'>
-            <h1 className={`text-3xl font-medium ${theme === 'dark' ? 'cornsilk' : '' }`}>{frontMatter.title}</h1>
+            <h1 className={`text-3xl font-medium ${resolvedTheme === 'dark' ? 'cornsilk' : '' }`}>{frontMatter.title}</h1>
             <p><span className='font-semibold'>{frontMatter.author}</span> ⚡️ {formatDate(frontMatter.date)}</p>
           </div>
           <div className='post'>
