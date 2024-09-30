@@ -71,7 +71,7 @@ img {
   margin-bottom: 1.2em;
 
   a:hover {
-    @apply text-gray-800 hover:text-gray-600 dark:text-gray-100 dark:hover:text-gray-300
+    text-decoration: underline;
   }
 }
 
@@ -164,7 +164,7 @@ svg {
   top: -30px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #333;
+  background-color: rgb(29, 31, 33);
   color: white;
   padding: 5px 10px;
   border-radius: 4px;

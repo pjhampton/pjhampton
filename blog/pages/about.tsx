@@ -38,10 +38,6 @@ export default function About() {
             meditating, reading, and practicing yoga. I collect guitar pedals and enjoy learning about
             Digital Signal Processing.
           </p>
-
-          <p>
-            If my work or content has helped you or your business consider paying it forward.
-          </p>
         </>
       </Layout>
     </>
