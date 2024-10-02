@@ -1,12 +1,11 @@
-import { useRouter } from 'next/router'
-import React, { useState } from 'react'
+import { useRouter } from 'next/router';
+import React, { useState } from 'react';
 
 function ShareUrl() {
-  const { asPath } = useRouter()
+  const { asPath } = useRouter();
   const [isCopied, setIsCopied] = useState(false);
 
-  const getUrl = () =>
-    `https://pjhampton.com${asPath}`
+  const getUrl = () => `https://pjhampton.com${asPath}`;
 
   const copyToClipboard = () => {
     navigator.clipboard.writeText(getUrl());
@@ -26,9 +25,8 @@ function ShareUrl() {
         onClick={copyToClipboard}
         className="bg-white url-input"
       />
-      
-      {isCopied && 
-        <span className="copied-animation">Copied!</span>}
+
+      {isCopied && <span className="copied-animation">Copied!</span>}
     </div>
   );
 }

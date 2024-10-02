@@ -1,4 +1,3 @@
-
 export interface RawPost {
   default: string;
 }
@@ -10,7 +9,7 @@ export interface Post {
 }
 
 export interface PostGroup {
-  [year: string]: Post[]
+  [year: string]: Post[];
 }
 
 export interface PostProps {

@@ -49,7 +49,8 @@ p {
   text-align: justify;
 }
 
-p, pre {
+p,
+pre {
   margin-bottom: 1em;
 }
 
@@ -80,11 +81,12 @@ img {
     font-size: 1.2em;
     font-weight: 600;
     font-style: italic;
-    border-left: .4em solid lightgray;
+    border-left: 0.4em solid lightgray;
     padding-left: 20px;
   }
 
-  ul, ol {
+  ul,
+  ol {
     padding: 0 1em 1em 1em;
     margin-left: 1em;
   }
@@ -114,7 +116,7 @@ img {
 // footer
 
 .post-footer {
-  background-color: #FF8668;
+  background-color: #ff8668;
   color: black;
 
   a {
@@ -139,7 +141,7 @@ svg {
 }
 
 .input-container {
-  padding: .7em 0;
+  padding: 0.7em 0;
   position: relative;
 }
 

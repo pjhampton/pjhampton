@@ -8,7 +8,8 @@
     "dev": "next dev",
     "lint": "next lint",
     "local": "next dev",
-    "start": "next start"
+    "start": "next start",
+    "prettify": "npx prettier . --write"
   },
   "dependencies": {
     "@next/bundle-analyzer": "^14.0.1",
@@ -43,6 +44,7 @@
     "eslint": "^8",
     "eslint-config-next": "^14.2.13",
     "postcss": "^8.4.47",
+    "prettier": "3.3.3",
     "tailwindcss": "^3.4.12",
     "typescript": "^5.6.2"
   }
