@@ -8,6 +8,7 @@
     "dev": "next dev",
     "lint": "next lint",
     "local": "next dev",
+    "scan": "npx react-scan@latest http://localhost:3000",
     "start": "next start",
     "prettify": "npx prettier . --write"
   },
