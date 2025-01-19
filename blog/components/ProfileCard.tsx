@@ -51,7 +51,7 @@ const ProfileCard = ({ showShare = false }: Props) => {
           <figure className="p-8 mt-4 text-center bg-white rounded-xl md:p-0 w-80 h-23">
             <div className="pt-4 space-y-3 text-center">
               <figcaption className="font-medium uppercase">
-                <div className="text-slate-700">Share this post</div>
+                <div className="text-slate-700">Share</div>
               </figcaption>
             </div>
 
