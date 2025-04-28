@@ -2,6 +2,7 @@ tap 'warrensbox/tap'
 tap 'tinygo-org/tools'
 
 brew 'avrdude'
+brew 'aws-iam-authenticator'
 brew 'bat'
 brew 'binutils'
 brew 'ccache'
