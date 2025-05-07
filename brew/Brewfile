@@ -52,6 +52,7 @@ brew 'watch'
 brew 'yq'
 brew 'zsh'
 
+cask 'cursor'
 cask 'ghostty'
 cask 'notion'
 cask 'notion-calendar'
