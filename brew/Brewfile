@@ -1,4 +1,5 @@
 tap 'warrensbox/tap'
+tap 'teamlumos/tap'
 tap 'tinygo-org/tools'
 
 brew 'avrdude'
@@ -32,6 +33,7 @@ brew 'libpcap'
 brew 'libpq'
 brew 'libtool'
 brew 'llvm'
+berw 'lumos'
 brew 'nmap'
 brew 'nvim'
 brew 'nvm'
