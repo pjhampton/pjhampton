@@ -45,22 +45,6 @@ export default function BlogPost({
               {markdownBody}
             </ReactMarkdown>
           </div>
-
-          {frontMatter.show_post_footer && (
-            <footer className="p-4 mb-10 rounded-lg post-footer">
-              <h2 className="special">Feedback?</h2>
-
-              <p>
-                Consider opening an{' '}
-                <Link
-                  href={`https://github.com/pjhampton/pjhampton`}
-                  target="_blank"
-                >
-                  issue on this repository
-                </Link>
-              </p>
-            </footer>
-          )}
         </article>
       </Layout>
     </>

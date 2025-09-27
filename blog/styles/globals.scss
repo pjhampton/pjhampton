@@ -78,11 +78,23 @@ img {
 
 .post {
   blockquote {
-    font-size: 1.2em;
-    font-weight: 600;
+    font-weight: 500;
+    font-size: 1.2rem;
     font-style: italic;
-    border-left: 0.4em solid lightgray;
-    padding-left: 20px;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 0.5rem;
+
+    background-color: #ff8668;
+    color: black;
+
+    a {
+      text-decoration: underline;
+    }
+
+    p {
+      margin-bottom: .3rem;
+    }
   }
 
   ul,
@@ -111,17 +123,6 @@ img {
 
 .activeNavLink {
   border-bottom: 4px solid #a9beef;
-}
-
-// footer
-
-.post-footer {
-  background-color: #ff8668;
-  color: black;
-
-  a {
-    text-decoration: underline;
-  }
 }
 
 // 404.tsx

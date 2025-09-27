@@ -17,7 +17,7 @@ interface Props {
 const ProfileCard = ({ showShare = false }: Props) => {
   return (
     <span style={{ position: 'fixed' }}>
-      <figure className="p-8 text-center bg-white rounded-xl md:p-0 w-80 h-96">
+      <figure className="p-8 text-center bg-white rounded-lg md:p-0 w-80 h-96">
         <div style={{ position: 'absolute', right: 0 }}>
           <ThemeToggle />
         </div>
@@ -48,7 +48,7 @@ const ProfileCard = ({ showShare = false }: Props) => {
 
       {showShare && (
         <FadeIn className="visible xs:invisible">
-          <figure className="p-8 mt-4 text-center bg-white rounded-xl md:p-0 w-80 h-23">
+          <figure className="p-8 mt-4 text-center bg-white rounded-lg md:p-0 w-80 h-23">
             <div className="pt-4 space-y-3 text-center">
               <figcaption className="font-medium uppercase">
                 <div className="text-slate-700">Share</div>
