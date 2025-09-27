@@ -38,7 +38,7 @@ const ProfileCard = ({ showShare = false }: Props) => {
 
         <div className="p-6 pt-8 space-y-4 text-center">
           <figcaption className="font-medium">
-            <div className="text-sky-500">Pete Hampton</div>
+            <div className="text-black font-bold text-[1.2rem]">Pete Hampton</div>
             <div className="text-slate-700">Code Zookeeper</div>
           </figcaption>
         </div>
