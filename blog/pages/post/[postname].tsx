@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import matter from 'gray-matter';
 import { NextSeo } from 'next-seo';
 import { useTheme } from 'next-themes';
