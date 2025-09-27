@@ -41,34 +41,7 @@ export default function Layout({ children, showShare }: Props) {
               </div>
 
               <div className="col-start-2 col-end-12 md:col-start-5">
-                <div className="hidden md:block">
-                  <ul
-                    role="tablist"
-                    className="flex flex-col flex-wrap pl-0 mb-8 list-none nav nav-tabs nav-justified md:flex-row"
-                    id="tabs-tabJustify"
-                  >
-                    <li
-                      className="flex-grow text-center nav-item"
-                      role="presentation"
-                    >
-                      <NavLink
-                        text="Posts"
-                        href="/"
-                        otherHrefMatches={['/post']}
-                      />
-                    </li>
-                    <li
-                      className="flex-grow text-center nav-item"
-                      role="presentation"
-                    >
-                      <NavLink
-                        text="About"
-                        href="/about"
-                        otherHrefMatches={[]}
-                      />
-                    </li>
-                  </ul>
-                </div>
+
 
                 <div className="visible md:hidden">
                   <button
