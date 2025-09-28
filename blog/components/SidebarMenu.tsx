@@ -41,14 +41,6 @@ const SidebarMenu = ({ menuOpenState, setMenuOpenState }: Props) => {
         </figcaption>
       </div>
 
-      <Link href="/" id="posts" className="block menu-item">
-        Posts
-      </Link>
-
-      <Link href="/about" id="about" className="block menu-item">
-        About
-      </Link>
-
       <div className="pt-12">
         <SocialIcons isSidebar={true} />
       </div>
