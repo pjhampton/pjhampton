@@ -40,7 +40,6 @@ export default function Layout({ children, showShare }: Props) {
               </div>
 
               <div className="col-start-2 col-end-12 md:col-start-5">
-
                 <div className="visible md:hidden">
                   <button
                     className="pt-2.5"
