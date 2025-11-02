@@ -1,7 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
 import { useTheme } from 'next-themes';
-import { FaGithub, FaSpeakerDeck, FaLinkedin } from 'react-icons/fa';
+import { FaGithub, FaSpeakerDeck } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
 
 interface Props {
   isSidebar: boolean;
@@ -31,12 +32,12 @@ const SocialIcons = ({ isSidebar }: Props) => {
 
       <div className="pl-2 pr-2">
         <Link
-          href={'https://www.linkedin.com/in/pjhampton/'}
+          href={'https://x.com/_pjhampton'}
           target="_blank"
           rel="noreferrer"
-          aria-label="Pete Hampton LinkedIn"
+          aria-label="Pete Hampton X (Twitter)"
         >
-          <FaLinkedin
+          <FaXTwitter
             size={35}
             className={`hover:opacity-80 ${socialHighlight}`}
           />
