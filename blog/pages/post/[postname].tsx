@@ -7,11 +7,15 @@ import Layout from '@components/Layout';
 import { formatDate } from '@utils/datetime';
 import { PostProps } from '../../@types/post';
 import CodeContainer from '@components/CodeContainer';
+import PostNavigation from '@components/PostNavigation';
+import { getSortedPosts } from '@utils/posts';
 
 export default function BlogPost({
   siteTitle,
   frontMatter,
-  markdownBody
+  markdownBody,
+  previousPost,
+  nextPost
 }: PostProps) {
   const { resolvedTheme } = useTheme();
 
@@ -44,6 +48,7 @@ export default function BlogPost({
               {markdownBody}
             </ReactMarkdown>
           </div>
+          <PostNavigation previousPost={previousPost} nextPost={nextPost} />
         </article>
       </Layout>
     </>
@@ -56,11 +61,19 @@ export async function getStaticProps({ ...ctx }) {
   const content = await import(`../../posts/${postname}.md`);
   const data = matter(content.default);
 
+  const allPosts = getSortedPosts();
+  const currentPostIndex = allPosts.findIndex(post => post.slug === postname);
+  
+  const previousPost = currentPostIndex < allPosts.length - 1 ? allPosts[currentPostIndex + 1] : null;
+  const nextPost = currentPostIndex > 0 ? allPosts[currentPostIndex - 1] : null;
+
   return {
     props: {
       siteTitle: 'Pete Hampton',
       frontMatter: data.data,
-      markdownBody: data.content
+      markdownBody: data.content,
+      previousPost,
+      nextPost
     }
   };
 }

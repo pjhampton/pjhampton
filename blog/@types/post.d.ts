@@ -16,4 +16,6 @@ export interface PostProps {
   siteTitle: string;
   frontMatter: FrontMatter;
   markdownBody: string;
+  previousPost?: Post;
+  nextPost?: Post;
 }

@@ -1,8 +1,8 @@
 import { useState } from 'react';
+import { MdContentCopy } from 'react-icons/md';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import type { ReactMarkdownProps } from 'react-markdown/lib/ast-to-react';
 import { atomDark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
-import { MdContentCopy, MdCheck } from 'react-icons/md';
 
 type CodeComponentProps = JSX.IntrinsicElements['code'] &
   ReactMarkdownProps & {
@@ -18,6 +18,7 @@ function CodeBlock({
   const [copied, setCopied] = useState(false);
   const match = /language-(\w+)/.exec(className || '');
   const codeContent = String(children).replace(/\r?\n$/, '');
+  const isOneLine = !codeContent.includes('\n');
 
   const copyToClipboard = async () => {
     try {
@@ -35,9 +36,10 @@ function CodeBlock({
         onClick={copyToClipboard}
         style={{
           position: 'absolute',
-          top: '8px',
+          top: isOneLine ? '50%' : '8px',
           right: '8px',
-          background: copied ? '#22c55e' : 'rgba(0, 0, 0, 0.7)',
+          transform: isOneLine ? 'translateY(-50%)' : 'none',
+          background: 'rgba(0, 0, 0, 0.7)',
           color: '#ffffff',
           border: 'none',
           borderRadius: '4px',
@@ -50,23 +52,16 @@ function CodeBlock({
           justifyContent: 'center'
         }}
         onMouseEnter={(e) => {
-          if (!copied) {
-            e.currentTarget.style.background = 'rgba(0, 0, 0, 0.9)';
-          }
+          e.currentTarget.style.background = 'rgba(0, 0, 0, 0.9)';
         }}
         onMouseLeave={(e) => {
-          if (!copied) {
-            e.currentTarget.style.background = 'rgba(0, 0, 0, 0.7)';
-          }
+          e.currentTarget.style.background = 'rgba(0, 0, 0, 0.7)';
         }}
-        title={copied ? 'Copied!' : 'Copy code'}
+        title="Copy code"
       >
-        {copied ? (
-          <MdCheck size={16} style={{ color: '#ffffff' }} />
-        ) : (
-          <MdContentCopy size={16} style={{ color: '#ffffff' }} />
-        )}
+        <MdContentCopy size={16} style={{ color: '#ffffff' }} />
       </button>
+      {copied && <span className="copied-animation">Copied!</span>}
       <SyntaxHighlighter
         language={match[1]}
         PreTag="div"
