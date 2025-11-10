@@ -1,10 +1,12 @@
 import { ReactChildren, ReactChild, useEffect, useState } from 'react';
+import { useTheme } from 'next-themes';
 
 import SiteImage from '@components/SiteImage';
 import ProfileCard from '@components/ProfileCard';
 import SidebarMenu from '@components/SidebarMenu';
 
-import avatar from '@public/avatar.webp';
+import avatarLight from '@public/pjhampton_light.jpeg';
+import avatarDark from '@public/pjhampton_dark.jpeg';
 
 interface Props {
   pageTitle: string;
@@ -15,6 +17,7 @@ interface Props {
 export default function Layout({ children, showShare }: Props) {
   const [isMounted, setIsMounted] = useState(false);
   const [menuOpenState, setMenuOpenState] = useState(false);
+  const { resolvedTheme } = useTheme();
 
   useEffect(() => {
     setIsMounted(true);
@@ -49,7 +52,7 @@ export default function Layout({ children, showShare }: Props) {
                     <SiteImage
                       alt="PJ Hampton Avatar"
                       className="p-1 rounded-xl"
-                      src={avatar}
+                      src={resolvedTheme === 'dark' ? avatarDark : avatarLight}
                       width={80}
                       height={80}
                     />

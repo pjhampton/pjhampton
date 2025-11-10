@@ -52,8 +52,8 @@ const SocialIcons = ({ isSidebar }: Props) => {
           aria-label="Pete Hampton SpeakerDeck"
         >
           <FaSpeakerDeck
-            size={38}
-            className={`hover:opacity-80 ${socialHighlight}`}
+            size={48}
+            className={`hover:opacity-80 ${socialHighlight} -mt-2`}
           />
         </Link>
       </div>

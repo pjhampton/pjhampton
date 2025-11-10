@@ -1,12 +1,14 @@
 import Link from 'next/link';
 import { push as Menu } from 'react-burger-menu';
 import React, { Dispatch, SetStateAction } from 'react';
+import { useTheme } from 'next-themes';
 
 import SiteImage from '@components/SiteImage';
 import SocialIcons from '@components/SocialIcons';
 import ThemeToggle from '@components/ThemeToggle';
 
-import avatar from '@public/avatar.webp';
+import avatarLight from '@public/pjhampton_light.jpeg';
+import avatarDark from '@public/pjhampton_dark.jpeg';
 
 interface Props {
   menuOpenState: boolean;
@@ -14,6 +16,7 @@ interface Props {
 }
 
 const SidebarMenu = ({ menuOpenState, setMenuOpenState }: Props) => {
+  const { resolvedTheme } = useTheme();
   return (
     <Menu
       isOpen={menuOpenState}
@@ -23,7 +26,7 @@ const SidebarMenu = ({ menuOpenState, setMenuOpenState }: Props) => {
       <div className="p-2 pt-6">
         <Link href="/" className="pt-10">
           <SiteImage
-            src={avatar}
+            src={resolvedTheme === 'dark' ? avatarDark : avatarLight}
             alt="Pete Hampton Avatar"
             width={32}
             height={32}
