@@ -2,19 +2,24 @@ import React from 'react';
 import Link from 'next/link';
 import FadeIn from 'react-fade-in';
 import { motion } from 'framer-motion';
+import { useTheme } from 'next-themes';
 
 import ShareUrl from '@components/ShareUrl';
 import SiteImage from '@components/SiteImage';
 import SocialIcons from '@components/SocialIcons';
 import ThemeToggle from '@components/ThemeToggle';
 
-import avatar from '@public/avatar.webp';
+import avatarLight from '@public/pjhampton_light.jpeg';
+import avatarDark from '@public/pjhampton_dark.jpeg';
 
 interface Props {
   showShare: boolean;
 }
 
 const ProfileCard = ({ showShare = false }: Props) => {
+  const { resolvedTheme } = useTheme();
+  const avatar = resolvedTheme === 'dark' ? avatarDark : avatarLight;
+
   return (
     <span style={{ position: 'fixed' }}>
       <figure className="p-8 text-center bg-white rounded-lg md:p-0 w-80 h-96">
