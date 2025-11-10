@@ -61,7 +61,7 @@ function CodeBlock({
       >
         <MdContentCopy size={16} style={{ color: '#ffffff' }} />
       </button>
-      {copied && <span className="copied-animation">Copied!</span>}
+      {copied && <span className="copied-animation-code">Copied!</span>}
       <SyntaxHighlighter
         language={match[1]}
         PreTag="div"

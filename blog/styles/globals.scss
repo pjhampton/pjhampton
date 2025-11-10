@@ -176,6 +176,19 @@ svg {
   animation: fadeOutUp 1.5s forwards;
 }
 
+.copied-animation-code {
+  position: absolute;
+  top: -30px;
+  right: -40px;
+  background-color: rgb(29, 31, 33);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  opacity: 1;
+  animation: fadeOutUp 1.5s forwards;
+}
+
 @keyframes fadeOutUp {
   0% {
     opacity: 1;
