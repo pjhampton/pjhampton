@@ -10,10 +10,16 @@ const defaultConfig = {
   images: {
     loader: 'imgix',
     path: 'https://',
-    domains: ['localhost', 'user-images.githubusercontent.com']
-  },
-  serverRuntimeConfig: {
-    cloudflareWorkerURL: 'https://blog-image-renderer.pdvil.workers.dev'
+    remotePatterns: [
+      {
+        protocol: 'http',
+        hostname: 'localhost'
+      },
+      {
+        protocol: 'https',
+        hostname: 'user-images.githubusercontent.com'
+      }
+    ]
   },
   productionBrowserSourceMaps: true
 };
