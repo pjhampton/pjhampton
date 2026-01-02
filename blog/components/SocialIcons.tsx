@@ -11,8 +11,8 @@ interface Props {
 const SocialIcons = ({ isSidebar }: Props) => {
   const { resolvedTheme } = useTheme();
 
-  const socialHighlight =
-    isSidebar && resolvedTheme == 'dark' ? 'text-slate-200' : '';
+  // Always use black for social icons
+  const iconColor = 'text-black';
 
   return (
     <div className="inline-flex pt-4">
@@ -24,8 +24,8 @@ const SocialIcons = ({ isSidebar }: Props) => {
           aria-label="Pete Hampton Github"
         >
           <FaGithub
-            size={35}
-            className={`hover:opacity-80 ${socialHighlight}`}
+            size={24}
+            className={`hover:opacity-80 react-icons ${iconColor}`}
           />
         </Link>
       </div>
@@ -38,8 +38,8 @@ const SocialIcons = ({ isSidebar }: Props) => {
           aria-label="Pete Hampton X (Twitter)"
         >
           <FaXTwitter
-            size={35}
-            className={`hover:opacity-80 ${socialHighlight}`}
+            size={24}
+            className={`hover:opacity-80 react-icons ${iconColor}`}
           />
         </Link>
       </div>
@@ -52,8 +52,8 @@ const SocialIcons = ({ isSidebar }: Props) => {
           aria-label="Pete Hampton SpeakerDeck"
         >
           <FaSpeakerDeck
-            size={48}
-            className={`hover:opacity-80 ${socialHighlight} -mt-2`}
+            size={28}
+            className={`hover:opacity-80 react-icons ${iconColor}`}
           />
         </Link>
       </div>
