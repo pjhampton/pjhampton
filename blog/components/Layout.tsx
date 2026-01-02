@@ -1,12 +1,8 @@
 import { ReactChildren, ReactChild, useEffect, useState } from 'react';
-import { useTheme } from 'next-themes';
 
-import SiteImage from '@components/SiteImage';
 import ProfileCard from '@components/ProfileCard';
 import SidebarMenu from '@components/SidebarMenu';
-
-import avatarLight from '@public/pjhampton_light.jpeg';
-import avatarDark from '@public/pjhampton_dark.jpeg';
+import { Orb } from '@components/Orb';
 
 interface Props {
   pageTitle: string;
@@ -17,7 +13,6 @@ interface Props {
 export default function Layout({ children, showShare }: Props) {
   const [isMounted, setIsMounted] = useState(false);
   const [menuOpenState, setMenuOpenState] = useState(false);
-  const { resolvedTheme } = useTheme();
 
   useEffect(() => {
     setIsMounted(true);
@@ -49,13 +44,9 @@ export default function Layout({ children, showShare }: Props) {
                     onClick={() => setMenuOpenState(!menuOpenState)}
                     aria-label="toggle menu on smaller devices"
                   >
-                    <SiteImage
-                      alt="PJ Hampton Avatar"
-                      className="p-1 rounded-xl"
-                      src={resolvedTheme === 'dark' ? avatarDark : avatarLight}
-                      width={80}
-                      height={80}
-                    />
+                    <div className="p-1">
+                      <Orb className="w-20 h-20" />
+                    </div>
                   </button>
                 </div>
 

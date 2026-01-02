@@ -10,12 +10,12 @@ const ThemeToggle = () => {
       {resolvedTheme === 'dark' ? (
         <FaSun
           onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
-          className="text-2xl text-gray-500 cursor-pointer dark:text-orange-400"
+          className="text-2xl text-orange-400 cursor-pointer react-icons"
         />
       ) : (
         <FaMoon
           onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
-          className="text-2xl text-gray-500 cursor-pointer dark:text-gray-400"
+          className="text-2xl text-gray-500 cursor-pointer react-icons"
         />
       )}
     </div>
