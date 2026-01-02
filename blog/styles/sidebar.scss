@@ -33,7 +33,11 @@
 }
 
 .bm-menu {
-  @apply bg-white dark:bg-zinc-900;
+  background: white;
+  
+  .dark & {
+    background: rgb(24 24 27);
+  }
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
 }

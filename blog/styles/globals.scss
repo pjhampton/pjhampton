@@ -1,6 +1,21 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+/* Ensure dark mode classes are properly applied */
+html {
+  color-scheme: light;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+/* Override Tailwind v4 CSS variables for dark mode */
+html.dark {
+  --color-gray-100: 28 25 23; /* stone-900 equivalent */
+  --color-stone-900: 28 25 23;
+  --color-slate-200: 226 232 240;
+}
+
 @import 'sidebar.scss';
 
 // Global overrides

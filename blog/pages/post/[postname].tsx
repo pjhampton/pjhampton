@@ -62,9 +62,12 @@ export async function getStaticProps({ ...ctx }) {
   const data = matter(content.default);
 
   const allPosts = getSortedPosts();
-  const currentPostIndex = allPosts.findIndex(post => post.slug === postname);
-  
-  const previousPost = currentPostIndex < allPosts.length - 1 ? allPosts[currentPostIndex + 1] : null;
+  const currentPostIndex = allPosts.findIndex((post) => post.slug === postname);
+
+  const previousPost =
+    currentPostIndex < allPosts.length - 1
+      ? allPosts[currentPostIndex + 1]
+      : null;
   const nextPost = currentPostIndex > 0 ? allPosts[currentPostIndex - 1] : null;
 
   return {
