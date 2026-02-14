@@ -29,7 +29,7 @@ const SidebarMenu = ({ menuOpenState, setMenuOpenState }: Props) => {
         </button>
 
         <div className="p-2 pt-6">
-          <a href="/" className="pt-10">
+          <a href="/" className="pt-10" onClick={() => setMenuOpenState(false)}>
             <div className="flex justify-center">
               <Orb className="w-32 h-32" />
             </div>

@@ -21,7 +21,7 @@ const ProfileCard = ({ showShare = false }: Props) => {
         </div>
 
         <span className="p-2 pt-6">
-          <a href="/" className="inline-flex" aria-label="return home">
+          <a href="/" className="inline-flex cursor-pointer" aria-label="return home">
             <div className="mx-auto mt-6 mb-1 transition-transform hover:scale-[1.03] active:scale-[0.98]">
               <Orb className="w-[150px] h-[150px]" />
             </div>

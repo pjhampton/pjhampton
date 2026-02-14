@@ -1,7 +1,6 @@
 import { useEffect } from 'preact/hooks';
 import ReactMarkdown from 'react-markdown';
 
-import Layout from '../components/Layout';
 import { formatDate } from '../utils/datetime';
 import CodeContainer from '../components/CodeContainer';
 import PostNavigation from '../components/PostNavigation';
@@ -39,29 +38,24 @@ export default function BlogPost({ postname }: Props) {
   const markdownBody = post.markdownBody;
 
   return (
-    <Layout
-      pageTitle={`Pete Hampton | ${frontMatter.title}`}
-      showShare={true}
-    >
-      <article>
-        <div className="pb-3">
-          <h1
-            className={`text-3xl font-medium ${resolvedTheme === 'dark' ? 'cornsilk' : ''}`}
-          >
-            {frontMatter.title}
-          </h1>
-          <p>
-            <span className="font-semibold">{frontMatter.author}</span> ⚡️{' '}
-            {formatDate(frontMatter.date)}
-          </p>
-        </div>
-        <div className="post">
-          <ReactMarkdown components={CodeContainer}>
-            {markdownBody}
-          </ReactMarkdown>
-        </div>
-        <PostNavigation previousPost={previousPost} nextPost={nextPost} />
-      </article>
-    </Layout>
+    <article>
+      <div className="pb-3">
+        <h1
+          className={`text-3xl font-medium ${resolvedTheme === 'dark' ? 'cornsilk' : ''}`}
+        >
+          {frontMatter.title}
+        </h1>
+        <p>
+          <span className="font-semibold">{frontMatter.author}</span> ⚡️{' '}
+          {formatDate(frontMatter.date)}
+        </p>
+      </div>
+      <div className="post">
+        <ReactMarkdown components={CodeContainer}>
+          {markdownBody}
+        </ReactMarkdown>
+      </div>
+      <PostNavigation previousPost={previousPost} nextPost={nextPost} />
+    </article>
   );
 }

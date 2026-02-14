@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'preact/hooks';
+import { useState } from 'preact/hooks';
 import type { ComponentChildren } from 'preact';
 
 import ProfileCard from './ProfileCard';
@@ -12,51 +12,42 @@ interface Props {
 }
 
 export default function Layout({ children, showShare }: Props) {
-  const [isMounted, setIsMounted] = useState(false);
   const [menuOpenState, setMenuOpenState] = useState(false);
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
 
   return (
     <>
-      {isMounted && (
-        <>
-          <div className="visible md:hidden">
-            <SidebarMenu
-              menuOpenState={menuOpenState}
-              setMenuOpenState={setMenuOpenState}
-            />
+      <div className="visible md:hidden">
+        <SidebarMenu
+          menuOpenState={menuOpenState}
+          setMenuOpenState={setMenuOpenState}
+        />
+      </div>
+
+      <div className="container w-full mx-auto md:pt-10 md:max-w-6xl">
+        <span className="grid grid-cols-12">
+          <div className="hidden md:block">
+            <div className="col-start-1 col-end-4">
+              <ProfileCard showShare={showShare} />
+            </div>
           </div>
 
-          <div className="container w-full mx-auto md:pt-10 md:max-w-6xl">
-            <span className="grid grid-cols-12">
-              <div className="hidden md:block">
-                <div className="col-start-1 col-end-4">
-                  <ProfileCard showShare={showShare} />
+          <div className="col-span-full px-4 md:px-0 md:col-span-auto md:col-start-5 md:col-end-12">
+            <div className="visible md:hidden">
+              <button
+                className="pt-2.5 cursor-pointer"
+                onClick={() => setMenuOpenState(!menuOpenState)}
+                aria-label="toggle menu on smaller devices"
+              >
+                <div className="p-1">
+                  <Orb className="w-20 h-20" />
                 </div>
-              </div>
+              </button>
+            </div>
 
-              <div className="col-start-2 col-end-12 md:col-start-5">
-                <div className="visible md:hidden">
-                  <button
-                    className="pt-2.5"
-                    onClick={() => setMenuOpenState(!menuOpenState)}
-                    aria-label="toggle menu on smaller devices"
-                  >
-                    <div className="p-1">
-                      <Orb className="w-20 h-20" />
-                    </div>
-                  </button>
-                </div>
-
-                <section>{children}</section>
-              </div>
-            </span>
+            <section>{children}</section>
           </div>
-        </>
-      )}
+        </span>
+      </div>
     </>
   );
 }

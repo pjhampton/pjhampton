@@ -60,10 +60,16 @@ export default defineConfig({
     }
   },
   build: {
+    chunkSizeWarningLimit: 2000,
     rollupOptions: {
       output: {
-        manualChunks: {
-          'syntax-highlighter': ['react-syntax-highlighter']
+        manualChunks(id: string) {
+          if (id.includes('react-syntax-highlighter') || id.includes('refractor') || id.includes('prismjs')) {
+            return 'syntax-highlighter';
+          }
+          if (id.includes('react-markdown') || id.includes('remark') || id.includes('rehype') || id.includes('unified') || id.includes('mdast') || id.includes('hast') || id.includes('micromark')) {
+            return 'markdown';
+          }
         }
       }
     }
