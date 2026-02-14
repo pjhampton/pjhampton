@@ -1,0 +1,365 @@
+@import 'tailwindcss';
+@import './sidebar.css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --radius: 0.625rem;
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.145 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.145 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.985 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: oklch(0.269 0 0);
+  --input: oklch(0.269 0 0);
+  --ring: oklch(0.439 0 0);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.269 0 0);
+  --sidebar-ring: oklch(0.439 0 0);
+}
+
+/* Ensure dark mode classes are properly applied */
+html {
+  color-scheme: light;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+/* Override Tailwind v4 CSS variables for dark mode */
+html.dark {
+  --color-gray-100: 28 25 23; /* stone-900 equivalent */
+  --color-stone-900: 28 25 23;
+  --color-slate-200: 226 232 240;
+}
+
+/* Global overrides */
+
+h1 {
+  font-size: 2.4em;
+
+  &.special {
+    font-family: 'Permanent Marker';
+    font-display: swap;
+    margin-bottom: 0.3em;
+  }
+}
+
+h2 {
+  font-size: 1.7em;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+
+  &.special {
+    font-size: 2.4em;
+    font-family: 'Permanent Marker';
+    margin-bottom: 0.3em;
+  }
+}
+
+h3 {
+  font-size: 1.5em;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+}
+
+h4 {
+  font-size: 1.4em;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+}
+
+h5 {
+  font-size: 1.2em;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+}
+
+p {
+  text-align: justify;
+}
+
+p,
+pre {
+  margin-bottom: 1em;
+}
+
+img {
+  border-radius: 0.3em;
+}
+
+.cornsilk {
+  color: cornsilk;
+}
+
+.navy {
+  color: rgb(30, 48, 80);
+}
+
+/* Post Styles */
+
+.postList {
+  margin-bottom: 1.2em;
+
+  & a:hover {
+    text-decoration: underline;
+  }
+}
+
+.post {
+  & blockquote {
+    font-weight: 500;
+    font-size: 1.2rem;
+    font-style: italic;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 0.5rem;
+    background-color: #ff8668;
+    color: black;
+
+    & a {
+      text-decoration: underline;
+    }
+
+    & p {
+      margin-bottom: 0.3rem;
+    }
+  }
+
+  & ul,
+  & ol {
+    padding: 0 1em 1em 1em;
+    margin-left: 1em;
+  }
+
+  & li {
+    list-style-type: square;
+  }
+
+  & img {
+    max-height: 35em;
+    margin: 0 auto;
+  }
+
+  & a {
+    @apply text-sky-500;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.activeNavLink {
+  border-bottom: 4px solid #a9beef;
+}
+
+/* 404 */
+
+.errorpage {
+  position: relative;
+
+  & figure {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+}
+
+.input-container {
+  padding: 0.7em 0;
+  position: relative;
+}
+
+.url-input {
+  width: 300px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #f0f0f0;
+  color: #888888;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: inherit;
+
+  &:focus,
+  &:active {
+    outline: none;
+  }
+}
+
+.copied-animation {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgb(29, 31, 33);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  opacity: 1;
+  animation: fadeOutUp 1.5s forwards;
+}
+
+.copied-animation-code {
+  position: absolute;
+  top: -30px;
+  right: -40px;
+  background-color: rgb(29, 31, 33);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  opacity: 1;
+  animation: fadeOutUp 1.5s forwards;
+}
+
+@keyframes fadeOutUp {
+  0% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-20px);
+  }
+}
+
+/* Keyframe animations for orb states */
+@keyframes morphBlob {
+  0%,
+  100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+  25% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+  50% {
+    border-radius: 50% 60% 30% 60% / 30% 60% 70% 40%;
+  }
+  75% {
+    border-radius: 60% 40% 60% 40% / 70% 30% 50% 60%;
+  }
+}
+
+@keyframes breathe {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes listening {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.4;
+  }
+}
+
+@keyframes particleFloat {
+  0% {
+    transform: translate(0, 0) scale(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--tx), var(--ty)) scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes gradientShift {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
