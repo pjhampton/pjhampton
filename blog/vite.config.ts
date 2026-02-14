@@ -22,6 +22,9 @@ function markdownPlugin() {
         const posts = files.map((file: string) => {
           const content = fs.readFileSync(path.join(postsDir, file), 'utf-8');
           const { data, content: markdownBody } = matter(content);
+          if (data.date) {
+            data.date = new Date(data.date).toISOString();
+          }
           return {
             frontMatter: data,
             markdownBody,
