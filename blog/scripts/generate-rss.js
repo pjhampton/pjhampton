@@ -9,11 +9,12 @@ const publicDir = path.resolve('public');
 function loadPosts() {
   const files = fs.readdirSync(postsDir).filter((f) => f.endsWith('.md'));
   const posts = files.map((file) => {
-    const content = fs.readFileSync(path.join(postsDir, file), 'utf-8');
-    const { data } = matter(content);
+    const raw = fs.readFileSync(path.join(postsDir, file), 'utf-8');
+    const { data, content } = matter(raw);
     return {
       slug: file.replace('.md', ''),
-      frontMatter: data
+      frontMatter: data,
+      content
     };
   });
 
@@ -51,6 +52,7 @@ function generateRssFeed() {
       id: `${site_url}/post/${post.slug}`,
       link: `${site_url}/post/${post.slug}`,
       description: post.frontMatter.description || post.frontMatter.excerpt || '',
+      content: post.content,
       date: new Date(post.frontMatter.date)
     });
   });

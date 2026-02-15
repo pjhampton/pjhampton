@@ -8,7 +8,8 @@
     "clean": "rm -rf ./dist",
     "dev": "vite",
     "preview": "vite preview",
-    "prettify": "npx prettier . --write"
+    "prettify": "npx prettier . --write",
+    "test": "vitest"
   },
   "dependencies": {
     "preact": "^10.25.4",
@@ -18,6 +19,7 @@
   },
   "devDependencies": {
     "@preact/preset-vite": "^2.9.3",
+    "vitest": "^3.0.0",
     "@tailwindcss/postcss": "^4.1.18",
     "@types/node": "^22.5.5",
     "@types/react-syntax-highlighter": "^15.5.9",

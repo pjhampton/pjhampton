@@ -21,7 +21,36 @@ export default function BlogPost({ postname }: Props) {
 
   useEffect(() => {
     if (post) {
-      document.title = `Pete Hampton - ${post.frontMatter.title}`;
+      document.title = `Pete Hampton's blog - ${post.frontMatter.title}`;
+
+      const jsonLd = {
+        '@context': 'https://schema.org',
+        '@type': 'BlogPosting',
+        headline: post.frontMatter.title,
+        author: {
+          '@type': 'Person',
+          name: post.frontMatter.author,
+        },
+        datePublished: post.frontMatter.date,
+        description: post.frontMatter.excerpt || post.frontMatter.description || '',
+        url: `https://pjhampton.com/post/${post.slug}`,
+      };
+
+      const script = document.createElement('script');
+      script.type = 'application/ld+json';
+      script.textContent = JSON.stringify(jsonLd);
+      script.id = 'json-ld';
+
+      const existing = document.getElementById('json-ld');
+      if (existing) {
+        existing.remove();
+      }
+      document.head.appendChild(script);
+
+      return () => {
+        const el = document.getElementById('json-ld');
+        if (el) el.remove();
+      };
     }
   }, [post]);
 

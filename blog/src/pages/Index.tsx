@@ -11,7 +11,7 @@ export default function Index(_props: Props) {
   const groupedPosts = groupPostsByYear(posts);
 
   useEffect(() => {
-    document.title = 'Pete Hampton - Programmer';
+    document.title = "Pete Hampton's blog";
   }, []);
 
   return (
