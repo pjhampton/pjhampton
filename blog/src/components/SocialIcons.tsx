@@ -25,7 +25,7 @@ const SocialIcons = ({ isSidebar }: Props) => {
 
       <div className="pl-2 pr-2">
         <a
-          href="https://x.com/pjhampton"
+          href="https://x.com/_pjhampton"
           target="_blank"
           rel="noreferrer"
           aria-label="Pete Hampton X (Twitter)"
