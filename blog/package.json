@@ -25,7 +25,7 @@
     "@types/react-syntax-highlighter": "^15.5.9",
     "feed": "^5.2.0",
     "gray-matter": "^4.0.3",
-    "postcss": "^8.4.47",
+    "postcss": "^8.5.15",
     "prettier": "3.3.3",
     "tailwindcss": "^4.1.18",
     "typescript": "^5.6.2",
