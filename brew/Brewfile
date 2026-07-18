@@ -1,3 +1,4 @@
+tap 'darrylmorley/whatcable'
 tap 'warrensbox/tap'
 tap 'teamlumos/tap'
 tap 'tinygo-org/tools'
@@ -43,6 +44,7 @@ brew 'tmux'
 brew 'tree'
 brew 'vcpkg'
 brew 'watch'
+brew 'whatcable'
 brew 'yq'
 brew 'zsh'
 
