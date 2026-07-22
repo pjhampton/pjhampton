@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "node scripts/generate-rss.js && node scripts/generate-sitemap.js && vite build && node scripts/generate-static-pages.js",
+    "build": "node scripts/generate-rss.js && node scripts/generate-sitemap.js && vite build && node scripts/generate-static-pages.js && node scripts/generate-markdown.js",
     "clean": "rm -rf ./dist",
     "dev": "vite",
     "preview": "vite preview",
