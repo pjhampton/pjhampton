@@ -5,6 +5,7 @@ import { onRequest as onHomepageRequest } from '../functions/index.js';
 
 function createContext({
   accept,
+  userAgent,
   method = 'GET',
   url = 'https://pjhampton.com/post/grokking-tmux',
   assetResponse = new Response('# Grokking tmux\n', {
@@ -12,18 +13,22 @@ function createContext({
   })
 }: {
   accept?: string;
+  userAgent?: string;
   method?: string;
   url?: string;
   assetResponse?: Response;
 }) {
   const next = vi.fn(() => new Response('html'));
   const fetch = vi.fn(() => Promise.resolve(assetResponse));
+  const headers = new Headers();
+  if (accept) headers.set('Accept', accept);
+  if (userAgent) headers.set('User-Agent', userAgent);
 
   return {
     context: {
       request: new Request(url, {
         method,
-        headers: accept ? { Accept: accept } : undefined
+        headers
       }),
       params: { postname: 'grokking-tmux' },
       env: { ASSETS: { fetch } },
@@ -47,7 +52,7 @@ describe('blog post Markdown negotiation', () => {
     expect(response.headers.get('Content-Type')).toBe(
       'text/markdown; charset=utf-8'
     );
-    expect(response.headers.get('Vary')).toBe('Accept');
+    expect(response.headers.get('Vary')).toBe('Accept, User-Agent');
     expect(response.headers.get('Link')).toBe(
       '<https://pjhampton.com/post/grokking-tmux>; rel="canonical"'
     );
@@ -74,6 +79,88 @@ describe('blog post Markdown negotiation', () => {
 
     expect(fetch).not.toHaveBeenCalled();
     expect(next).toHaveBeenCalledOnce();
+    expect(response.headers.get('Vary')).toBe('Accept, User-Agent');
+    expect(await response.text()).toBe('html');
+  });
+
+  it('honours media type quality values', async () => {
+    const { context, fetch, next } = createContext({
+      accept: 'text/html, text/markdown;q=0.5'
+    });
+
+    const response = await onRequest(context);
+
+    expect(fetch).not.toHaveBeenCalled();
+    expect(next).toHaveBeenCalledOnce();
+    expect(await response.text()).toBe('html');
+  });
+
+  it('does not return Markdown when it is explicitly unacceptable', async () => {
+    const { context, fetch, next } = createContext({
+      accept: 'text/markdown;q=0, */*;q=0.5',
+      userAgent: 'Claude-User'
+    });
+
+    const response = await onRequest(context);
+
+    expect(fetch).not.toHaveBeenCalled();
+    expect(next).toHaveBeenCalledOnce();
+    expect(await response.text()).toBe('html');
+  });
+
+  it('serves Markdown by default to a recognised AI reader', async () => {
+    const { context, fetch, next } = createContext({
+      accept: '*/*',
+      userAgent: 'Mozilla/5.0 (compatible; Claude-User/1.0)'
+    });
+
+    const response = await onRequest(context);
+
+    expect(next).not.toHaveBeenCalled();
+    expect(fetch).toHaveBeenCalledOnce();
+    expect(response.headers.get('Content-Type')).toBe(
+      'text/markdown; charset=utf-8'
+    );
+  });
+
+  it('returns headers without a body for a Markdown HEAD request', async () => {
+    const { context } = createContext({
+      accept: 'text/markdown',
+      method: 'HEAD'
+    });
+
+    const response = await onRequest(context);
+
+    expect(response.headers.get('Content-Type')).toBe(
+      'text/markdown; charset=utf-8'
+    );
+    expect(await response.text()).toBe('');
+  });
+
+  it('does not treat a model-training crawler as an AI reader', async () => {
+    const { context, fetch, next } = createContext({
+      accept: '*/*',
+      userAgent: 'Mozilla/5.0 (compatible; GPTBot/1.0)'
+    });
+
+    const response = await onRequest(context);
+
+    expect(fetch).not.toHaveBeenCalled();
+    expect(next).toHaveBeenCalledOnce();
+    expect(await response.text()).toBe('html');
+  });
+
+  it('lets an explicit HTML query override the AI reader default', async () => {
+    const { context, fetch, next } = createContext({
+      accept: '*/*',
+      userAgent: 'Perplexity-User',
+      url: 'https://pjhampton.com/post/grokking-tmux?format=html'
+    });
+
+    const response = await onRequest(context);
+
+    expect(fetch).not.toHaveBeenCalled();
+    expect(next).toHaveBeenCalledOnce();
     expect(await response.text()).toBe('html');
   });
 
@@ -88,6 +175,7 @@ describe('blog post Markdown negotiation', () => {
     const response = await onRequest(context);
 
     expect(response.status).toBe(404);
+    expect(response.headers.get('Vary')).toBe('Accept, User-Agent');
     expect(await response.text()).toBe('Post not found\n');
   });
 });
@@ -134,6 +222,7 @@ describe('homepage Markdown negotiation', () => {
     const response = await onHomepageRequest(context);
 
     expect(next).toHaveBeenCalledOnce();
+    expect(response.headers.get('Vary')).toBe('Accept, User-Agent');
     expect(await response.text()).toBe('html');
   });
 });

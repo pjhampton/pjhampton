@@ -10,15 +10,10 @@ import {
   renderPostMarkdown,
   siteUrl
 } from './scripts/post-markdown.js';
-
-function acceptsMarkdown(accept: string | undefined): boolean {
-  return (accept || '')
-    .split(',')
-    .map((mediaType) => mediaType.trim())
-    .some((mediaType) =>
-      /^(text\/markdown|text\/x-markdown)(?:\s*;|$)/i.test(mediaType)
-    );
-}
+import {
+  mergeVary,
+  preferredRepresentation
+} from './scripts/markdown-request.js';
 
 function markdownMiddleware(postsDir: string): Connect.NextHandleFunction {
   return (request, response, next) => {
@@ -27,12 +22,21 @@ function markdownMiddleware(postsDir: string): Connect.NextHandleFunction {
     const url = new URL(request.url || '/', 'http://localhost');
     const match = url.pathname.match(/^\/post\/([^/]+)\/?$/);
     const isHomepage = url.pathname === '/';
-    const requestsMarkdown =
-      url.searchParams.get('format')?.toLowerCase() === 'markdown';
+    const isContentRoute = Boolean(match || isHomepage);
+
+    if (!isContentRoute) return next();
+
+    response.setHeader(
+      'Vary',
+      mergeVary(response.getHeader('Vary')?.toString())
+    );
 
     if (
-      (!match && !isHomepage) ||
-      (!requestsMarkdown && !acceptsMarkdown(request.headers.accept))
+      preferredRepresentation({
+        url: url.href,
+        accept: request.headers.accept,
+        userAgent: request.headers['user-agent']
+      }) !== 'markdown'
     ) {
       return next();
     }
@@ -53,7 +57,6 @@ function markdownMiddleware(postsDir: string): Connect.NextHandleFunction {
       response.setHeader('Content-Disposition', 'inline; filename="index.md"');
       response.setHeader('Cache-Control', 'no-cache');
       response.setHeader('Link', `<${siteUrl}>; rel="canonical"`);
-      response.setHeader('Vary', 'Accept');
       response.end(request.method === 'HEAD' ? undefined : markdown);
       return;
     }
@@ -85,7 +88,6 @@ function markdownMiddleware(postsDir: string): Connect.NextHandleFunction {
     response.setHeader('Content-Disposition', `inline; filename="${slug}.md"`);
     response.setHeader('Cache-Control', 'no-cache');
     response.setHeader('Link', `<${canonicalUrl}>; rel="canonical"`);
-    response.setHeader('Vary', 'Accept');
     response.end(request.method === 'HEAD' ? undefined : markdown);
   };
 }
