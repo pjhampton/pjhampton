@@ -2,7 +2,7 @@
 title: 'First class markdown'
 author: 'Pete Hampton'
 author_link: 'https://github.com/pjhampton'
-date: '2026-Jul-27'
+date: '2026-Jul-31'
 show_post_footer: true
 excerpt: >
   I made this blog serve HTML to browsers and Markdown to agents without maintaining two versions of every post.
