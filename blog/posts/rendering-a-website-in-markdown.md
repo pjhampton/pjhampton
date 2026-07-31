@@ -10,7 +10,7 @@ excerpt: >
 
 Most posts on this blog are Markdown wrapped in HTML. That is exactly what I want for somebody reading in a browser, but it is a slightly roundabout journey for an agent that only wants the words. I wondered how difficult it would be to let both use the same URL and get the representation that suits them. 
 
-The short answer to the title is: sometimes. A public, text-heavy website that already starts life as Markdown is a very good fit. An interactive application, where state, layout or personalised data carries the meaning, probably is not. Markdown should be another interface to the content, not a ritual applied to every website because agents are the current hot thing, but it was something I wanted to experiment.
+A public, text-heavy website that already starts life as Markdown is a very good fit. An interactive application, where state, layout or personalised data carries the meaning, probably is not. Markdown should be another interface to the content, not a ritual applied to every website because agents are the current hot thing, but it was something I wanted to experiment.
 
 You can try it by adding `?format=markdown` to a post:
 
@@ -29,7 +29,7 @@ An ordinary browser request still gets the normal HTML page. A caller can also f
 
 ## One URL, two representations
 
-The web is read by software as well as people. Search engines have done this for years, but agents, language models, command-line tools and small scripts are now trying to understand the same pages. HTML is a fine delivery format for a browser, but it brings navigation, styling, scripts and other unrelated information along with the words. A Markdown response is smaller, predictable and much closer to the thing I originally wrote. This is not about replacing the blog. People should still get typography, syntax highlighting, navigation and all the other details that make reading pleasant. It is about giving machines a useful representation without asking them to reverse-engineer the presentation first.
+The web is read by software as well as people. Search engines have done this for years, but agents, language models, command-line tools and small scripts are now trying to understand the same pages. HTML is a fine delivery format for a browser, but it brings navigation, styling, scripts and other unrelated information along with the words. Things are complicated by SPAs that may require OCR to scrape, or frameworks that use the DOM code as an intermediate compilation step. A Markdown response is smaller, predictable and much closer to the thing I originally wrote - _the intent_. This is not about replacing the blog. People should still get the typography, syntax highlighting, navigation and all the other details that make reading pleasant. It is about giving agents a useful representation without asking them to reverse-engineer the presentation first.
 
 There is also something pleasingly ordinary about this. A web resource does not have to mean one file format. The same post can be represented as HTML or Markdown while keeping one canonical URL.
 
@@ -124,6 +124,6 @@ I added tests around these boundaries: quality values, explicit overrides, ordin
 
 I would consider it when the content is public, mostly text and already has a clean source representation. Blogs, documentation and reference pages are obvious candidates. The cost is low and automated readers avoid scraping meaning back out of the presentation. If I noticed more and more requesters such as firecrawl or tavily, I might consider this more of a permanent feature rather than an experimental side quest. 
 
-What I will conclude however, is I would be more cautious when the website is an interactive application, the response is personalised, or an API already expresses the underlying data better. HTML also carries useful semantics, links and structured data. Markdown is not automatically the best agent interface simply because it contains fewer characters.
+What I will conclude however, is I would be more cautious when the website is an interactive application, the responses are heavily personalised, or an API already expresses the underlying data better. HTML also carries useful semantics, links and structured data. Markdown is not automatically the best agent interface simply because it contains fewer characters.
 
-For this incredibly simple blog, the answer is yes. The source was already there, so the feature amounted to some generated files, a small decision at the edge and tests around the awkward bits. People still get the website I designed for them. Agents can get the words without the noise.
+For this incredibly simple blog, the answer is yes. The source was already there, so the feature amounted to some generated files, a small decision at the edge and tests around the awkward bits. People still get the website I designed for them. Agents can get the words without the noise. I'm excited to see how agent influence the deployment of websites and applications over the next decade.
