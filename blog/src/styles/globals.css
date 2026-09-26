@@ -77,6 +77,8 @@
 /* Ensure dark mode classes are properly applied */
 html {
   color-scheme: light;
+  /* Keep the page aligned when navigation adds or removes a scrollbar. */
+  scrollbar-gutter: stable;
 }
 
 html.dark {

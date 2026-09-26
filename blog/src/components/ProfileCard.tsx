@@ -14,8 +14,8 @@ const ProfileCard = ({ showShare = false }: Props) => {
   const { resolvedTheme } = useTheme();
 
   return (
-    <span style={{ position: 'fixed' }}>
-      <figure className="p-8 text-center bg-white rounded-lg md:p-0 w-80 h-96">
+    <div className="relative">
+      <figure className="p-8 text-center bg-white rounded-lg md:p-0 w-full h-96">
         <div style={{ position: 'absolute', right: 0 }}>
           <ThemeToggle />
         </div>
@@ -41,7 +41,7 @@ const ProfileCard = ({ showShare = false }: Props) => {
       </figure>
 
       {showShare && (
-        <figure className="p-8 mt-4 text-center bg-white rounded-lg h-28 md:p-0 w-80">
+        <figure className="p-8 mt-4 text-center bg-white rounded-lg h-28 md:p-0 w-full">
           <div className="pt-4 space-y-3 text-center">
             <figcaption className="font-medium uppercase">
               <div className="text-slate-700">Share</div>
@@ -51,7 +51,7 @@ const ProfileCard = ({ showShare = false }: Props) => {
           <ShareUrl />
         </figure>
       )}
-    </span>
+    </div>
   );
 };
 

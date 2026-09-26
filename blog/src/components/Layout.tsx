@@ -23,15 +23,13 @@ export default function Layout({ children, showShare }: Props) {
         />
       </div>
 
-      <div className="container w-full mx-auto md:pt-10 md:max-w-6xl">
-        <span className="grid grid-cols-12">
-          <div className="hidden md:block">
-            <div className="col-start-1 col-end-4">
-              <ProfileCard showShare={showShare} />
-            </div>
-          </div>
+      <div className="w-full max-w-6xl mx-auto px-4 md:pt-10">
+        <div className="grid grid-cols-1 md:grid-cols-[20rem_minmax(0,1fr)] md:gap-8">
+          <aside className="hidden md:block md:sticky md:top-10 md:self-start">
+            <ProfileCard showShare={showShare} />
+          </aside>
 
-          <div className="col-span-full px-4 md:px-0 md:col-span-auto md:col-start-5 md:col-end-12">
+          <div className="min-w-0">
             <div className="visible md:hidden">
               <button
                 className="pt-2.5 cursor-pointer"
@@ -46,7 +44,7 @@ export default function Layout({ children, showShare }: Props) {
 
             <section>{children}</section>
           </div>
-        </span>
+        </div>
       </div>
     </>
   );
