@@ -30,17 +30,25 @@ export default function Layout({ children, showShare }: Props) {
           </aside>
 
           <div className="min-w-0">
-            <div className="visible md:hidden">
-              <button
-                className="pt-2.5 cursor-pointer"
-                onClick={() => setMenuOpenState(!menuOpenState)}
-                aria-label="toggle menu on smaller devices"
+            <header className="flex items-center justify-between gap-4 pt-2.5 md:hidden">
+              <a
+                href="/"
+                className="rounded-lg p-1 focus-visible:outline-2 focus-visible:outline-offset-4"
+                aria-label="Return home"
               >
-                <div className="p-1">
-                  <Orb className="w-20 h-20" />
-                </div>
+                <Orb className="w-20 h-20" />
+              </a>
+              <button
+                type="button"
+                className="inline-flex min-h-12 items-center gap-2 rounded-lg px-3 text-sm font-semibold cursor-pointer hover:bg-black/5 active:bg-black/10 dark:hover:bg-white/10 dark:active:bg-white/20 focus-visible:outline-2 focus-visible:outline-offset-4"
+                onClick={() => setMenuOpenState((open) => !open)}
+                aria-expanded={menuOpenState}
+                aria-controls="mobile-menu"
+              >
+                <span aria-hidden="true">☰</span>
+                Menu
               </button>
-            </div>
+            </header>
 
             <section>{children}</section>
           </div>

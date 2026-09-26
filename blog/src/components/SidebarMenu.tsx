@@ -19,7 +19,12 @@ const SidebarMenu = ({ menuOpenState, setMenuOpenState }: Props) => {
       />
 
       {/* Menu panel */}
-      <nav className={`sidebar-menu ${menuOpenState ? 'sidebar-menu--open' : ''}`}>
+      <nav
+        id="mobile-menu"
+        aria-label="Main navigation"
+        inert={!menuOpenState}
+        className={`sidebar-menu ${menuOpenState ? 'sidebar-menu--open' : ''}`}
+      >
         <button
           className="sidebar-close"
           onClick={() => setMenuOpenState(false)}
