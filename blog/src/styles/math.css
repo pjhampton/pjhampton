@@ -1,0 +1,12 @@
+/* Keep wide equations inside the article on small screens. */
+.post .katex-display {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  margin: 1.5rem 0;
+  padding: 0.5rem 0;
+}
+
+.post .katex {
+  color: inherit;
+}

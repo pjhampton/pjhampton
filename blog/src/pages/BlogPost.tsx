@@ -1,11 +1,14 @@
 import { useEffect } from 'preact/hooks';
+import { lazy, Suspense } from 'preact/compat';
 import ReactMarkdown from 'react-markdown';
 
 import { formatDate } from '../utils/datetime';
-import CodeContainer from '../components/CodeContainer';
+import { postComponents } from '../components/ChartBlock';
 import PostNavigation from '../components/PostNavigation';
 import { getSortedPosts } from '../utils/posts';
 import { useTheme } from '../utils/theme';
+
+const MathMarkdown = lazy(() => import('../components/MathMarkdown'));
 
 interface Props {
   path?: string;
@@ -80,9 +83,15 @@ export default function BlogPost({ postname }: Props) {
         </p>
       </div>
       <div className="post">
-        <ReactMarkdown components={CodeContainer}>
-          {markdownBody}
-        </ReactMarkdown>
+        {frontMatter.math === true ? (
+          <Suspense fallback={<p role="status">Loading equations…</p>}>
+            <MathMarkdown markdown={markdownBody} />
+          </Suspense>
+        ) : (
+          <ReactMarkdown components={postComponents}>
+            {markdownBody}
+          </ReactMarkdown>
+        )}
       </div>
       <PostNavigation previousPost={previousPost} nextPost={nextPost} />
     </article>
