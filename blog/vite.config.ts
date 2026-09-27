@@ -161,6 +161,14 @@ export default defineConfig({
       output: {
         manualChunks(id: string) {
           if (
+            id.includes('katex') ||
+            id.includes('remark-math') ||
+            id.includes('micromark-extension-math') ||
+            id.includes('mdast-util-math')
+          ) {
+            return 'math';
+          }
+          if (
             id.includes('react-syntax-highlighter') ||
             id.includes('refractor') ||
             id.includes('prismjs')

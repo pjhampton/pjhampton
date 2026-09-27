@@ -6,6 +6,7 @@ export interface FrontMatter {
   description?: string;
   show_post_footer?: boolean;
   author_link?: string;
+  math?: boolean;
 }
 
 export interface Post {
